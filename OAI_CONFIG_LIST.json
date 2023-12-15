@@ -1,0 +1,32 @@
+[
+    {
+        "model": "gpt-3.5-turbo",
+        "api_key": "your OpenAI Key goes here",
+        "base_url": "https://api.openai.com/v1",
+        "api_version": "2023-06-01-preview"
+    },
+    {
+        "model": "gpt-4-vision-preview",
+        "api_key": "your OpenAI Key goes here",
+        "base_url": "https://api.openai.com/v1",
+        "api_version": "2023-06-01-preview"
+    },
+    {
+        "model": "dalle",
+        "api_key": "your OpenAI Key goes here",
+        "base_url": "https://api.openai.com/v1",
+        "api_version": "2023-06-01-preview"
+    },
+    {
+        "model": "gemini-pro",
+        "api_key": "your Google's GenAI Key goes here",
+        "base_url": "https://genai.google.com/v1",
+        "api_type": "google"
+    },
+    {
+        "model": "gemini-pro-vision",
+        "api_key": "your Google's GenAI Key goes here",
+        "base_url": "https://genai.google.com/v1",
+        "api_type": "google"
+    }
+]

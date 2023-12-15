@@ -1,0 +1,14 @@
+beautifulsoup4~=4.12
+typing-extensions
+pydantic
+gradio
+azure-common
+azure-core
+azure-search-documents
+pyautogen[gemini]~=0.2.0b4
+semantic-kernel
+msrest
+msrestazure
+bs4
+python-dotenv
+chromadb
