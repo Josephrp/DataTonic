@@ -9,7 +9,7 @@
 **methodoly :** we made "simple applications" using trulens wrappers in jupyter notebooks to evaluate prompts and combinations of prompts for gemini, openai, jina embeddings, mistral embeddings **(and more?)**
 
 **default prompts :** these are our baselines: 
-- [autogen](https://github.com/Tonic-AI/DataTonic/blob/main/evaluation/autogendefaultprompts.md)
+- [autogen](https://github.com/Tonic-AI/DataTonic/blob/main/evaluation/baselineprompts/autogendefaultprompts.md)
 - semantic-kernel
 - taskweaver
 - datatonic
