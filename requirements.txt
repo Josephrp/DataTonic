@@ -12,3 +12,6 @@ msrestazure
 bs4
 python-dotenv
 chromadb
+aiohttp
+llama_hub
+llama_index
