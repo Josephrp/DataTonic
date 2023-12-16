@@ -27,5 +27,5 @@ Do not wait for accounting, legal or business intelligence reporting with uncert
 
 * git clone
 * edit OAI_CONFIG
-* edit GoogleConnector
+* edit src/semantic_kernel/GoogleConnector
 * python run app.py
