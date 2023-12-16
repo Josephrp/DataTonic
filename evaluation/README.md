@@ -6,13 +6,18 @@
 
 **solution :** We're working with trulens to evaluate default prompts and optimize performance.
 
-**methodoly :** we made "simple applications" using trulens wrappers in jupyter notebooks to evaluate prompts and combinations of prompts for gemini, openai, jina embeddings, mistral embeddings **(and more?)**
+**methodology :** to arrive at our optimal solution:
+- we made "simple applications" using trulens wrappers in jupyter notebooks
+- We evaluated prompts and combinations of prompts for gemini and openai for our libraries Autogen, TaskWeaver, Semantic-Kernel
+- We evaluated RAG retrieval performance for various embedding models.
+- Analyzed the results for best performance and quality
+then applied them to our enterprise application DataTonic.
 
 **default prompts :** these are our baselines: 
 - [autogen](https://github.com/Tonic-AI/DataTonic/blob/main/evaluation/baselineprompts/autogendefaultprompts.md)
-- semantic-kernel
-- taskweaver
-- datatonic
+- [semantic-kernel](https://github.com/Tonic-AI/DataTonic/blob/main/evaluation/baselineprompts/semantickerneldefaultprompts.md)
+- [taskweaver](https://github.com/Tonic-AI/DataTonic/blob/main/evaluation/baselineprompts/taskweaverdefaultprompts.md)
+- [datatonic](https://github.com/Tonic-AI/DataTonic/blob/main/evaluation/baselineprompts/datatonicdefaultprompts.md)
 
 **proposed prompts :** these are our proposals
 
