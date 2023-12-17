@@ -1,5 +1,5 @@
 aiohttp==3.9.1
-aiohttp==3.8.5
+aiohttp==3.9.0
 beautifulsoup4==4.12.2
 chromadb==0.4.20
 llama_hub==0.0.59
