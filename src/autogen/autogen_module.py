@@ -81,7 +81,7 @@ class AutoGenModule:
         self.taskweaver = TaskweaverModule()
         self.agent_builder = AgentBuilder()
         self.vector_index = index  # Integrated VectorStoreIndex
-
+    
     def create_builder(self) -> AgentBuilder:
         """
         Create an instance of AgentBuilder.
@@ -116,9 +116,6 @@ class AutoGenModule:
         )
         return image_agent, user_proxy
     
-    def auto_generate(self, response):
-        return f"Generated Content based on: {response}"
-
     def execute_code(self, code_snippet):
         """
         Execute a Python code snippet and return the result.
