@@ -13,7 +13,6 @@ class TaskWeaverSQLIntegration:
         self.initialize_database()
 
     def initialize_database(self):
-        # SQL commands to set up tables
         self.db_connection.execute('''CREATE TABLE IF NOT EXISTS results (...);''')
 
     def process_and_store_data(self, task_data):
