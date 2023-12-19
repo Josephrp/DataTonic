@@ -13,20 +13,16 @@ class TaskWeaverSQLIntegration:
         self.initialize_database()
 
     def initialize_database(self):
-        # SQL commands to set up tables
         self.db_connection.execute('''CREATE TABLE IF NOT EXISTS results (...);''')
 
     def process_and_store_data(self, task_data):
-        # Processing data
         results = self.taskweaver_processor.process_data_task(task_data)
 
-        # Storing results in the database
         for result in results:
             self.db_connection.execute('INSERT INTO results VALUES (...)', (result,))
         self.db_connection.commit()
 
     def retrieve_data_for_planner(self, query):
-        # SQL query to retrieve specific data for Semantic Kernel planner
         cursor = self.db_connection.execute(query)
         return cursor.fetchall()
 
