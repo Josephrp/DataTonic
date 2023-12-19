@@ -1,5 +1,5 @@
 import os
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from pathlib import Path
 from semantic_kernel.semantic_kernel_module import SemanticKernelModule
 from taskweaver.taskweaver_module import TaskweaverModule
@@ -14,6 +14,56 @@ from llama_index.storage.storage_context import StorageContext
 from llama_index.embeddings import HuggingFaceEmbedding
 from llama_index.node_parser import SimpleNodeParser
 import chromadb
+import json
+import memgpt
+import memgpt.autogen.memgpt_agent
+from memgpt.autogen.memgpt_agent import create_memgpt_autogen_agent_from_config
+class MemGPTMemoryManager:
+    def __init__(self, storage_path: str):
+        self.storage_path = Path(storage_path)
+        self.storage_path.mkdir(parents=True, exist_ok=True)
+
+    def save_memory(self, agent_name: str, memory_state: Dict):
+        """Saves the memory state of a specific agent."""
+        try:
+            with open(self.storage_path / f"{agent_name}_memory.json", "w") as file:
+                json.dump(memory_state, file)
+        except Exception as e:
+            print(f"Error saving memory state for agent {agent_name}: {e}")
+
+    def load_memory(self, agent_name: str) -> Optional[Dict]:
+        """Loads the memory state of a specific agent."""
+        memory_file = self.storage_path / f"{agent_name}_memory.json"
+        if memory_file.exists():
+            try:
+                with open(memory_file, "r") as file:
+                    return json.load(file)
+            except Exception as e:
+                print(f"Error loading memory state for agent {agent_name}: {e}")
+        return None
+
+    def clear_memory(self, agent_name: str):
+        """Clears the memory state of a specific agent."""
+        memory_file = self.storage_path / f"{agent_name}_memory.json"
+        if memory_file.exists():
+            try:
+                memory_file.unlink()
+            except Exception as e:
+                print(f"Error clearing memory state for agent {agent_name}: {e}")
+class MemGPTAgent(ConversableAgent):
+    def __init__(self, name: str, agent: _Agent, memory_manager: MemGPTMemoryManager, skip_verify=False):
+        super().__init__(name)
+        self.agent = agent
+        self.memory_manager = memory_manager
+
+    def save_memory_state(self):
+        memory_state = self.agent.extract_memory_state()  # Assuming this method exists in the _Agent class
+        self.memory_manager.save_memory(self.name, memory_state)
+
+    def load_memory_state(self):
+        memory_state = self.memory_manager.load_memory(self.name)
+        if memory_state is not None:
+            self.agent.set_memory_state(memory_state)  # Assuming this method exists in the _Agent class
 
 # Set up the environment variables
 os.environ['OPENAI_API_KEY'] = 'Your key here'  # Replace with your actual API key
@@ -72,7 +122,7 @@ class AutoGenModule:
         f"Reply TERMINATE when the task is done."
     )
 
-    def __init__(self):
+    def __init__(self, memgpt_memory_path: str, openai_api_key: str): # needs to be more clear
         self.kernel = kernel
         self.llm_config = llm_config or {}
         self.builder_config_path = builder_config_path
@@ -81,8 +131,19 @@ class AutoGenModule:
         self.taskweaver = TaskweaverModule()
         self.agent_builder = AgentBuilder()
         self.vector_index = index  # Integrated VectorStoreIndex
-    
-    def create_builder(self) -> AgentBuilder:
+        self.memgpt_memory_manager = MemGPTMemoryManager(memgpt_memory_path)
+        # Set the environment variable for OpenAI API key
+        os.environ['OPENAI_API_KEY'] = openai_api_key
+        # MemGPT Configuration
+        self.memgpt_config = {
+            "model": "gpt-4",
+            "preset": "memgpt_chat",
+            "model_endpoint_type": "openai",
+            "model_endpoint": "https://api.openai.com/v1",
+            "context_window": 8192,
+        }
+
+     def create_builder(self) -> AgentBuilder:
         """
         Create an instance of AgentBuilder.
         """
@@ -132,7 +193,28 @@ class AutoGenModule:
             return execution_result
         except Exception as e:
             return f"Error executing code: {str(e)}"
-    
+ 
+    def create_memgpt_agent(self, agent_name: str):
+        """
+        Create and initialize a MemGPT agent.
+        """
+        memgpt_llm_config = {"config_list": [self.memgpt_config], "seed": 42}
+        interface_kwargs = {
+            "debug": False,
+            "show_inner_thoughts": True,
+            "show_function_outputs": False,
+        }
+        memgpt_agent = create_memgpt_autogen_agent_from_config(
+            agent_name,
+            llm_config=memgpt_llm_config,
+            system_message=self.ASSISTANT_PERSONA,
+            interface_kwargs=interface_kwargs,
+            default_auto_reply="...",
+            skip_verify=True,
+        )
+        memgpt_agent.memory_manager = self.memgpt_memory_manager
+        return memgpt_agent
+   
     def create_assistant_agent(self, name: str) -> AssistantAgent:
         # Create an AssistantAgent with the given name and persona
         return RetrieveAssistantAgent(name=name, system_message=self.ASSISTANT_PERSONA, llm_config=self.llm_config)
