@@ -1,0 +1,29 @@
+name: sql_database_deployment
+enabled: true
+required: false
+description: >-
+  Deploy a SQL database based on a schema definition. 
+  This plugin sets up the initial structure of the database, including the creation of tables 
+  as per the provided schema definitions. It is used at the beginning of the session or when 
+  the system requires initialization or reset of the database.
+
+parameters:
+  - name: entities_definition
+    type: dict
+    required: true
+    description: >-
+      This is a dictionary where keys are the names of the tables to be created and 
+      values are strings defining the schema of these tables in SQL syntax.
+
+returns:
+  - name: success
+    type: bool
+    description: This is a boolean indicating whether the database deployment was successful.
+
+configurations:
+  api_type: internal
+  api_base:
+  api_key:
+  api_version:
+  deployment_name:
+  sqlite_db_path: sqlite:///path/to/your/database/entities.db
