@@ -17,22 +17,24 @@ class TaskWeaverSQLIntegration:
         self.db_connection.execute('''CREATE TABLE IF NOT EXISTS results (...);''')
 
     def process_and_store_data(self, task_data):
+        # Assuming task_data is a dictionary with 'section' and 'details'
+        section = task_data['section']
+        details = task_data['details']
+        
         # Processing data
-        results = self.taskweaver_processor.process_data_task(task_data)
-
+        results = self.taskweaver_processor.process_data_task(details)
+        
         # Storing results in the database
-        for result in results:
-            self.db_connection.execute('INSERT INTO results VALUES (...)', (result,))
+        self.db_connection.execute('INSERT INTO results (section, details, processed_content) VALUES (?, ?, ?)', (section, details, results))
         self.db_connection.commit()
 
-    def retrieve_data_for_planner(self, query):
-        # SQL query to retrieve specific data for Semantic Kernel planner
-        cursor = self.db_connection.execute(query)
-        return cursor.fetchall()
+    def retrieve_data_for_planner(self, section):
+        cursor = self.db_connection.execute('SELECT processed_content FROM results WHERE section = ?', (section,))
+        return cursor.fetchone()[0]  # Assuming each section only has one entry
 
     def close(self):
         self.db_connection.close()
-
+        
 
 async def create_sow_document():
     # Initialize SemanticKernelDataModule
@@ -55,15 +57,15 @@ async def create_sow_document():
     return completed_plan
 
 class SoWPlanner:
-    def __init__(self, taskweaver_processor):
-        self.taskweaver = taskweaver_processor
+    def __init__(self, taskweaver_integration):
+        self.taskweaver_integration = taskweaver_integration
 
-    async def generate_sow(self, project_details):
-        sow_sections = {}
-        for section, details in project_details.items():
-            processed_section = await self.taskweaver.process_data_task({"section": section, "details": details})
-            sow_sections[section] = processed_section
-        return sow_sections
+    async def generate_sow(self, sections):
+        sow_document = ""
+        for section in sections:
+            processed_content = self.taskweaver_integration.retrieve_data_for_planner(section)
+            sow_document += f"({section}) - {processed_content}\n"
+        return sow_document
 
     # async def generate_sow(self, project_details):
     #     sow_sections = {
@@ -94,6 +96,7 @@ class SemanticKernelDataModule:
         self.taskweaver_processor = TaskWeaverDataProcessor()
         self.google_connector = GoogleConnector(google_api_key, google_search_engine_id)
         self.web_pages_plugin = WebPagesPlugin()
+        self.taskweaver_integration = TaskWeaverSQLIntegration()
         self.semantic_kernel.register_plugin('taskweaver', self.taskweaver_processor)
         self.semantic_kernel.register_plugin('web_pages', self.web_pages_plugin)
 
@@ -122,10 +125,15 @@ class SemanticKernelDataModule:
         return page_contents
     
     async def create_and_fetch_sow(self, project_details):
-        sow_planner = SoWPlanner(self.taskweaver_processor)
-        sow_sections = await sow_planner.generate_sow(project_details)
-        completed_plan = "\n".join([f"({key}) - {value}" for key, value in sow_sections.items()])
-        return completed_plan
+        sow_planner = SoWPlanner(self.taskweaver_integration)
+
+        # Processing and storing each section in the database
+        for section, details in project_details.items():
+            self.taskweaver_integration.process_and_store_data({'section': section, 'details': details})
+
+        # Generating the SoW document
+        sow_document = await sow_planner.generate_sow(project_details.keys())
+        return sow_document
 class SemanticKernelPlannerModule:
     def __init__(self):
         self.taskweaver_integration = TaskWeaverSQLIntegration()
@@ -140,7 +148,42 @@ class SemanticKernelPlannerModule:
 
     def close(self):
         self.taskweaver_integration.close()
-        
+
+async def create_sow_document():
+    # Initialize SemanticKernelDataModule
+    semantic_kernel_data_module = SemanticKernelDataModule('<google_api_key>', '<google_search_engine_id>')
+
+    # Define comprehensive project details
+    project_details = {
+        "introduction": {
+            "overview": "A concise overview of the client's organization within the context of the engagement.",
+            "purpose": "Explanation of the SoW's intent and its role as a guiding agreement."
+        },
+        "project_objectives_scope": {
+            "objectives": "Specific goals that the project aims to achieve.",
+            "scope_of_work": "Detailed description of the services and tasks to be performed, including inclusions and exclusions."
+        },
+        "project_approach_methodology": {
+            "methodology": "Outline of the methodologies, frameworks, or strategies to be used.",
+            "phases_of_work": "Breakdown of the project into phases or milestones with specific tasks and objectives."
+        },
+        "deliverables": {
+            "list_of_deliverables": "Comprehensive list of outputs, reports, presentations, tools, or models to be provided.",
+            "quality_standards": "Standards or criteria for assessing the deliverables."
+        },
+        "timeline": {
+            "project_timeline": "Detailed timeline including start and end dates, phase durations, and key milestones.",
+            "review_points": "Scheduled points for reviewing progress and making necessary adjustments."
+        }
+        # ... [Other sections like roles_responsibilities, pricing_payment, etc.]
+    }
+
+    # Fetch the completed SoW plan using SemanticKernelDataModule
+    completed_plan = await semantic_kernel_data_module.create_and_fetch_sow(project_details)
+    return completed_plan
+
+# Assuming the rest of the SemanticKernelDataModule and related classes are defined as previously described
+
 if __name__ == "__main__":
     completed_sow_plan = asyncio.run(create_sow_document())
     print(completed_sow_plan)
