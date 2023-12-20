@@ -1,5 +1,6 @@
 import json
 import asyncio
+from dotenv import load_dotenv
 from datetime import datetime
 from autogen.autogen_module import AutoGenModule
 from semantic_kernel.semantic_kernel_module import SemanticKernelModule
@@ -9,6 +10,9 @@ from autogen.agentchat.contrib.retrieve_assistant_agent import RetrieveAssistant
 from autogen.agentchat.contrib.retrieve_user_proxy_agent import RetrieveUserProxyAgent
 
 async def main():
+    # Load environment variables from .env file
+    load_dotenv()
+
     # Load the configuration list for different LLMs
     with open('OAI_CONFIG_LIST.json', 'r') as file:
         OAI_CONFIG_LIST = json.load(file)
