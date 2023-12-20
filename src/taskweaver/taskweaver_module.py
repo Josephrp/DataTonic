@@ -1,7 +1,7 @@
 from taskweaver import TaskWeaver
 from planner.planner import Planner
 from code_generator.code_generator import CodeGenerator
-from code_interpretor.code_interpretor import CodeInterpreter
+from code_interpretor.code_interpreter import CodeInterpreter
 from taskweaver.logging import TelemetryLogger
 from taskweaver.memory import Memory
 

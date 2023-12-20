@@ -2,7 +2,7 @@ import os
 from typing import List, Dict, Any, Optional
 from pathlib import Path
 from semantic_kernel.semantic_kernel_module import SemanticKernelModule
-from taskweaver.taskweaver_module import TaskweaverModule
+from taskweaver.taskweaver_module import TaskWeaverDataProcessor
 from agent_builder import AgentBuilder
 from autogen.agentchat.contrib.retrieve_assistant_agent import RetrieveAssistantAgent
 from autogen.agentchat.contrib.retrieve_user_proxy_agent import RetrieveUserProxyAgent
@@ -211,23 +211,6 @@ class AutoGenModule:
 
         # Combine and return the processed content
         return f"{section_name}: Initial: {initial_processing}, Enhanced: {enhanced_content}\n"
-
-    # def execute_plan(self, plan: Dict):
-    #     """
-    #     Execute specific tasks based on the structured plan.
-    #     """
-    #     response = ""
-
-    #     # Iterate over each section of the plan and process it
-    #     for section, content in plan.items():
-    #         if isinstance(content, Dict):
-    #             # Handling complex content with multiple sub-sections
-    #             response += self.handle_complex_content(section, content)
-    #         else:
-    #             # Handling simple content
-    #             response += self.handle_section(section, content)
-
-    #     return response
 
     def create_builder(self) -> AgentBuilder:
         """
