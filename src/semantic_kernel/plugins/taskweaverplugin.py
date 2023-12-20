@@ -1,6 +1,6 @@
 import sqlite3
 import taskweaver
-from src.TaskWeaver.taskweaver_module import TaskWeaverDataProcessor
+from src.tonicweaver.taskweaver_module import TaskWeaverDataProcessor
 from taskweaver.app.app import TaskWeaverApp
 
 # Setup TaskWeaver
@@ -14,16 +14,6 @@ async def send_to_taskweaver(user_query):
         user_query,
         event_handler=lambda _type, _msg: print(f"{_type}:\n{_msg}"))
     return response_round.to_dict()
-
-# Main function
-# async def main():
-#     # Existing setup (e.g., SemanticKernelDataModule initialization)
-#     semantic_kernel_data_module = SemanticKernelDataModule('<google_api_key>', '<google_search_engine_id>')
-
-#     # Example user query
-#     user_query = "hello, what can you do?"
-#     response = await send_to_taskweaver(user_query)
-#     print(response)
 
 if __name__ == "__main__":
     asyncio.run(main())

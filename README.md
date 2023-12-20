@@ -48,6 +48,8 @@ this section describes how it works from a technical perspective:
 
 Please follow the instructions in this readme exactly. 
 
+### Follow Tonic-AI
+
 ### Star & Fork this repository
 
 ![image](https://github.com/Tonic-AI/DataTonic/assets/18212928/54e2f12a-0379-49d5-866c-985ea36f0e2b)
@@ -76,23 +78,79 @@ git clone https://github.com/DataTonic/DataTonic.git
 
 ## Step 2: Configure DataTonic
 
+### Add Your Files to DataTonic 
+
+1. add relevant files one by one with no folder to the folder called 'src/autogen/add_your_files_here' 
+    - supported file types : ".pdf" ,  ".html" ,  ".eml" & ".xlsx":
+2. 
+
+### Configuration
 1. you'll need the keys you made above for the following.
 2. use a text editor , and IDE  or command line to edit the following documents.
 3. Edit then save the files 
 
-### OAI_CONFIG_LIST
+#### OAI_CONFIG_LIST
 
-### Google API
+edit 'OAI_CONFIG_LIST'
+
+```json
+        "api_key": "your OpenAI Key goes here",
+```
+and 
+```json
+        "api_key": "your Google's GenAI Key goes here",
+```
+
+#### Configure OpenAI Key(s)
+    1. modify Line 135 in autogen_module.py
+        ```python
+        os.environ['OPENAI_API_KEY'] = 'Your key here'
+        ```
+    2. modify .env.example
+        ```os
+        OPENAI_API_KEY = "your_key_here"
+        ```
+        save as '.env' - this should create a new file.
+        **or** 
+        rename to '.env' - this will rename the existing file.
+
+    3. modify src\tonicweaver\taskweaver_config.json
+        ```json
+        {
+            "llm.api_base": "https://api.openai.com/v1",
+            "llm.api_key": "",
+            "llm.model": "gpt-4-1106-preview"
+        }
+        ```
+
+    4. 
+#### Google API
+
+edit ./src/semantic_kernel/semantic_kernel_module.py
+```python
+line 64:    semantic_kernel_data_module = SemanticKernelDataModule('<google_api_key>', '<google_search_engine_id>')
+```
+and 
+```python
+line 158:    semantic_kernel_data_module = SemanticKernelDataModule('<google_api_key>', '<google_search_engine_id>')
+```
+with your google API key and Search Engine ID , made above.
+
 src/semantic_kernel/googleconnector.py
-### TaskWeaver/Config
 
-### LiteSql
-
-### Chroma
-edit autogen_module.py "path to your database"
 
 ## Step 3: Install DataTonic
 
+### Install Taskweaver
+
+from the project directory :
+```bash
+cd ./src/tonicweaver/TaskWeaver
+# install the requirements
+pip install -r requirements.txt
+```
+### Install DataTonic
+from the project directory :
 ```bash
 pip install -r requirements.txt
 ```
