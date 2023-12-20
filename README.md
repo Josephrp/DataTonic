@@ -15,6 +15,12 @@ DataTonic produces fixed business intelligence assets based on autonomous multim
 - Research Reports
 - Business Automation Applications
 
+Based on those it can produce :
+- Strategies
+- Applications
+- Analyses
+- rich business intelligence
+
 ## Business Case
 
 DataTonic provides junior executives with an extremely effective solution for basic and time-consuming data processing, document creation or business intelligence tasks.
@@ -23,78 +29,76 @@ DataTonic provides junior executives with an extremely effective solution for ba
 
 Do not wait for accounting, legal or business intelligence reporting with uncertain quality and long review cycles. DataTonic accelerates the slowest part of analysis : data processing and project planning execution. 
 
-### How To Use
+# How it works :
 
-# Setup Instructions
+this section explains how Data Tonic works to produce what you need, consistently.
+
+- your request is first processed according to a statement of work
+- additional data is retrieved and stored
+- multiple agents are created based on your specific use case
+
+# Technology : 
+
+this section describes how it works from a technical perspective:
+
+- Autogen uses a semantic-kernel function calling agent to access the internet using the google api semantic-kernel then processes the new information and stores it inside a SQL database orchestrated by Taskweaver.
+- Gemini is used in various configurations both for text using the autogen connector and for multimodal/image information processing. 
+
+# How To Use
+
+Please follow the instructions in this readme exactly. 
+
+### Star & Fork this repository
+
+![image](https://github.com/Tonic-AI/DataTonic/assets/18212928/54e2f12a-0379-49d5-866c-985ea36f0e2b)
+1. Step 1 : Star this repository
+2. Step 2 : Fork this repository
+
+### Set Up Gemini
+
+### Get Google API key
+
+### Get Open AI Key(s)
+
+### Set Up Azure
+
+## Setup Instructions
 
 This section provides instructions on setting up the project.
 
-## Step 1: Clone the repository
+### Step 1 : Clone the repository
 
-/**
- Clone the Git repository.
- */
+clone this repository using the command line :
+
+```bash
 git clone https://github.com/DataTonic/DataTonic.git
-
-## Step 2: Set the environment variables
-
-This section of the code contains the configuration settings for the OAI (OpenAI) and Gemini APIs. These settings include the API keys, base URLs, and API versions for different models.
-
-## OAI_CONFIG_LIST
-
-The `OAI_CONFIG_LIST` variable is an environment variable that stores a list of dictionaries. Each dictionary represents a configuration for a specific model. The dictionaries contain the following keys:
-
-- `model`: The name of the model.
-- `api_key`: The API key for the model.
-- `base_url`: The base URL for the API.
-- `api_version`: The version of the API.
-
-The code snippet provides example configurations for different models, including 'gpt-3.5-turbo', 'dalle', 'gpt-4', 'gpt-4-turbo', 'gpt-4-vision', 'gemini-pro', and 'gemini-pro-vision'. You need to replace the placeholder values with your actual API keys.
-
-Note: The Gemini API keys are specific to Google's GenAI service.
-
-Please ensure that you update the API keys and other configuration details according to your requirements before using this code.
-
-```bash
-export OAI_CONFIG_LIST="[
-    {'model': 'gpt-3.5-turbo-preview', 'api_key': '<your OpenAI Key for gpt-3.5-turbo>', 'base_url': 'https://api.openai.com/v1', 'api_version': '2023-06-01-preview'},
-
-    {'model': 'gpt-4-1106-preview', 'api_key': '<your OpenAI Key for gpt-4-1106>', 'base_url': 'https://api.openai.com/v1', 'api_version': '2023-06-01-preview'},
-
-    {'model': 'dall-e-3', 'api_key': '<your OpenAI Key goes here>', 'base_url': 'https://api.openai.com/v1', 'api_version': '2023-06-01-preview'},
-
-    {'model': 'gpt-4-vision', 'api_key': '<your OpenAI Key goes here>', 'base_url': 'https://api.openai.com/v1', 'api_version': '2023-06-01-preview'}
-]"
 ```
 
-## Gemini_CONFIG_LIST
+## Step 2: Configure DataTonic
 
-```bash
-export OAI_CONFIG_LIST="[
-    {'model': 'gemini-pro', 'api_key': '<your Google's GenAI Key goes here>', 'base_url': 'https://genai.google.com/v1', 'api_type': 'google'},
-    {'model': 'gemini-pro-vision', 'api_key': '<your Google's GenAI Key goes here>', 'base_url': 'https://genai.google.com/v1', 'api_type': 'google'}
-]"
-```
+1. you'll need the keys you made above for the following.
+2. use a text editor , and IDE  or command line to edit the following documents.
+3. Edit then save the files 
 
- 
+### OAI_CONFIG_LIST
 
-### Step 3: Install the required packages
+### Google API
+src/semantic_kernel/googleconnector.py
+### TaskWeaver/Config
+
+### LiteSql
+
+### Chroma
+edit autogen_module.py "path to your database"
+
+## Step 3: Install DataTonic
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 4: Edit src/semantic_kernel/googleconnector.py
-
-* edit src/semantic_kernel/googleconnector.py
-
-## Step 5: Edit autogen_module.py
-
-* edit autogen_module.py "path to your database"
-
-## Step 6: Run the application
+## Step 4: Run the application
 
 ```bash
 python run app.py
 ```
-

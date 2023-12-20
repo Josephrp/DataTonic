@@ -18,6 +18,21 @@ import json
 import memgpt
 import memgpt.autogen.memgpt_agent
 from memgpt.autogen.memgpt_agent import create_memgpt_autogen_agent_from_config
+
+async def create_sow_document(semantic_kernel_data_module):
+    # Fetching plan from Semantic Kernel
+    project_details = {
+        # Project details as defined earlier
+    }
+    plan = await semantic_kernel_data_module.create_and_fetch_sow(project_details)
+
+    # Initializing AutoGenModule
+    autogen_module = AutoGenModule(memgpt_memory_path="<path>", openai_api_key=os.getenv('OPENAI_API_KEY'))
+
+    # Executing the plan using AutoGenModule
+    executed_plan = autogen_module.execute_plan(plan)
+    return executed_plan
+
 class MemGPTMemoryManager:
     def __init__(self, storage_path: str):
         self.storage_path = Path(storage_path)
@@ -142,6 +157,16 @@ class AutoGenModule:
             "model_endpoint": "https://api.openai.com/v1",
             "context_window": 8192,
         }
+    def process_sow_plan(self, sow_plan: str):
+        """
+        Process the Statement of Work (SoW) plan and execute tasks based on its contents.
+        """
+        # Process SoW plan with Semantic Kernel
+        plan = self.semantic_kernel.process_input(sow_plan)
+
+        # Execute tasks based on the plan
+        response = self.execute_plan(plan)
+        return response
 
      def create_builder(self) -> AgentBuilder:
         """

@@ -6,7 +6,7 @@ from semantic_kernel.plugins.googleconnector import GoogleConnector
 from semantic_kernel.plugins.sk_web_pages_plugin import WebPagesPlugin
 import asyncio
 import sqlite3 
-
+        
 async def create_sow_document():
     # Initialize SemanticKernelDataModule
     semantic_kernel_data_module = SemanticKernelDataModule('<google_api_key>', '<google_search_engine_id>')
@@ -98,6 +98,7 @@ class SemanticKernelDataModule:
     #     sow_document = await sow_planner.generate_sow(project_details.keys())
     #     return sow_document
 
+
     async def process_data_with_taskweaver(self, task_description):
         taskweaver_processor = self.semantic_kernel.get_plugin('taskweaver')
         results = taskweaver_processor.process_data_task(task_description)
@@ -122,6 +123,18 @@ class SemanticKernelDataModule:
             page_contents.append(processed_content)
         return page_contents
     
+
+    async def create_and_fetch_sow(self, project_details):
+        sow_planner = SoWPlanner(self.taskweaver_integration)
+
+        # Processing and storing each section in the database
+        for section, details in project_details.items():
+            self.taskweaver_integration.process_and_store_data({'section': section, 'details': details})
+
+        # Generating the SoW document
+        sow_document = await sow_planner.generate_sow(project_details.keys())
+        return sow_document
+
 class SemanticKernelPlannerModule:
     def __init__(self):
         self.taskweaver_integration = TaskWeaverSQLIntegration()
