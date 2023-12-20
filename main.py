@@ -10,11 +10,11 @@ async def main():
         OAI_CONFIG_LIST = json.load(file)
     semantic_kernel = SemanticKernelDataModule()
     taskweaver = TaskWeaverDataProcessor()
-    autogen_module = AutoGenModule(memgpt_memory_path="<path_to_memgpt_memory>", openai_api_key=os.getenv('OPENAI_API_KEY'))
+    autogen_module = AutoGenModule(memgpt_memory_path="./src/autogen/MemGPT", openai_api_key=os.getenv('OPENAI_API_KEY'))
     autogen_module.semantic_kernel = semantic_kernel
     autogen_module.taskweaver = taskweaver
 
-    user_input = input("Please provide a description for the task you'd like to perform: ")
+    user_input = input("Please provide a description for the task you'd like to perform, identify your objectives, a plan on how to achieve it according to you, and a list of the final results you expect: ")
 
     sow_document = await semantic_kernel.create_and_fetch_sow(user_input)
 

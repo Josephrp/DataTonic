@@ -1,4 +1,5 @@
 from semantic_kernel import SemanticKernel, KernelBuilder
+import taskweaver
 from taskweaver.app.app import TaskWeaverApp
 from semantic_kernel.plugins.taskweaverplugin import TaskWeaverSQLIntegration
 from semantic_kernel.plugins.googleconnector import GoogleConnector
