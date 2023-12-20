@@ -155,36 +155,24 @@ class AutoGenModule:
             "model_endpoint": "https://api.openai.com/v1",
             "context_window": 8192,
         }
-    # async def process_user_input(self, user_input: str):
-    #     """
-    #     Process the user input using Semantic Kernel and execute the plan with AutoGen.
-    #     """
-    #     # Process user input with Semantic Kernel to generate a plan
-    #     plan = await self.semantic_kernel.semantic_kernel_data_module(user_input)
+    async def process_semantic_kernel_results(self, results: Dict):
+        """
+        Process results from Semantic Kernel and execute tasks based on its contents.
+        """
+        response = ""
 
-    #     # Execute the plan using AutoGen framework
-    #     executed_plan = self.execute_plan(plan)
-    #     return executed_plan
+        # Process each specified section
+        for section in ["Overview", "ProjectGoalsAndScope", "MethodologyAndWorkflow", "ExpectedDeliverables", "ResourceAllocationAndRoles"]:
+            if section in results:
+                content = results[section]
+                if isinstance(content, Dict):
+                    # Handling complex content within each section
+                    response += self.handle_complex_content(section, content)
+                else:
+                    # Handling simple content
+                    response += self.handle_section(section, content)
 
-
-    # def execute_plan(self, plan: Dict):
-    #     """
-    #     Execute specific tasks based on the structured plan.
-    #     Each section of the plan will be handled by a dedicated method.
-    #     """
-    #     response = ""
-
-    #     # Process each section of the plan
-    #     response += self.handle_overview(plan.get("Overview", {}))
-    #     response += self.handle_project_goals_and_scope(plan.get("ProjectGoalsAndScope", {}))
-    #     response += self.handle_methodology_and_workflow(plan.get("MethodologyAndWorkflow", {}))
-    #     response += self.handle_expected_deliverables(plan.get("ExpectedDeliverables", {}))
-    #     response += self.handle_resource_allocation_and_roles(plan.get("ResourceAllocationAndRoles", {}))
-    #     response += self.handle_budget_and_costing(plan.get("BudgetAndCosting", {}))
-    #     response += self.handle_risk_management_plan(plan.get("RiskManagementPlan", {}))
-    #     response += self.handle_legal_and_compliance(plan.get("LegalAndCompliance", {}))
-
-    #     return response
+        return response
 
     def handle_complex_content(self, section_name: str, content: Dict) -> str:
         """
@@ -213,25 +201,35 @@ class AutoGenModule:
             complex_content_response += f"{key}: {combined_response}\n"
 
         return complex_content_response
-
-    def execute_plan(self, plan: Dict):
+    def handle_section(self, section_name: str, content: str) -> str:
         """
-        Execute specific tasks based on the structured plan.
+        Handle simpler content for sections with straightforward information.
         """
-        response = ""
+        # Process the content using existing methods
+        initial_processing = self.generate_response(content)
+        enhanced_content = self.auto_generate(initial_processing)
 
-        # Iterate over each section of the plan and process it
-        for section, content in plan.items():
-            if isinstance(content, Dict):
-                # Handling complex content with multiple sub-sections
-                response += self.handle_complex_content(section, content)
-            else:
-                # Handling simple content
-                response += self.handle_section(section, content)
+        # Combine and return the processed content
+        return f"{section_name}: Initial: {initial_processing}, Enhanced: {enhanced_content}\n"
 
-        return response
+    # def execute_plan(self, plan: Dict):
+    #     """
+    #     Execute specific tasks based on the structured plan.
+    #     """
+    #     response = ""
 
-     def create_builder(self) -> AgentBuilder:
+    #     # Iterate over each section of the plan and process it
+    #     for section, content in plan.items():
+    #         if isinstance(content, Dict):
+    #             # Handling complex content with multiple sub-sections
+    #             response += self.handle_complex_content(section, content)
+    #         else:
+    #             # Handling simple content
+    #             response += self.handle_section(section, content)
+
+    #     return response
+
+    def create_builder(self) -> AgentBuilder:
         """
         Create an instance of AgentBuilder.
         """
