@@ -4,9 +4,15 @@ from code_generator.code_generator import CodeGenerator
 from code_executor.code_executor import CodeExecutor
 from taskweaver.logging import TelemetryLogger
 from taskweaver.memory import Memory
+import os
 
 class TaskWeaverDataProcessor:
-    def __init__(self, db_config, logger_config):
+    def __init__(self, db_config_path, logger_config):
+        # Load API key from environment variable
+        with open(db_config_path, 'r') as config_file:
+            db_config = json.load(config_file)
+        db_config['llm.api_key'] = os.getenv('OPENAI_API_KEY')
+
         self.taskweaver = TaskWeaver(db_config)
         self.planner = Planner()
         self.code_generator = CodeGenerator(self.taskweaver)
