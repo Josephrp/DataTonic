@@ -3,6 +3,7 @@ from logging import Logger
 from typing import List, Optional
 
 import aiohttp
+from dotenv import load_dotenv
 
 from semantic_kernel.connectors.search_engine.connector import ConnectorBase
 from semantic_kernel.utils.null_logger import NullLogger
@@ -20,6 +21,7 @@ class GoogleConnector(ConnectorBase):
     def __init__(
         self, api_key: str, search_engine_id: str, logger: Optional[Logger] = None
     ) -> None:
+        load_dotenv()
         self._api_key = api_key
         self._search_engine_id = search_engine_id
         self._logger = logger if logger else NullLogger()
