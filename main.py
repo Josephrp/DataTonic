@@ -1,10 +1,10 @@
 import json
 import asyncio
 from datetime import datetime
-from autogen.autogen_module import AutoGenModule
-from semantic_kernel.semantic_kernel_module import SemanticKernelModule
-from taskweaver.taskweaver_module import TaskweaverModule
-from agent_builder import AgentBuilder
+from src.semantic_kernel.semantic_kernel_module import SemanticKernelDataModule
+from src.taskweaver.taskweaver_module import TaskWeaverDataProcessor
+from src.autogen.autogen_module import AutoGenModule
+from src.autogen.agent_builder import AgentBuilder
 from autogen.agentchat.contrib.retrieve_assistant_agent import RetrieveAssistantAgent
 from autogen.agentchat.contrib.retrieve_user_proxy_agent import RetrieveUserProxyAgent
 
@@ -18,8 +18,8 @@ async def main():
     config_list_gemini_vision = [config for config in OAI_CONFIG_LIST if 'gemini-pro-vision' in config["model"]]
 
     # Initialize the AutoGenModule with the Semantic Kernel and Taskweaver modules
-    semantic_kernel = SemanticKernelModule()
-    taskweaver = TaskweaverModule()
+    semantic_kernel = SemanticKernelDataModule()
+    taskweaver = TaskWeaverDataProcessor()
     agent_builder = AgentBuilder()
 
     autogen_module = AutoGenModule()
