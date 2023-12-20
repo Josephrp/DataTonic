@@ -145,6 +145,8 @@ src/semantic_kernel/googleconnector.py
 
 from the project directory :
 ```bash
+cd ./src/tonicweaver
+git clone https://github.com/microsoft/TaskWeaver.git
 cd ./src/tonicweaver/TaskWeaver
 # install the requirements
 pip install -r requirements.txt
