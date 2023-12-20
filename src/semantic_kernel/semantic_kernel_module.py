@@ -1,39 +1,11 @@
-from semantic_kernel import SemanticKernel
+from semantic_kernel import SemanticKernel, KernelBuilder
 import taskweaver
 from taskweaver.taskweaver_module import TaskWeaverDataProcessor
-from semantic_kernel.googleconnector import GoogleConnector
-from sk_web_pages_plugin import WebPagesPlugin
+from semantic_kernel.plugins.taskweaverplugin import TaskWeaverSQLIntegration
+from semantic_kernel.plugins.googleconnector import GoogleConnector
+from semantic_kernel.plugins.sk_web_pages_plugin import WebPagesPlugin
 import asyncio
-import sqlite3  # Assuming SQLite for simplicity
-
-class TaskWeaverSQLIntegration:
-    def __init__(self):
-        self.taskweaver_processor = TaskWeaverDataProcessor(taskweaver.TaskWeaver())
-        self.db_connection = sqlite3.connect('taskweaver_data.db')
-        self.initialize_database()
-
-    def initialize_database(self):
-        self.db_connection.execute('''CREATE TABLE IF NOT EXISTS results (...);''')
-
-    def process_and_store_data(self, task_data):
-        # Assuming task_data is a dictionary with 'section' and 'details'
-        section = task_data['section']
-        details = task_data['details']
-        
-        # Processing data
-        results = self.taskweaver_processor.process_data_task(details)
-        
-        # Storing results in the database
-        self.db_connection.execute('INSERT INTO results (section, details, processed_content) VALUES (?, ?, ?)', (section, details, results))
-        self.db_connection.commit()
-
-    def retrieve_data_for_planner(self, section):
-        cursor = self.db_connection.execute('SELECT processed_content FROM results WHERE section = ?', (section,))
-        return cursor.fetchone()[0]  # Assuming each section only has one entry
-
-    def close(self):
-        self.db_connection.close()
-        
+import sqlite3 
 
 async def create_sow_document():
     # Initialize SemanticKernelDataModule
@@ -91,13 +63,40 @@ class SoWPlanner:
     # Similarly, define methods for other sections
 class SemanticKernelDataModule:
     def __init__(self, google_api_key, google_search_engine_id):
-        self.semantic_kernel = SemanticKernel()
-        self.taskweaver_processor = TaskWeaverDataProcessor()
+        self.kernel = SemanticKernel()
+        self.kernel_builder = KernelBuilder()
+        self.taskweaver_integration = TaskWeaverSQLIntegration()
         self.google_connector = GoogleConnector(google_api_key, google_search_engine_id)
         self.web_pages_plugin = WebPagesPlugin()
-        self.taskweaver_integration = TaskWeaverSQLIntegration()
-        self.semantic_kernel.register_plugin('taskweaver', self.taskweaver_processor)
-        self.semantic_kernel.register_plugin('web_pages', self.web_pages_plugin)
+        self.kernel.Plugins.RegisterPlugin('taskweaver', self.taskweaver_integration)
+        self.kernel.Plugins.RegisterPlugin('google', self.google_connector)
+        self.kernel.Plugins.RegisterPlugin('web_pages', self.web_pages_plugin)
+
+        # Adding plugins to Kernel
+        self.kernel.Plugins.RegisterPlugin('taskweaver', self.taskweaver_processor)
+        self.kernel.Plugins.RegisterPlugin('google', self.google_connector)
+        self.kernel.Plugins.RegisterPlugin('webpages', self.web_pages_plugin)
+
+        # Adding prompt directories
+        # self.kernel_builder.Plugins.AddPromptDirectory('sow_prompts', '/path/to/sow/prompts')
+
+    async def create_and_fetch_sow(self, project_details):
+        # Process data using TaskWeaver and store it using SQL integration
+        sow_planner = SoWPlanner(self.taskweaver_processor)
+        sow_sections = await sow_planner.generate_sow(project_details)
+        completed_plan = "\n".join([f"({key}) - {value}" for key, value in sow_sections.items()])
+        return completed_plan
+    
+    # async def create_and_fetch_sow(self, project_details):
+    #     sow_planner = SoWPlanner(self.taskweaver_integration)
+
+    #     # Processing and storing each section in the database
+    #     for section, details in project_details.items():
+    #         self.taskweaver_integration.process_and_store_data({'section': section, 'details': details})
+
+    #     # Generating the SoW document
+    #     sow_document = await sow_planner.generate_sow(project_details.keys())
+    #     return sow_document
 
     async def process_data_with_taskweaver(self, task_description):
         taskweaver_processor = self.semantic_kernel.get_plugin('taskweaver')
@@ -123,16 +122,6 @@ class SemanticKernelDataModule:
             page_contents.append(processed_content)
         return page_contents
     
-    async def create_and_fetch_sow(self, project_details):
-        sow_planner = SoWPlanner(self.taskweaver_integration)
-
-        # Processing and storing each section in the database
-        for section, details in project_details.items():
-            self.taskweaver_integration.process_and_store_data({'section': section, 'details': details})
-
-        # Generating the SoW document
-        sow_document = await sow_planner.generate_sow(project_details.keys())
-        return sow_document
 class SemanticKernelPlannerModule:
     def __init__(self):
         self.taskweaver_integration = TaskWeaverSQLIntegration()
