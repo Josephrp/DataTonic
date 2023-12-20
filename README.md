@@ -29,6 +29,21 @@ DataTonic provides junior executives with an extremely effective solution for ba
 
 Do not wait for accounting, legal or business intelligence reporting with uncertain quality and long review cycles. DataTonic accelerates the slowest part of analysis : data processing and project planning execution. 
 
+# How it works :
+
+this section explains how Data Tonic works to produce what you need, consistently.
+
+- your request is first processed according to a statement of work
+- additional data is retrieved and stored
+- multiple agents are created based on your specific use case
+
+# Technology : 
+
+this section describes how it works from a technical perspective:
+
+- Autogen uses a semantic-kernel function calling agent to access the internet using the google api semantic-kernel then processes the new information and stores it inside a SQL database orchestrated by Taskweaver.
+- Gemini is used in various configurations both for text using the autogen connector and for multimodal/image information processing. 
+
 # How To Use
 
 Please follow the instructions in this readme exactly. 
