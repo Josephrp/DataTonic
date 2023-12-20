@@ -1,5 +1,5 @@
 from semantic_kernel import SemanticKernel, KernelBuilder
-from taskweaver.taskweaver_module import TaskWeaverDataProcessor
+from taskweaver.app.app import TaskWeaverApp
 from semantic_kernel.plugins.taskweaverplugin import TaskWeaverSQLIntegration
 from semantic_kernel.plugins.googleconnector import GoogleConnector
 from semantic_kernel.plugins.sk_web_pages_plugin import WebPagesPlugin
@@ -79,29 +79,31 @@ class SoWPlanner:
             sow_document += "\n"  
 
         return sow_document
+
 class SemanticKernelDataModule:
-    def __init__(self, google_api_key, google_search_engine_id):
+    def __init__(self, google_api_key, google_search_engine_id, taskweaver_app_dir):
         self.kernel = SemanticKernel()
         self.kernel_builder = KernelBuilder()
-        self.taskweaver_integration = TaskWeaverSQLIntegration()
+
+        # Initialize TaskWeaver as a library
+        self.taskweaver_app = TaskWeaverApp(app_dir=taskweaver_app_dir)
+        self.taskweaver_session = self.taskweaver_app.get_session()
+
+        # Initialize other plugins
         self.google_connector = GoogleConnector(google_api_key, google_search_engine_id)
         self.web_pages_plugin = WebPagesPlugin()
-        self.kernel.Plugins.RegisterPlugin('taskweaver', self.taskweaver_integration)
+
+        # Register plugins
         self.kernel.Plugins.RegisterPlugin('google', self.google_connector)
         self.kernel.Plugins.RegisterPlugin('web_pages', self.web_pages_plugin)
-        self.kernel.Plugins.RegisterPlugin('taskweaver', self.taskweaver_processor)
-        self.kernel.Plugins.RegisterPlugin('google', self.google_connector)
-        self.kernel.Plugins.RegisterPlugin('webpages', self.web_pages_plugin)
 
-        # Adding prompt directories
-        # self.kernel_builder.Plugins.AddPromptDirectory('sow_prompts', '/path/to/sow/prompts')
-
-    async def create_and_fetch_sow(self, project_details):
-        # Process data using TaskWeaver and store it using SQL integration
-        sow_planner = SoWPlanner(self.taskweaver_processor)
-        sow_sections = await sow_planner.generate_sow(project_details)
-        completed_plan = "\n".join([f"({key}) - {value}" for key, value in sow_sections.items()])
-        return completed_plan
+    async def process_data_with_taskweaver(self, task_description):
+        # Process data using TaskWeaver library
+        response_round = self.taskweaver_session.send_message(
+            task_description,
+            event_handler=lambda _type, _msg: print(f"{_type}:\n{_msg}")
+        )
+        return response_round.to_dict()
 
     async def process_data_with_taskweaver(self, task_description):
         taskweaver_processor = self.semantic_kernel.get_plugin('taskweaver')

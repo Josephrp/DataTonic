@@ -1,7 +1,32 @@
 import sqlite3
 import taskweaver
 from src.TaskWeaver.taskweaver_module import TaskWeaverDataProcessor
+from taskweaver.app.app import TaskWeaverApp
 
+# Setup TaskWeaver
+app_dir = "./src/taskweaver/"  # Path to the directory with taskweaver_config.json
+app = TaskWeaverApp(app_dir=app_dir)
+session = app.get_session()
+
+# Function to send a message to TaskWeaver and handle the response
+async def send_to_taskweaver(user_query):
+    response_round = session.send_message(
+        user_query,
+        event_handler=lambda _type, _msg: print(f"{_type}:\n{_msg}"))
+    return response_round.to_dict()
+
+# Main function
+# async def main():
+#     # Existing setup (e.g., SemanticKernelDataModule initialization)
+#     semantic_kernel_data_module = SemanticKernelDataModule('<google_api_key>', '<google_search_engine_id>')
+
+#     # Example user query
+#     user_query = "hello, what can you do?"
+#     response = await send_to_taskweaver(user_query)
+#     print(response)
+
+if __name__ == "__main__":
+    asyncio.run(main())
 class TaskWeaverSQLIntegration:
     def __init__(self):
         self.taskweaver_processor = TaskWeaverDataProcessor(taskweaver.TaskWeaver())
