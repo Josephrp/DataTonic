@@ -143,27 +143,57 @@ async def create_sow_document():
 
     # Define comprehensive project details
     project_details = {
-        "introduction": {
-            "overview": "A concise overview of the client's organization within the context of the engagement.",
-            "purpose": "Explanation of the SoW's intent and its role as a guiding agreement."
+        "Overview": {
+            "Background": "In-depth background information about the target organization and history.",
+            "ProjectRationale": "Explanation of why the project is being undertaken and its importance."
         },
-        "project_objectives_scope": {
-            "objectives": "Specific goals that the project aims to achieve.",
-            "scope_of_work": "Detailed description of the services and tasks to be performed, including inclusions and exclusions."
+        "ProjectGoalsAndScope": {
+            "PrimaryObjectives": "Key objectives the project aims to achieve.",
+            "SecondaryObjectives": "Additional objectives that add value to the project.",
+            "ScopeInclusions": "Explicitly what is included in the project's scope.",
+            "ScopeExclusions": "Explicitly what is excluded from the project's scope.",
+            "KeyPerformanceIndicators": "Metrics to measure the project's success."
         },
-        "project_approach_methodology": {
-            "methodology": "Outline of the methodologies, frameworks, or strategies to be used.",
-            "phases_of_work": "Breakdown of the project into phases or milestones with specific tasks and objectives."
+
+        "MethodologyAndWorkflow": {
+            "ProjectMethodology": "Detailed description of the methodologies to be applied.",
+            "WorkflowStrategy": "Strategy for workflow management across the project.",
+            "MilestonePlanning": "Breakdown of key project milestones.",
+            "TaskAllocation": "Allocation of tasks within each project phase.",
+            "QualityAssuranceProcesses": "Processes in place to ensure the quality of work."
         },
-        "deliverables": {
-            "list_of_deliverables": "Comprehensive list of outputs, reports, presentations, tools, or models to be provided.",
-            "quality_standards": "Standards or criteria for assessing the deliverables."
+
+        "ExpectedDeliverables": {
+            "CoreDeliverables": "List of primary deliverables to be produced.",
+            "SupportingDeliverables": "Supplementary deliverables that support core outputs.",
+            "DeliveryStandards": "Standards and specifications for deliverable quality.",
+            "PresentationRequirements": "Requirements for the presentation of deliverables.",
+            "FeedbackAndRevisions": "Process for providing feedback and making revisions."
         },
-        "timeline": {
-            "project_timeline": "Detailed timeline including start and end dates, phase durations, and key milestones.",
-            "review_points": "Scheduled points for reviewing progress and making necessary adjustments."
+
+        # "ProjectTimelineAndMilestones": {
+        #     "DetailedTimeline": "Comprehensive timeline with start and end dates, phase durations, and key milestones.",
+        #     "ProgressReviewCheckpoints": "Pre-defined intervals for reviewing project progress and making adjustments."
+        # },
+        "ResourceAllocationAndRoles": {
+            "TeamStructure": "Description of the project team's composition and hierarchy.",
+            "RoleResponsibilities": "Specific responsibilities assigned to each team role.",
+        #   "ResourcePlanning": "Detailed plan for allocating resources throughout the project.",
+        #   "SkillDevelopment": "Opportunities for team skill development and training.",
+        #   "StakeholderEngagement": "Plan for engaging stakeholders throughout the project."
+        },
+        "BudgetAndCosting": {
+            "BudgetBreakdown": "Detailed budget allocation for different project components.",
+            "CostControlMeasures": "Measures in place to control costs and handle budget overruns."
+        },
+        "RiskManagementPlan": {
+            "IdentifiedRisks": "List of potential risks and their impact on the project.",
+            "MitigationStrategies": "Strategies for managing and mitigating these risks."
+        },
+        "LegalAndCompliance": {
+            "RegulatoryRequirements": "Overview of legal and regulatory requirements relevant to the project.",
+            "ComplianceStrategy": "Approach to ensuring compliance with these requirements."
         }
-        # ... [Other sections like roles_responsibilities, pricing_payment, etc.]
     }
 
     # Fetch the completed SoW plan using SemanticKernelDataModule
