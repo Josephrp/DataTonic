@@ -1,4 +1,4 @@
-import os
+import os, json
 from typing import List, Dict, Any, Optional
 from pathlib import Path
 from semantic_kernel.semantic_kernel_module import SemanticKernelModule
@@ -148,7 +148,16 @@ class AutoGenModule:
         self.vector_index = index  # Integrated VectorStoreIndex
         self.memgpt_memory_manager = MemGPTMemoryManager(memgpt_memory_path)
         # Set the environment variable for OpenAI API key
-        # os.environ['OPENAI_API_KEY'] = openai_api_key  # No longer needed as we load from .env
+        # Load API keys from environment variables and update the configuration list
+        with open('OAI_CONFIG_LIST.json', 'r') as config_file:
+            config_list = json.load(config_file)
+        for config in config_list:
+            if 'api_key' in config:
+                env_api_key = os.getenv(config['model'].upper().replace('-', '_') + '_API_KEY')
+                if env_api_key:
+                    config['api_key'] = env_api_key
+        with open('OAI_CONFIG_LIST.json', 'w') as config_file:
+            json.dump(config_list, config_file, indent=4)
         # MemGPT Configuration
         self.memgpt_config = {
             "model": "gpt-4",
