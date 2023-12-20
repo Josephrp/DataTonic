@@ -89,11 +89,14 @@ class SoWPlanner:
         return self.taskweaver.generate_section("introduction", intro_details)
 
     # Similarly, define methods for other sections
+from dotenv import load_dotenv
+
 class SemanticKernelDataModule:
     def __init__(self, google_api_key, google_search_engine_id):
         self.semantic_kernel = SemanticKernel()
+        load_dotenv()
         self.taskweaver_processor = TaskWeaverDataProcessor()
-        self.google_connector = GoogleConnector(google_api_key, google_search_engine_id)
+        self.google_connector = GoogleConnector()  # API keys are loaded from .env
         self.web_pages_plugin = WebPagesPlugin()
         self.taskweaver_integration = TaskWeaverSQLIntegration()
         self.semantic_kernel.register_plugin('taskweaver', self.taskweaver_processor)
