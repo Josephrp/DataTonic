@@ -148,7 +148,7 @@ class AutoGenModule:
         self.vector_index = index  # Integrated VectorStoreIndex
         self.memgpt_memory_manager = MemGPTMemoryManager(memgpt_memory_path)
         # Set the environment variable for OpenAI API key
-        os.environ['OPENAI_API_KEY'] = openai_api_key
+        # os.environ['OPENAI_API_KEY'] = openai_api_key  # No longer needed as we load from .env
         # MemGPT Configuration
         self.memgpt_config = {
             "model": "gpt-4",
