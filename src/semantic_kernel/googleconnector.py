@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from semantic_kernel.connectors.search_engine.connector import ConnectorBase
 from semantic_kernel.utils.null_logger import NullLogger
 
+import os
 
 class GoogleConnector(ConnectorBase):
     """
@@ -21,9 +22,8 @@ class GoogleConnector(ConnectorBase):
     def __init__(
         self, api_key: str, search_engine_id: str, logger: Optional[Logger] = None
     ) -> None:
-        load_dotenv()
-        self._api_key = api_key
-        self._search_engine_id = search_engine_id
+        self._api_key = os.getenv('GOOGLE_API_KEY', api_key)
+        self._search_engine_id = os.getenv('GOOGLE_SEARCH_ENGINE_ID', search_engine_id)
         self._logger = logger if logger else NullLogger()
 
         if not self._api_key:

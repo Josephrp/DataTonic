@@ -3,6 +3,7 @@ import taskweaver
 from taskweaver.taskweaver_module import TaskWeaverDataProcessor
 from semantic_kernel.googleconnector import GoogleConnector
 from sk_web_pages_plugin import WebPagesPlugin
+import os
 import asyncio
 import sqlite3  # Assuming SQLite for simplicity
 
@@ -94,9 +95,8 @@ from dotenv import load_dotenv
 class SemanticKernelDataModule:
     def __init__(self, google_api_key, google_search_engine_id):
         self.semantic_kernel = SemanticKernel()
-        load_dotenv()
-        self.taskweaver_processor = TaskWeaverDataProcessor()
-        self.google_connector = GoogleConnector()  # API keys are loaded from .env
+        self.taskweaver_processor = TaskWeaverDataProcessor(db_config_path=os.getenv('TASKWEAVER_CONFIG_PATH', 'taskweaver_config.json'), logger_config=os.getenv('TASKWEAVER_LOGGER_CONFIG', 'logger_config.json'))
+        self.google_connector = GoogleConnector(api_key=os.getenv('GOOGLE_API_KEY', google_api_key), search_engine_id=os.getenv('GOOGLE_SEARCH_ENGINE_ID', google_search_engine_id))
         self.web_pages_plugin = WebPagesPlugin()
         self.taskweaver_integration = TaskWeaverSQLIntegration()
         self.semantic_kernel.register_plugin('taskweaver', self.taskweaver_processor)

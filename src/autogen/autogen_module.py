@@ -1,4 +1,5 @@
-import os, json
+import os
+import json
 from typing import List, Dict, Any, Optional
 from pathlib import Path
 from semantic_kernel.semantic_kernel_module import SemanticKernelModule
@@ -147,7 +148,7 @@ class AutoGenModule:
         self.agent_builder = AgentBuilder()
         self.vector_index = index  # Integrated VectorStoreIndex
         self.memgpt_memory_manager = MemGPTMemoryManager(memgpt_memory_path)
-        # Set the environment variable for OpenAI API key
+
         # Load API keys from environment variables and update the configuration list
         with open('OAI_CONFIG_LIST.json', 'r') as config_file:
             config_list = json.load(config_file)
