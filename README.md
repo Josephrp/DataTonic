@@ -102,25 +102,80 @@ python run app.py
 -----------------
 ---
 //*DRAFT For the GEMINI Hackathon - Jon//
-Project Name: DataTonic - Enabling Consultants of All Kinds to Reach Beyond Their Full Potential.
-Objective: To augment strategy consultants using an AI-driven approach.
-Event: Developed exclusively for the Gemini AI Hackathon, for now.
-Core Technology Stack:
+### Project Name: DataTonic - Enabling Consultants of All Kinds to Reach Beyond Their Full Potential.
+### Objective: To augment strategy consultants using an AI-driven approach.
+### Event: Developed exclusively for the Gemini AI Hackathon, for now.
+### Core Technology Stack:
     -Integrates Gemini AI, a multimodal AI model by Google DeepMind.
     -Incorporates TruLens for evaluation and improvement of LLM applications.
     -Llamaindex, too!
-Capabilities: Processes and analyzes diverse data types (text, images, audio, video) for actionable business strategy decision-making insights.
-Team Composition:
+### Capabilities: Processes and analyzes diverse data types (text, images, audio, video) for actionable business strategy decision-making insights.
+### Team Composition:
 
     Lead Engineer: Tonic - Expert coder leading core development.
     PM Engineering: Specialist in Gemini AI and TruLens tools.
-    Engineering: N00r, Zachary
+    Engineering: N00r
     Frontend: Zachary
     Subject Matter Expert/Strategy Consultant: JonP
-Vision: A world where beyond world-class business strategy is not limited by an individual, team, or organization's capital expenditures 
-Mission: 
--The Consulting Firm for All Consulting Firms: To revolutionize business strategy and consulting by providing rapid, data-driven actionable insights accessible to a wide range of enterprises, individuals, and students; 
--The Learning System for Consulting: To provide a safe environment where every user has the option to both learn and feed-forward to improve on their own and society's business strategy for a better world
+### Vision: 
+    A world where beyond world-class business strategy is not limited by an individual, team, or organization's capital expenditures 
+### Mission: 
+    The Consulting Firm for All Consulting Firms: To revolutionize business strategy and consulting by providing rapid, data-driven actionable insights accessible to a wide range of enterprises, individuals, and students; 
+    The Learning System for Consulting: To provide a safe environment where every user has the option to both learn and feed-forward to improve on their own and society's business strategy for a better world
+
+### Features:
+    Blending human EI input with advanced machine learning AI for better strategy consulting solutions and learning.
+
+    1. Better Multimodal Data Processing: Integrates and analyzes various consulting communication including consultant/client request prompts and datasets (including text, images, audio, and video) with special tools including...
+
+     -Utilizes Gemini AI's advanced algorithms for seamless advanced AI data integration.
+     -Utilizes TruLens for immediate and unbiased feedback for human QA/QI
+     **-Utilizes LlamaIndex for....
+
+    This minimizes human error, provides faster processing, and enables human consultants to focus on what they do best - social capitalization and creativity
+
+    2. Strategic Business Synthesis for Actionable Insights and Final Recommendations:
+
+     -Using best practices, provides data-driven insights for common strategy consulting problems (including profitability, market entry/sizing, growth, acquisition/sales, industry assessment)
+     -Employs predictive modeling for better brainstorming and scenario planning to better guide decision-making.
+
+      It can create more and iterate faster on interim analysis and final solutions sets, risk analyses, and next steps for a more optimal and deeper final business strategy. 
+
+    3. Natural Language Processing (NLP):
+
+      - Advanced NLP capabilities for interpreting complex business queries.
+      - Generates detailed recommendations and final reports, specialized for the specific consultant and client
+
+    4. User Interface Design:
+
+      -Intuitive, user-friendly interface for easy interaction and data input.
+      -Visual representations of data insights for faster human comprehension.
+
+    5. Performance Evaluation with TruLens:
+
+       -Continuous evaluation and optimization of recommendations using TruLens.
+       -Ensures groundedness, relevance, and non-bias in outputs.
+
+    6. Customizable Framework:
+
+       -Flexible and adaptable to all business needs across all sectors (using data from all major business schools,... [all business strategy publications - academic, media, etc]).
+       [-Allows for the addition of custom modules and features.]
+       -Create a junior/associate consultant, team of associates
+
+    7. Collaborative Tools for Team-Based Analysis:
+
+        -Create a junior/associate consultant, 
+    Facilitates joint decision-making and strategy development.
+
+Security and Confidentiality:
+
+    High standards of data security and confidentiality.
+    Ensures protection of sensitive business information.
+
+Scalability:
+
+    Designed to handle increased workload and data volume.
+    Suitable for both large corporations and small businesse
 
 Join us in exploring the future of consulting with DataTonic.
 
