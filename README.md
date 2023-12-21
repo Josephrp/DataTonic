@@ -133,7 +133,7 @@ This section provides instructions on setting up the project.
 clone this repository using the command line :
 
 ```bash
-git clone https://github.com/DataTonic/DataTonic.git
+git clone https://github.com/Tonic-AI/DataTonic.git
 ```
 
 ## Step 2: Configure DataTonic
