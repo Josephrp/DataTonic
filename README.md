@@ -50,6 +50,19 @@ DataTonic is unique for many reasons :
 - based on a rigorous and reproducible evaluation method.
 - developper friendly : easily plug in new functionality and integrations.
 
+## Do more with DataTonic 
+
+- is DataTonic Accessible ?
+**yes** DataTonic is accessible both audio and image input.
+- can i use it to make beautiful graphs and statistical analyses with little or no starting data ?
+**yes.** DataTonic will look for the data it needs but you can add your .db files or any other types of files with DataTonic.
+- can i write a book or a long report ?
+**yes.** DataTonic produces rich , full-length content.
+- can i make an app ?
+**yes.** DataTonic is more tailored to business intelligence but it is able to produce functioning applications inside generated repositories.
+- can it do my job ?
+**yes** DataTonic is able to automate many junior positions and it will include more enterprise connectors, soon !
+
 ### How we use it : Multi-Consult Technology
 
 You can use datatonic however you want, here's how we're using it :
@@ -116,17 +129,99 @@ Please follow the instructions in this readme **exactly**.
 1. Step 1 : Star this repository
 2. Step 2 : Fork this repository
 
+## Set Up
+
+please use command line with administrator priviledges for the below.
+
 ### Set Up Gemini
+
+- run the following command to install googlecloud/vertex cli :
+```bash
+pip install google-cloud-aiplatform
+```
+
+- navigate to this url :
+```
+https://console.cloud.google.com/vertex-ai
+```
+- and click create new project.
+![image](https://github.com/Tonic-AI/DataTonic/assets/18212928/582ee276-e8b7-4d5d-b251-c1f730eaa84c)
+
+- Create a new project and add a payment method.
+
+- click 'enable all recommended APIs' 
+![image](https://github.com/Tonic-AI/DataTonic/assets/18212928/2193f80b-fd46-444c-9173-81044166b3a6)
+
+- click on 'multimodal' on the left then 'my prompts' on the top:
+![image](https://github.com/Tonic-AI/DataTonic/assets/18212928/3ca60a1b-9012-432a-b431-b13eccbb57ff)
+
+- click on 'create prompt' and 'GET CODE' on the top right in the next screen:
+![image](https://github.com/Tonic-AI/DataTonic/assets/18212928/f563af64-cb9f-40a0-8158-564cd42bbc45)
+
+- then click on 'curl' on the top right to find your 'endpoint' and projectid , and other information
+e.g.
+```curl
+cat << EOF > request.json
+{
+    "contents": [
+        {
+            "role": "user",
+            "parts": []
+        }
+    ],
+    "generation_config": {
+        "maxOutputTokens": 2048,
+        "temperature": 0.4,
+        "topP": 1,
+        "topK": 32
+    }
+}
+EOF
+
+API_ENDPOINT="us-central1-aiplatform.googleapis.com"
+PROJECT_ID="focused-album-408018"
+MODEL_ID="gemini-pro-vision"
+LOCATION_ID="us-central1"
+
+curl \
+-X POST \
+-H "Authorization: Bearer $(gcloud auth print-access-token)" \
+-H "Content-Type: application/json" \
+"https://${API_ENDPOINT}/v1/projects/${PROJECT_ID}/locations/${LOCATION_ID}/publishers/google/models/${MODEL_ID}:streamGenerateContent" -d '@request.json'
+```
 
 ### Get Google API key
 
+ run the following command to find your API key after following the instructions above:
+```bash
+gcloud auth print-access-token
+```
+**IMPORTANT : this key will expire every less than 30 minutes, so please refresh it regularly and accordingly**
+
 ### Get Open AI Key(s)
+
+- navigate to openai and create a new key :
+```
+https://platform.openai.com/api-keys
+```
 
 ### Set Up Azure
 
+- use the Azure OAI portal by navigating to this page :
+```
+https://oai.azure.com/portal
+```
+- deploy your models
+![image](https://github.com/Tonic-AI/DataTonic/assets/18212928/db19a2f3-5996-462c-9273-ef4af5710d0e)
+
+- go to playground
+- click on view code :
+![image](https://github.com/Tonic-AI/DataTonic/assets/18212928/192f55fb-c174-45d6-a15b-12f7bce5e0b2)
+- make a note of your `endpoint` , `API Key` , and `model name` to use it later.
+
 ## Setup Instructions
 
-This section provides instructions on setting up the project.
+This section provides instructions on setting up the project. Please turn off your firewall and use administrator priviledges on the command line.
 
 ### Step 1 : Clone the repository
 
