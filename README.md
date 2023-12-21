@@ -101,7 +101,7 @@ python run app.py
 -------------------
 -----------------
 ---
-//*DRAFT For the GEMINI Hackathon - Jon//
+//*DRAFT Fluff For the GEMINI Hackathon Presentation - Jon//
 ### Project Name: DataTonic - Enabling Consultants of All Kinds to Reach Beyond Their Full Potential.
 ### Objective: To augment strategy consultants using an AI-driven approach.
 ### Event: Developed exclusively for the Gemini AI Hackathon, for now.
@@ -160,22 +160,20 @@ python run app.py
 
        -Flexible and adaptable to all business needs across all sectors (using data from all major business schools,... [all business strategy publications - academic, media, etc]).
        [-Allows for the addition of custom modules and features.]
-       -Create a junior/associate consultant, team of associates
+       -Create a junior/associate consultant, or team of associates
 
     7. Collaborative Tools for Team-Based Analysis:
 
-        -Create a junior/associate consultant, 
-    Facilitates joint decision-making and strategy development.
+       ...
 
-Security and Confidentiality:
+    8. Security and Confidentiality:
 
-    High standards of data security and confidentiality.
-    Ensures protection of sensitive business information.
+      -High standards of data security and confidentiality... [explain]
 
-Scalability:
+    9. Scalability:
 
-    Designed to handle increased workload and data volume.
-    Suitable for both large corporations and small businesse
+      -Designed to handle increased workload and data volume.
+      -Suitable for both large corporations, small businesse, and individuals
 
 Join us in exploring the future of consulting with DataTonic.
 
