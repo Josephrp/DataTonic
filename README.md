@@ -98,3 +98,29 @@ pip install -r requirements.txt
 python run app.py
 ```
 
+-------------------
+-----------------
+---
+//*DRAFT For the GEMINI Hackathon - Jon//
+Project Name: DataTonic - Enabling Consultants of All Kinds to Reach Beyond Their Full Potential.
+Objective: To augment strategy consultants using an AI-driven approach.
+Event: Developed exclusively for the Gemini AI Hackathon, for now.
+Core Technology Stack:
+    -Integrates Gemini AI, a multimodal AI model by Google DeepMind.
+    -Incorporates TruLens for evaluation and improvement of LLM applications.
+    -Llamaindex, too!
+Capabilities: Processes and analyzes diverse data types (text, images, audio, video) for actionable business strategy decision-making insights.
+Team Composition:
+
+    Lead Engineer: Tonic - Expert coder leading core development.
+    PM Engineering: Specialist in Gemini AI and TruLens tools.
+    Engineering: N00r, Zachary
+    Frontend: Zachary
+    Subject Matter Expert/Strategy Consultant: JonP
+Vision: A world where beyond world-class business strategy is not limited by an individual, team, or organization's capital expenditures 
+Mission: 
+-The Consulting Firm for All Consulting Firms: To revolutionize business strategy and consulting by providing rapid, data-driven actionable insights accessible to a wide range of enterprises, individuals, and students; 
+-The Learning System for Consulting: To provide a safe environment where every user has the option to both learn and feed-forward to improve on their own and society's business strategy for a better world
+
+Join us in exploring the future of consulting with DataTonic.
+
