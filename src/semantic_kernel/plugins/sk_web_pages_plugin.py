@@ -22,14 +22,9 @@ class WebPagesPlugin:
             async with session.get(input, raise_for_status=True) as response:
                 html = await response.text()
                 soup = BeautifulSoup(html, features="html.parser")
-                # remove some elements
                 for el in soup(["script", "style", "iframe", "img", "video", "audio"]):
                     el.extract()
-
-                # get text and compact empty lines
                 text = soup.get_text()
-                # remove multiple empty lines
                 text = re.sub(r"[\r\n][\r\n]{2,}", "\n\n", text)
-                # remove leading and trailing empty spaces, leaving max 1 empty space at the beginning of each line
                 text = re.sub(r"[\n] +", "\n ", text)
                 return text

@@ -1,103 +1,110 @@
-from semantic_kernel import SemanticKernel
+from semantic_kernel import SemanticKernel, KernelBuilder
 import taskweaver
-from taskweaver.taskweaver_module import TaskWeaverDataProcessor
-from semantic_kernel.googleconnector import GoogleConnector
-from sk_web_pages_plugin import WebPagesPlugin
+from taskweaver.app.app import TaskWeaverApp
+from semantic_kernel.plugins.taskweaverplugin import TaskWeaverSQLIntegration
+from semantic_kernel.plugins.googleconnector import GoogleConnector
+from semantic_kernel.plugins.sk_web_pages_plugin import WebPagesPlugin
 import asyncio
-import sqlite3  # Assuming SQLite for simplicity
 
-class TaskWeaverSQLIntegration:
-    def __init__(self):
-        self.taskweaver_processor = TaskWeaverDataProcessor(taskweaver.TaskWeaver())
-        self.db_connection = sqlite3.connect('taskweaver_data.db')
-        self.initialize_database()
-
-    def initialize_database(self):
-        self.db_connection.execute('''CREATE TABLE IF NOT EXISTS results (...);''')
-
-    def process_and_store_data(self, task_data):
-        # Assuming task_data is a dictionary with 'section' and 'details'
-        section = task_data['section']
-        details = task_data['details']
-        
-        # Processing data
-        results = self.taskweaver_processor.process_data_task(details)
-        
-        # Storing results in the database
-        self.db_connection.execute('INSERT INTO results (section, details, processed_content) VALUES (?, ?, ?)', (section, details, results))
-        self.db_connection.commit()
-
-    def retrieve_data_for_planner(self, section):
-        cursor = self.db_connection.execute('SELECT processed_content FROM results WHERE section = ?', (section,))
-        return cursor.fetchone()[0]  # Assuming each section only has one entry
-
-    def close(self):
-        self.db_connection.close()
-        
-
-async def create_sow_document():
-    # Initialize SemanticKernelDataModule
-    semantic_kernel_data_module = SemanticKernelDataModule('<google_api_key>', '<google_search_engine_id>')
-
-    # Instantiate SoWPlanner with TaskWeaverDataProcessor
-    sow_planner = SoWPlanner(semantic_kernel_data_module.taskweaver_processor)
-
-    # Example project details (to be provided or retrieved)
-    project_details = {
-        "introduction": {
-            "overview": "Brief description of the client's organization...",
-            "purpose": "Clarification of the document's intent..."
+project_details = {
+        "Overview": {
+            "Background": "In-depth background information about the target organization and history.",
+            "ProjectRationale": "Explanation of why the project is being undertaken and its importance."
         },
-        # ... other sections
+        "ProjectGoalsAndScope": {
+            "PrimaryObjectives": "Key objectives the project aims to achieve.",
+            "SecondaryObjectives": "Additional objectives that add value to the project.",
+            "ScopeInclusions": "Explicitly what is included in the project's scope.",
+            "ScopeExclusions": "Explicitly what is excluded from the project's scope.",
+            "KeyPerformanceIndicators": "Metrics to measure the project's success."
+        },
+
+        "MethodologyAndWorkflow": {
+            "ProjectMethodology": "Detailed description of the methodologies to be applied.",
+            "WorkflowStrategy": "Strategy for workflow management across the project.",
+            "MilestonePlanning": "Breakdown of key project milestones.",
+            "TaskAllocation": "Allocation of tasks within each project phase.",
+            "QualityAssuranceProcesses": "Processes in place to ensure the quality of work."
+        },
+
+        "ExpectedDeliverables": {
+            "CoreDeliverables": "List of primary deliverables to be produced.",
+            "SupportingDeliverables": "Supplementary deliverables that support core outputs.",
+            "DeliveryStandards": "Standards and specifications for deliverable quality.",
+            "PresentationRequirements": "Requirements for the presentation of deliverables.",
+            "FeedbackAndRevisions": "Process for providing feedback and making revisions."
+        },
+
+        # "ProjectTimelineAndMilestones": {
+        #     "DetailedTimeline": "Comprehensive timeline with start and end dates, phase durations, and key milestones.",
+        #     "ProgressReviewCheckpoints": "Pre-defined intervals for reviewing project progress and making adjustments."
+        # },
+        "ResourceAllocationAndRoles": {
+            "TeamStructure": "Description of the project team's composition and hierarchy.",
+            "RoleResponsibilities": "Specific responsibilities assigned to each team role.",
+        #   "ResourcePlanning": "Detailed plan for allocating resources throughout the project.",
+        #   "SkillDevelopment": "Opportunities for team skill development and training.",
+        #   "StakeholderEngagement": "Plan for engaging stakeholders throughout the project."
+        },
+        "BudgetAndCosting": {
+            "BudgetBreakdown": "Detailed budget allocation for different project components.",
+            "CostControlMeasures": "Measures in place to control costs and handle budget overruns."
+        },
+        "RiskManagementPlan": {
+            "IdentifiedRisks": "List of potential risks and their impact on the project.",
+            "MitigationStrategies": "Strategies for managing and mitigating these risks."
+        },
+        "LegalAndCompliance": {
+            "RegulatoryRequirements": "Overview of legal and regulatory requirements relevant to the project.",
+            "ComplianceStrategy": "Approach to ensuring compliance with these requirements."
+        }
     }
 
-    # Fetch the completed SoW plan
-    completed_plan = await semantic_kernel_data_module.create_and_fetch_sow(project_details)
+async def create_sow_document():
+    semantic_kernel_data_module = SemanticKernelDataModule('<google_api_key>', '<google_search_engine_id>')
+    sow_planner = SoWPlanner(semantic_kernel_data_module.process_data_with_taskweaver)
+    completed_plan = await sow_planner.generate_sow(project_details)
     return completed_plan
 
 class SoWPlanner:
-    def __init__(self, taskweaver_integration):
-        self.taskweaver_integration = taskweaver_integration
+    def __init__(self, process_data_function):
+        self.process_data = process_data_function
 
-    async def generate_sow(self, sections):
+    async def generate_sow(self, project_details):
         sow_document = ""
-        for section in sections:
-            processed_content = self.taskweaver_integration.retrieve_data_for_planner(section)
-            sow_document += f"({section}) - {processed_content}\n"
+        for section, details in project_details.items():
+            processed_section = await self.process_data({'section': section, 'details': details})
+            sow_document += f"{section}:\n"
+            for sub_section, content in processed_section.items():
+                sow_document += f"  {sub_section}: {content}\n"
+            sow_document += "\n"  
+
         return sow_document
 
-    # async def generate_sow(self, project_details):
-    #     sow_sections = {
-    #         "introduction": self.generate_introduction(project_details["introduction"]),
-    #         "project_objectives_scope": self.generate_objectives_scope(project_details["objectives_scope"]),
-    #         "project_approach_methodology": self.generate_approach_methodology(project_details["approach_methodology"]),
-    #         "deliverables": self.generate_deliverables(project_details["deliverables"]),
-    #         "timeline": self.generate_timeline(project_details["timeline"]),
-    #         "roles_responsibilities": self.generate_roles_responsibilities(project_details["roles_responsibilities"]),
-    #         "pricing_payment": self.generate_pricing_payment(project_details["pricing_payment"]),
-    #         "confidentiality_legal_ethical": self.generate_confidentiality_legal_ethical(project_details["confidentiality_legal_ethical"]),
-    #         "terms_conditions": self.generate_terms_conditions(project_details["terms_conditions"]),
-    #         "signatures": self.generate_signatures(project_details["signatures"])
-    #     }
-    #     for section, details in project_details.items():
-    #         processed_content = await self.taskweaver.process_data_task({'section': section, 'content': details})
-    #         sow_sections[section] = processed_content
-    #     return sow_sections
-
-    def generate_introduction(self, intro_details):
-        # TaskWeaver plugin for generating Introduction section
-        return self.taskweaver.generate_section("introduction", intro_details)
-
-    # Similarly, define methods for other sections
 class SemanticKernelDataModule:
-    def __init__(self, google_api_key, google_search_engine_id):
-        self.semantic_kernel = SemanticKernel()
-        self.taskweaver_processor = TaskWeaverDataProcessor()
+    def __init__(self, google_api_key, google_search_engine_id, taskweaver_app_dir):
+        self.kernel = SemanticKernel()
+        self.kernel_builder = KernelBuilder()
+
+        # Initialize TaskWeaver as a library
+        self.taskweaver_app = TaskWeaverApp(app_dir=taskweaver_app_dir)
+        self.taskweaver_session = self.taskweaver_app.get_session()
+
+        # Initialize other plugins
         self.google_connector = GoogleConnector(google_api_key, google_search_engine_id)
         self.web_pages_plugin = WebPagesPlugin()
-        self.taskweaver_integration = TaskWeaverSQLIntegration()
-        self.semantic_kernel.register_plugin('taskweaver', self.taskweaver_processor)
-        self.semantic_kernel.register_plugin('web_pages', self.web_pages_plugin)
+
+        # Register plugins
+        self.kernel.Plugins.RegisterPlugin('google', self.google_connector)
+        self.kernel.Plugins.RegisterPlugin('web_pages', self.web_pages_plugin)
+
+    async def process_data_with_taskweaver(self, task_description):
+        # Process data using TaskWeaver library
+        response_round = self.taskweaver_session.send_message(
+            task_description,
+            event_handler=lambda _type, _msg: print(f"{_type}:\n{_msg}")
+        )
+        return response_round.to_dict()
 
     async def process_data_with_taskweaver(self, task_description):
         taskweaver_processor = self.semantic_kernel.get_plugin('taskweaver')
@@ -123,16 +130,14 @@ class SemanticKernelDataModule:
             page_contents.append(processed_content)
         return page_contents
     
+
     async def create_and_fetch_sow(self, project_details):
         sow_planner = SoWPlanner(self.taskweaver_integration)
-
-        # Processing and storing each section in the database
         for section, details in project_details.items():
             self.taskweaver_integration.process_and_store_data({'section': section, 'details': details})
-
-        # Generating the SoW document
         sow_document = await sow_planner.generate_sow(project_details.keys())
         return sow_document
+
 class SemanticKernelPlannerModule:
     def __init__(self):
         self.taskweaver_integration = TaskWeaverSQLIntegration()
@@ -151,31 +156,6 @@ class SemanticKernelPlannerModule:
 async def create_sow_document():
     # Initialize SemanticKernelDataModule
     semantic_kernel_data_module = SemanticKernelDataModule('<google_api_key>', '<google_search_engine_id>')
-
-    # Define comprehensive project details
-    project_details = {
-        "introduction": {
-            "overview": "A concise overview of the client's organization within the context of the engagement.",
-            "purpose": "Explanation of the SoW's intent and its role as a guiding agreement."
-        },
-        "project_objectives_scope": {
-            "objectives": "Specific goals that the project aims to achieve.",
-            "scope_of_work": "Detailed description of the services and tasks to be performed, including inclusions and exclusions."
-        },
-        "project_approach_methodology": {
-            "methodology": "Outline of the methodologies, frameworks, or strategies to be used.",
-            "phases_of_work": "Breakdown of the project into phases or milestones with specific tasks and objectives."
-        },
-        "deliverables": {
-            "list_of_deliverables": "Comprehensive list of outputs, reports, presentations, tools, or models to be provided.",
-            "quality_standards": "Standards or criteria for assessing the deliverables."
-        },
-        "timeline": {
-            "project_timeline": "Detailed timeline including start and end dates, phase durations, and key milestones.",
-            "review_points": "Scheduled points for reviewing progress and making necessary adjustments."
-        }
-        # ... [Other sections like roles_responsibilities, pricing_payment, etc.]
-    }
 
     # Fetch the completed SoW plan using SemanticKernelDataModule
     completed_plan = await semantic_kernel_data_module.create_and_fetch_sow(project_details)

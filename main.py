@@ -1,52 +1,37 @@
 import json
+import os
 import asyncio
-from datetime import datetime
-from autogen.autogen_module import AutoGenModule
-from semantic_kernel.semantic_kernel_module import SemanticKernelModule
-from taskweaver.taskweaver_module import TaskweaverModule
-from agent_builder import AgentBuilder
-from autogen.agentchat.contrib.retrieve_assistant_agent import RetrieveAssistantAgent
-from autogen.agentchat.contrib.retrieve_user_proxy_agent import RetrieveUserProxyAgent
+from chainlit import chainlit as cl
+from src.semantic_kernel.semantic_kernel_module import SemanticKernelDataModule
+from src.tonicweaver.taskweaver_module import TaskWeaverDataProcessor
+from src.autogen.autogen_module import AutoGenModule
 
-async def main():
-    # Load the configuration list for different LLMs
-    with open('OAI_CONFIG_LIST.json', 'r') as file:
-        OAI_CONFIG_LIST = json.load(file)
-
-    # Extract Gemini configurations from the list
-    config_list_gemini = [config for config in OAI_CONFIG_LIST if 'gemini' in config["model"]]
-    config_list_gemini_vision = [config for config in OAI_CONFIG_LIST if 'gemini-pro-vision' in config["model"]]
-
-    # Initialize the AutoGenModule with the Semantic Kernel and Taskweaver modules
-    semantic_kernel = SemanticKernelModule()
-    taskweaver = TaskweaverModule()
-    agent_builder = AgentBuilder()
-
-    autogen_module = AutoGenModule()
+async def process_user_input(user_input):
+    semantic_kernel = SemanticKernelDataModule()
+    taskweaver = TaskWeaverDataProcessor()
+    autogen_module = AutoGenModule(memgpt_memory_path="./src/autogen/MemGPT", openai_api_key=os.getenv('OPENAI_API_KEY'))
+    
     autogen_module.semantic_kernel = semantic_kernel
     autogen_module.taskweaver = taskweaver
-    autogen_module.agent_builder = agent_builder
+    
+    sow_document = await semantic_kernel.create_and_fetch_sow(user_input)
+    
+    executed_plan = await autogen_module.AutoGenModule(sow_document)
+    
+    return executed_plan
 
-    # Create Gemini RAG and Multimodal Agents
-    assistant = autogen_module.create_assistant_agent(name="Assistant")
-    user_proxy = autogen_module.create_user_proxy_agent(name="User_Proxy", max_auto_reply=3)
-    image_agent, _ = autogen_module.create_gemini_multimodal_agent()
+@cl.on_chat_start
+async def start():
+    # Initial setup if needed
+    pass
 
-    # Get user input to trigger the UserProxyAgent and start the interaction
-    user_input = input("Please provide a description for the task you'd like to perform: ")
-
-    # Use the user input to start the UserProxyAgent
-    await user_proxy.initiate_chat(assistant, message=user_input)
-
-    # Process the interaction based on the task description
-    task_description = user_input
-    agent_list, agent_configs = autogen_module.build_agents_for_task(task_description)
-
-    # Output the agents' results and configurations
-    for agent, config in zip(agent_list, agent_configs):
-        print(f"Agent: {agent}, Config: {config}")
-
-    # Additional logic for image agent interactions or other processes can be added here
+@cl.on_message
+async def main(message: cl.Message):
+    user_input = message.content
+    executed_plan = await process_user_input(user_input)
+    
+    # Assuming the executed_plan is a string or something that can be converted to a string
+    await cl.Message(content=str(executed_plan)).send()
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    cl.run(main)

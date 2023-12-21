@@ -2,7 +2,7 @@ import os
 from typing import List, Dict, Any, Optional
 from pathlib import Path
 from semantic_kernel.semantic_kernel_module import SemanticKernelModule
-from taskweaver.taskweaver_module import TaskweaverModule
+from tonicweaver.taskweaver_module import TaskWeaverDataProcessor
 from agent_builder import AgentBuilder
 from autogen.agentchat.contrib.retrieve_assistant_agent import RetrieveAssistantAgent
 from autogen.agentchat.contrib.retrieve_user_proxy_agent import RetrieveUserProxyAgent
@@ -19,15 +19,67 @@ import memgpt
 import memgpt.autogen.memgpt_agent
 from memgpt.autogen.memgpt_agent import create_memgpt_autogen_agent_from_config
 
-async def create_sow_document(semantic_kernel_data_module):
-    # Fetching plan from Semantic Kernel
-    project_details = {
-        # Project details as defined earlier
+
+project_details = {
+        "Overview": {
+            "Background": "In-depth background information about the target organization and history.",
+            "ProjectRationale": "Explanation of why the project is being undertaken and its importance."
+        },
+        "ProjectGoalsAndScope": {
+            "PrimaryObjectives": "Key objectives the project aims to achieve.",
+            "SecondaryObjectives": "Additional objectives that add value to the project.",
+            "ScopeInclusions": "Explicitly what is included in the project's scope.",
+            "ScopeExclusions": "Explicitly what is excluded from the project's scope.",
+            "KeyPerformanceIndicators": "Metrics to measure the project's success."
+        },
+
+        "MethodologyAndWorkflow": {
+            "ProjectMethodology": "Detailed description of the methodologies to be applied.",
+            "WorkflowStrategy": "Strategy for workflow management across the project.",
+            "MilestonePlanning": "Breakdown of key project milestones.",
+            "TaskAllocation": "Allocation of tasks within each project phase.",
+            "QualityAssuranceProcesses": "Processes in place to ensure the quality of work."
+        },
+
+        "ExpectedDeliverables": {
+            "CoreDeliverables": "List of primary deliverables to be produced.",
+            "SupportingDeliverables": "Supplementary deliverables that support core outputs.",
+            "DeliveryStandards": "Standards and specifications for deliverable quality.",
+            "PresentationRequirements": "Requirements for the presentation of deliverables.",
+            "FeedbackAndRevisions": "Process for providing feedback and making revisions."
+        },
+
+        # "ProjectTimelineAndMilestones": {
+        #     "DetailedTimeline": "Comprehensive timeline with start and end dates, phase durations, and key milestones.",
+        #     "ProgressReviewCheckpoints": "Pre-defined intervals for reviewing project progress and making adjustments."
+        # },
+        "ResourceAllocationAndRoles": {
+            "TeamStructure": "Description of the project team's composition and hierarchy.",
+            "RoleResponsibilities": "Specific responsibilities assigned to each team role.",
+        #   "ResourcePlanning": "Detailed plan for allocating resources throughout the project.",
+        #   "SkillDevelopment": "Opportunities for team skill development and training.",
+        #   "StakeholderEngagement": "Plan for engaging stakeholders throughout the project."
+        },
+        "BudgetAndCosting": {
+            "BudgetBreakdown": "Detailed budget allocation for different project components.",
+            "CostControlMeasures": "Measures in place to control costs and handle budget overruns."
+        },
+        "RiskManagementPlan": {
+            "IdentifiedRisks": "List of potential risks and their impact on the project.",
+            "MitigationStrategies": "Strategies for managing and mitigating these risks."
+        },
+        "LegalAndCompliance": {
+            "RegulatoryRequirements": "Overview of legal and regulatory requirements relevant to the project.",
+            "ComplianceStrategy": "Approach to ensuring compliance with these requirements."
+        }
     }
+
+async def create_sow_document(semantic_kernel_data_module):
+
     plan = await semantic_kernel_data_module.create_and_fetch_sow(project_details)
 
     # Initializing AutoGenModule
-    autogen_module = AutoGenModule(memgpt_memory_path="<path>", openai_api_key=os.getenv('OPENAI_API_KEY'))
+    autogen_module = AutoGenModule(memgpt_memory_path="./src/autogen/MemGPT", openai_api_key=os.getenv('OPENAI_API_KEY'))
 
     # Executing the plan using AutoGenModule
     executed_plan = autogen_module.execute_plan(plan)
@@ -72,20 +124,19 @@ class MemGPTAgent(ConversableAgent):
         self.memory_manager = memory_manager
 
     def save_memory_state(self):
-        memory_state = self.agent.extract_memory_state()  # Assuming this method exists in the _Agent class
+        memory_state = self.agent.extract_memory_state()
         self.memory_manager.save_memory(self.name, memory_state)
 
     def load_memory_state(self):
         memory_state = self.memory_manager.load_memory(self.name)
         if memory_state is not None:
-            self.agent.set_memory_state(memory_state)  # Assuming this method exists in the _Agent class
+            self.agent.set_memory_state(memory_state)
 
-# Set up the environment variables
-os.environ['OPENAI_API_KEY'] = 'Your key here'  # Replace with your actual API key
+os.environ['OPENAI_API_KEY'] = 'Your key here'
 
 # Load data/documents
 UnstructuredReader = download_loader('UnstructuredReader')
-dir_reader = SimpleDirectoryReader(r"path to your folder", file_extractor={
+dir_reader = SimpleDirectoryReader(r"./src/autogen/add_your_files_here", file_extractor={
     ".pdf": UnstructuredReader(),
     ".html": UnstructuredReader(),
     ".eml": UnstructuredReader(),
@@ -95,7 +146,7 @@ dir_reader = SimpleDirectoryReader(r"path to your folder", file_extractor={
 documents = dir_reader.load_data()
 
 # Create vector store/embeddings
-db = chromadb.PersistentClient(path=r"path to your database")
+db = chromadb.PersistentClient(path=r"./src/autogen/vector_store")
 chroma_client = chromadb.EphemeralClient()
 chroma_collection = chroma_client.create_collection("collection_name")
 embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-base-en-v1.5") #TruEra Evaluation
@@ -137,7 +188,7 @@ class AutoGenModule:
         f"Reply TERMINATE when the task is done."
     )
 
-    def __init__(self, memgpt_memory_path: str, openai_api_key: str): # needs to be more clear
+    def __init__(self, memgpt_memory_path: str, openai_api_key: str): 
         self.kernel = kernel
         self.llm_config = llm_config or {}
         self.builder_config_path = builder_config_path
@@ -145,11 +196,9 @@ class AutoGenModule:
         self.semantic_kernel = SemanticKernelModule()
         self.taskweaver = TaskweaverModule()
         self.agent_builder = AgentBuilder()
-        self.vector_index = index  # Integrated VectorStoreIndex
+        self.vector_index = index  
         self.memgpt_memory_manager = MemGPTMemoryManager(memgpt_memory_path)
-        # Set the environment variable for OpenAI API key
         os.environ['OPENAI_API_KEY'] = openai_api_key
-        # MemGPT Configuration
         self.memgpt_config = {
             "model": "gpt-4",
             "preset": "memgpt_chat",
@@ -157,18 +206,64 @@ class AutoGenModule:
             "model_endpoint": "https://api.openai.com/v1",
             "context_window": 8192,
         }
-    def process_sow_plan(self, sow_plan: str):
+    async def process_semantic_kernel_results(self, results: Dict):
         """
-        Process the Statement of Work (SoW) plan and execute tasks based on its contents.
+        Process results from Semantic Kernel and execute tasks based on its contents.
         """
-        # Process SoW plan with Semantic Kernel
-        plan = self.semantic_kernel.process_input(sow_plan)
+        response = ""
 
-        # Execute tasks based on the plan
-        response = self.execute_plan(plan)
+        # Process each specified section
+        for section in ["Overview", "ProjectGoalsAndScope", "MethodologyAndWorkflow", "ExpectedDeliverables", "ResourceAllocationAndRoles"]:
+            if section in results:
+                content = results[section]
+                if isinstance(content, Dict):
+                    # Handling complex content within each section
+                    response += self.handle_complex_content(section, content)
+                else:
+                    # Handling simple content
+                    response += self.handle_section(section, content)
+
         return response
 
-     def create_builder(self) -> AgentBuilder:
+    def handle_complex_content(self, section_name: str, content: Dict) -> str:
+        """
+        Handle complex content within each section by integrating various functionalities.
+        """
+        complex_content_response = f"Handling Complex Content for {section_name}:\n"
+
+        # Use different methods based on the content requirements
+        for key, detail in content.items():
+            # Use generate_response for initial processing of the content
+            initial_processing = self.generate_response(detail)
+
+            # Use auto_generate for further content enhancement
+            enhanced_content = self.auto_generate(initial_processing)
+
+            # Use create_memgpt_agent for advanced processing and insights
+            memgpt_agent = self.create_memgpt_agent(section_name)
+            agent_response = memgpt_agent.process_input(detail)  # Assuming process_input method exists
+
+            # Use query_vector_db for fetching relevant data
+            vector_db_results = self.query_vector_db([detail.get('query', '')], 10)
+
+            # Combine responses
+            combined_response = f"Initial: {initial_processing}, Enhanced: {enhanced_content}, " \
+                                f"Agent: {agent_response}, DB Query: {vector_db_results}\n"
+            complex_content_response += f"{key}: {combined_response}\n"
+
+        return complex_content_response
+    def handle_section(self, section_name: str, content: str) -> str:
+        """
+        Handle simpler content for sections with straightforward information.
+        """
+        # Process the content using existing methods
+        initial_processing = self.generate_response(content)
+        enhanced_content = self.auto_generate(initial_processing)
+
+        # Combine and return the processed content
+        return f"{section_name}: Initial: {initial_processing}, Enhanced: {enhanced_content}\n"
+
+    def create_builder(self) -> AgentBuilder:
         """
         Create an instance of AgentBuilder.
         """
@@ -178,7 +273,7 @@ class AutoGenModule:
 
     def generate_response(self, user_input: str):
         # Use Semantic Kernel to interpret input and generate a response
-        response = self.semantic_kernel.process_input(user_input)
+        # response = self.semantic_kernel.process_input(user_input)
         # Auto-generate content or code snippet based on the response
         generated_content = self.auto_generate(response)
         return generated_content

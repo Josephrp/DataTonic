@@ -7,7 +7,6 @@ class Memory:
     Memory is used to store all the conversations in the system,
     which should be initialized when creating a session.
     """
-
     def __init__(self, session_id: str) -> None:
         self.session_id = session_id
         self.conversation = Conversation.init()
