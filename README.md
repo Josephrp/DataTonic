@@ -32,9 +32,23 @@ Based on those it can produce :
 
 DataTonic provides junior executives with an extremely effective solution for basic and time-consuming data processing, document creation or business intelligence tasks.
 
+Now anyone can :
+- get rapid client profile and sales strategy including design assets for executions with a single request
+- create a functional web application
+- create entire databases of business intelligence that can be used by enterprise systems. 
+
 ### Enterprise Autonomation Agent
 
-Do not wait for accounting, legal or business intelligence reporting with uncertain quality and long review cycles. DataTonic accelerates the slowest part of analysis : data processing and project planning execution. 
+Do not wait for accounting, legal or business intelligence reporting with uncertain quality and long review cycles. DataTonic accelerates the slowest part of analysis : data processing and project planning execution.
+
+## Main Benefits
+
+DataTonic is unique for many reasons :
+
+- local and secure application threads.
+- compatible with microsoft  enterprise environments.
+- based on a rigorous and reproducible evaluation method.
+- developper friendly : easily plug in new functionality and integrations.
 
 ### How we use it : Multi-Consult Technology
 
@@ -45,6 +59,14 @@ You can use datatonic however you want, here's how we're using it :
 - ask data tonic to create targetted sales strategies : now DataTonic is your sales assistant !
 
 **Data Tonic is the first multi-nested agent-builder-of-agents!**
+
+## How Data Tonic Was Created
+
+DataTonic Team started by evaluating multiple models against the new google/gemini models , testing all functions. Based on our evaluation results we optimized default prompts and created new prompts and prompt pipeline configurations. 
+
+Learn more about using TruLens and our scientific method in the [evaluation folder](https://github.com/Tonic-AI/DataTonic/tree/main/evaluation). We share our results in the [evaluation/results](https://github.com/Tonic-AI/DataTonic/tree/main/evaluation/results) folder.
+
+**you can also replicate our evaluation by following the instructions in #Easy Deploy**
 
 ## How it works :
 
@@ -64,6 +86,23 @@ Data Tonic uses a novel combination of three orchestration libraries.
 
 - Gemini is used in various configurations both for text using the autogen connector and for multimodal/image information processing. 
 - Autogen uses a semantic-kernel function calling agent to access the internet using the google api semantic-kernel then processes the new information and stores it inside a SQL database orchestrated by Taskweaver.
+
+# Easy Deploy
+
+Please try the methods below to use and deploy DataTonic.
+
+### Easy Deploy DataTonic evaluation/results
+
+The easiest way to use DataTonic is to deploy on github spaces and use the **notebooks in the evaluation/results folder** . 
+
+Click here for easy_deploy [COMING SOON!]
+
+**in the mean time please follow the instructions below:**
+
+1. Star then Fork this repository
+2. [use these instructions to deploy a code space for DataTonic](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository)
+3. Configure DataTonic according to the instructions below or 
+4. navigate to [evaluation/results](https://github.com/Tonic-AI/DataTonic/tree/main/evaluation/results) to use our evaluation methods.
 
 # How To Use
 
