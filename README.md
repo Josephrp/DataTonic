@@ -53,14 +53,23 @@ DataTonic is unique for many reasons :
 ## Do more with DataTonic 
 
 - is DataTonic Accessible ?
+
 **yes** DataTonic is accessible both audio and image input.
+
 - can i use it to make beautiful graphs and statistical analyses with little or no starting data ?
+ 
 **yes.** DataTonic will look for the data it needs but you can add your .db files or any other types of files with DataTonic.
+  
 - can i write a book or a long report ?
+
 **yes.** DataTonic produces rich , full-length content.
+
 - can i make an app ?
+
 **yes.** DataTonic is more tailored to business intelligence but it is able to produce functioning applications inside generated repositories.
+
 - can it do my job ?
+
 **yes** DataTonic is able to automate many junior positions and it will include more enterprise connectors, soon !
 
 ### How we use it : Multi-Consult Technology
