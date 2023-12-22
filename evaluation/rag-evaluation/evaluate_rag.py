@@ -8,6 +8,10 @@ from chromadb.utils import embedding_functions
 from dotenv import load_dotenv
 
 from langchain.document_loaders import TextLoader, DirectoryLoader
+from langchain.document_loaders.csv_loader import CSVLoader
+from langchain.document_loaders.pdf import PyMuPDFLoader
+from langchain.document_loaders.xml import UnstructuredXMLLoader
+
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 from trulens_eval import Feedback, Select, Tru, TruCustomApp
@@ -20,28 +24,47 @@ def parse_input(local_path: str) -> tuple:
     if not os.path.exists(local_path):
         os.mkdir(local_path)
 
-    loader = DirectoryLoader(
-        local_path,
-        loader_cls=TextLoader,
-        show_progress=True
-    )
-    documents = loader.load()
+    file_types = {
+        # '.csv': CSVLoader,
+        '.pdf': PyMuPDFLoader,
+        '.txt': TextLoader,
+        # '.xml': UnstructuredXMLLoader
+    }
 
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=200
-    )
-    texts = text_splitter.split_documents(documents)
-    
+    texts = []
+    for file_type in file_types.keys():
+        print(f'Loading files of type {file_type = }')
+        directory_loader = DirectoryLoader(
+            path=local_path,
+            glob=f"**/*{file_type}",
+            loader_cls=file_types[file_type],
+            show_progress=True
+        )
+        documents = directory_loader.load()
+
+        text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=1000,
+            chunk_overlap=200
+        )
+        splits = text_splitter.split_documents(documents)
+
+        for split in splits:
+            texts.append(split)
+
     id_list = [
-        f'doc-{str(i).zfill(len(texts))}' for i, doc in enumerate(texts)
+        f'doc-{str(i)}' for i in range(len(texts))
     ]
-    text_content_list = [
-        doc.page_content for doc in texts
-    ]
-    metadata_list = [
-        doc.metadata for doc in texts
-    ]
+
+    text_content_list = []
+    metadata_list = []
+
+    for doc in texts:
+        text_content_list.append(
+            doc.page_content.replace('\n', ' ') 
+        )
+        metadata_list.append(
+            doc.metadata
+        )
 
     return id_list, text_content_list, metadata_list
 
@@ -181,8 +204,17 @@ def query_rag(rag):
         feedbacks = get_feedbacks_for_openai()
     )
 
+    prompts = [
+        "How much is a physician willing to pay extra per needle for higher accuracy ?",
+        "How much is a physician willing to pay extra per needle for faster speed ?",
+        "How much profit would licensing EX1 bring in the first year ?",
+        "How much licesnging profit would EX1 bring in after the first year ?",
+        "What % of MS patients are diagnosed ?",
+        "What % of Multiple Sclerosis receive treatment"
+    ]
     with tru_rag as _:
-        rag.query("What is the news about Pando")
+        for prompt in prompts:
+            rag.query(prompt)
 
 
 if __name__ == "__main__":
