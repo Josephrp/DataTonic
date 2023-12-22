@@ -20,8 +20,11 @@ then applied them to our enterprise application DataTonic.
 - [taskweaver](https://github.com/Tonic-AI/DataTonic/blob/main/evaluation/baselineprompts/taskweaverdefaultprompts.md)
 - [datatonic](https://github.com/Tonic-AI/DataTonic/blob/main/evaluation/baselineprompts/datatonicdefaultprompts.md)
 
-**proposed prompts :** these are our proposals
+**proposed prompts :** these are our unique prompts:
+- [taskweaver planner](https://github.com/Tonic-AI/DataTonic/blob/main/src/tonicweaver/planner)
+- [semantic-kernel planner](https://github.com/Tonic-AI/DataTonic/blob/main/src/semantic_kernel/semantic_kernel_module.py)
 
-**evaluation results :** these are our results
+**evaluation results :** 
+- these are our [results](https://github.com/Tonic-AI/DataTonic/blob/main/evaluation/results)
 
 **analysis :** based on our results , we have ranked prompts and prompt combinations and optimized their useage and their applicability to our use case
