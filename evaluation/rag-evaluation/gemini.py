@@ -30,7 +30,7 @@ def load_text(local_path: str) -> list:
     return texts
 
 
-class RAG_openai:
+class RAG_gemini:
     @instrument
     def retrieve(self, query: str) -> list:
         """
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     load_dotenv('../../.env')
     providers = {
         'openai' : {
-            'rag': RAG_openai(),
+            'rag': RAG_gemini(),
             'feedbacks': get_feedbacks_for_openai()
         },
     }
