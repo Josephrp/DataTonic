@@ -103,28 +103,38 @@ def get_feedbacks_for_openai() -> list:
     return [f_groundedness, f_qa_relevance, f_context_relevance]
 
 
-def evaluate_openai():
-    rag_openai = RAG_openai()
-
+def evaluate(app_id: str, rag, feedbacks: list):
     tru_rag = TruCustomApp(
-        rag_openai,
-        app_id = 'openai',
-        feedbacks = get_feedbacks_for_openai()
+        rag,
+        app_id = app_id,
+        feedbacks = feedbacks
     )
 
     with tru_rag as _:
-        rag_openai.query("What is the news about Pando")
+        rag.query("What is the news about Pando")
+
 
 
 if __name__ == "__main__":
     load_dotenv('../../.env')
+    providers = {
+        'openai' : {
+            'rag': RAG_openai(),
+            'feedbacks': get_feedbacks_for_openai()
+        },
+    }
 
     texts = load_text('new-articles')
 
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
     vectordb = Chroma.from_documents(documents=texts, embedding=embeddings)
 
-    evaluate_openai()
+    for app_id in providers:
+        evaluate(
+            app_id,
+            providers[app_id]['rag'],
+            providers[app_id]['feedbacks']
+        )
 
     tru = Tru()
     tru.get_leaderboard(app_ids=['openai'])
