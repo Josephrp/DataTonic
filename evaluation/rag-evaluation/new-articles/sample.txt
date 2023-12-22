@@ -1,0 +1,2302 @@
+    YGCC Life Sciences Case Book
+    2014
+    © Yale Graduate Student Consulting Club
+
+
+
+
+Full Version                                  1
+Introduction
+ Welcome to the 2014 Yale Graduate Consulting Club (YGCC) Life Sciences Casebook!
+ This casebook was created with the intention of providing new practice cases based on the interview experiences
+ of recent YGCC members, and providing a look at real-world problems that healthcare and life sciences
+ consulting firms are currently helping to solve. There is also a selection of cases from other casebooks that can
+ be explored to delve deeper into the healthcare and life sciences industries. My hope is that readers unfamiliar
+ with this area can better navigate their understanding of this important business sector and can better orient
+ themselves in their exploration of relevant business problems.
+
+ Follow these general steps when practicing a case:
+
+ 1.   Pair up with a partner. Assign one person as the interviewer and the other as the candidate
+ 2.   Interviewer – take about 5 minutes to read through the case in your head. Then read the prompt to the
+      candidate
+ 3.   Candidate – Note on paper important details from the prompt. Ask clarifying questions, then ask the
+      interviewer if you can take about 1 minute to draw up a structured problem-solving approach. Then talk
+      through your structure with the interviewer and ask for any additional information you think might be helpful
+ 4.   Interviewer – Listen carefully to candidate’s structure and logic. Are there any crucial pieces he/she is
+      missing? Is he/she going down the right track? If not, try to lead the candidate in the right direction. Provide
+      additional information only when the candidate asks for them. Then go through the questions one by one,
+      providing the exhibits as appropriate
+ 5.   Candidate – Take as much initiative as you can in answering the questions. Calculate whatever you think is
+      relevant
+ 6.   At the end of the case, the interviewer should ask the candidate to summarize (“synthesize”) the case. The
+      candidate should give a very brief ~1 minute summary of his/her recommendations
+
+ For the interviewer, we have included a glossary of healthcare and life science-specific terms in the appendix.
+
+Yale Graduate Student Consulting Club© !                                                                             2
+Acknowledgements
+
+   I would like to wholeheartedly thank past and present members of YGCC for their contributions, which have
+   been critical to the process of putting together this casebook:
+
+   !    Devin Noblin, Joydeep Banerjee, Garrett Cobb, Jonathan Graeupner, Nancy Tao, Jie Yang, Sarah
+        Bertino, Ellie Schmelzer, Raja Banerjee, and Pam Wang for advice and support in the development of
+        the cases and supplementary information
+   !    Yi Shao, Diana Hu, Andy Chen, Ramiro Nandez, and Zhiyuan Zhou for testing the cases and providing
+        invaluable feedback
+   All questions and comments are welcome by email at yale.grad.consulting@gmail.com.
+
+   I hope you find this casebook to be useful towards your consulting preparation, and best of luck in the
+   interview process!
+
+
+   Jonathan Chee
+   Managing Director of Content
+   Yale Graduate Student Consulting Club
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                                       3
+Disclaimer
+
+ As the YGCC have limited experience and knowledge in the life sciences / healthcare fields, the definitions in the
+ glossary and in the cases should not be taken as fact. This represents a stepping stone towards expanding your
+ knowledge about this field should you wish to learn more.
+
+ The science, treatments, and drugs portrayed in this casebook also should not be taken as accurate medical
+ advice.
+
+ While these cases are based on recent cases that candidates received during interviews, they have been
+ modified and expanded from their original versions.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                                              4
+Introduction
+
+Type of Case                                                                         Firm
+Type                                                                                 Name
+
+Prompt
+Interviewer should read this to the candidate
+
+
+
+Additional Information (provided on request)
+Information to be provided to the candidate. Usually contains information about client goals, client
+business model, disease description, drug description, or patient descriptions.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                               5
+Introduction
+ What factors should be considered?
+ Sample Issue Tree
+
+ An example of a structure that can be used to approach this case. There are many variations on
+ structures that could apply to a given case so do not be surprised if the candidate’s structure differ
+ from the example structure. A good structure should be MECE and logical. Also remember there are
+ always more than just one structure to solve the problem.
+
+
+                                                          Profit
+
+
+
+
+                             Revenue                                               Costs
+
+
+
+
+             # of units                    Price / unit            Fixed costs                Variable costs
+
+
+
+
+                                                                                 Cost/ unit                    # of units
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                                                    6
+Introduction
+ Section title
+ In italics will be example interviewer prompts. You can decide to change these prompts or
+ expand on them to alter the flow of the case.
+
+ Key takeaway points from a section will be underlined
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                     7
+Introduction
+ Summary / End of Case
+ Summation of the case
+
+ Recommendation / Rationale
+ Example recommendation. A good recommendation should pull from the course of the analysis.
+
+ Risks / Next Steps
+ There will always be risks involved and next steps to come with each approach. This is where the
+ candidate can demonstrate creativeness outside the scope of the original case.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                            8
+Table of Contents
+
+  Case #                     Title              Firm                  Type
+
+      1                    CS Med          Health Advances      Commercialization
+
+      2                      Ear X         Health Advances      Commercialization
+
+      3                  NeoFactor         Trinity Partners       Market Entry
+
+      4                   LT Neuro         Trinity Partners       Market Entry
+
+      5                    O’ Care         Trinity Partners        Acquisition
+
+      6             Ultimate Bandage       Trinity Partners       Market Entry
+
+      7             C Difficile Vaccine      ClearView               Pricing
+
+      8                IBD Products          ClearView        Market Size Estimation
+
+      9                     Boreal             L.E.K.              Profitability
+
+
+
+Yale Graduate Student Consulting Club© !                                               9
+Estimation Practice
+ Estimation Prompts
+ To help with your preparation, below are a collection of prompts used from previous
+ interviews or based on similar interview questions
+
+ Before starting, you should take a look at various outside resources to guide your approach
+
+ Some suggestions are:
+
+       •   Case Interview Secrets by Victor Cheng (Amazon)
+       •   Guesstimation by Lawrence Weinstein (Amazon)
+       •   Framework for McKinsey, BCG and Bain estimation cases (Youtube)
+       •   Estimation podcasts (Firmsconsulting website)
+
+
+
+
+ Example Estimation Questions:
+ How many HPLCs are sold annually?
+ How many PCR machines are sold annually?
+ What is the amount of floss used in America?
+ How many new braces (teeth) are installed per year?
+ How many new glasses are prescribed per year?
+ How much contact solution is sold every year in America?
+
+
+
+Yale Graduate Student Consulting Club© !                                                       10
+Case 1: CS Med (Medical Device)
+Type of Case                                                                        Firm
+Commercialization                                                                   Health Advances
+
+Prompt
+Our client is CS Med, a medical device start-up company. CS Med built a new biopsy needle
+attachment, AccuBiop, which is integrated directly into needles. This device exploits differences within
+breast cancer masses for greater accuracy to decrease the need for a second biospy. AccuBiop is
+approaching FDA approval so the CEO has brought our firm on board to explore routes to
+commercialization.
+Additional Information (provided on request)
+Client Goals
+- CEO wants to achieve $1M in profit as soon as possible to recoup R/D costs, but does not want to
+   sell the patent for AccuBiop or the company
+CS Med’s Capabilities
+- CS Med mainly invested in R/D for the AccuBiops.
+- AccuBiop would be the first revenue stream for the company
+- The company does not yet have the manufacturing infrastructure make needles, or the experience
+   to sell/market/distribute a product
+Biopsy Needles
+- Currently sold around $200 per needle and are disposed after one use
+- Estimated market size is 200k biopsies/year.
+Yale Graduate Student Consulting Club© !                                                            11
+       Case 1: CS Med (Medical Device)
+        What factors should be considered?
+        Sample Issue Tree
+
+
+
+
+                                                How to Commercialize
+                                                     AccuBiop?
+
+        Market Potential                                                                                      Routes to
+         of AccuBiop                                                                                       Commercialization
+
+           Major      Customer
+                                                                          In House                                                                Partnership
+Size      Players     Preference
+
+
+            Speed          Accuracy   Price         Profitability                          Feasibility                                 Profitability       Feasibility
+
+
+                                                Revenue             Costs       Time      Experties      Capital          Revenue                          Costs
+
+                                                                     Sales /                                           # of    Per device
+                                              Manufacturing                       Distribution                       devices                   Upfront          Operational
+                                                                    Marketing                                                  payments
+
+
+                                       Needle          AccuBiop
+
+
+
+
+       Yale Graduate Student Consulting Club© !                                                                                                                    12
+Case 1: CS Med (Medical Device)
+ Market Analysis
+ When asked about the market size, provide 200k biopsies/year.
+ If candidate request information about market trend and the potential market share for client
+ (related to current competition) Present Exhibit 1
+ What can be interpreted from this table?
+
+ Interpretations of Exhibit 1
+ 1) Total sales = market size (as given above). Market is saturated
+ 2) Costs are not particularly different between the companies on the market
+ 3) C1 and C2 are offering a lower price. Could have larger market share by competing on price
+
+ How could CS Med enter this saturated market?
+ Product differentiation
+  -Price
+  -Features
+  -Quality
+
+ A good candidate should recognize AccuBiop adds new features and would proactively ask if the
+ features fulfill unmet customer preferences
+ How would you analyze if the features AccuBiop adds are relevant?
+ - Physician surveys for features
+ - Interview experts in the field
+
+Yale Graduate Student Consulting Club© !                                                         13
+Case 1: CS Med (Medical Device)
+ Product Differentiation
+ Provide Exhibit 2
+ Interpretations of Exhibit 2
+ 1) Accuracy is the most important feature for the surveyed physicians so the AccuBiop adds
+     relevant value
+ 2) Physicians specifically value this at $100 extra per needle
+
+ Now that candidate realizes that AccuBiop can add relevant value, move to commercialization.
+
+ Commercialization
+ Candidate should have already thought of a few examples of commercialization styles, but if not
+ utilize this time to brainstorm potential ways to market.
+ - In house " Produce AccuBiop + needles alone
+ - Partnership " Work with another company to produce needles with AccuBiop
+ - Licensing " A subtype of partnership where the intellectual property of making needles with
+     Accubiop are rented to another company to produce the needles with AccuBiop
+ - Selling IP/Company (not an option from prompt)
+
+ Interviewer should ask the candidate to evaluate in house commercialization first
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                           14
+Case 1: CS Med (Medical Device)
+ In House Assessment
+ To in house manufacture needles with AccuBiop, CS Med can make a maximum $10M
+ investment in manufacturing, storage/inventory, sales/marketing, and distribution. By year 2
+ this allows for the production and estimated sales of 10k needles with AccuBiops per year.
+
+ What other information is needed to calculate profitability for this approach?
+ Revenue Side
+ -Expected units sold – 10k needles
+ -Expected price - $300 per needle (max doctors will pay via Exhibit 2)
+ Cost Side
+ -Expected fixed cost - $10M investment
+ -Expected variable cost - $30 for needle and $20 for AccuBiop (candidate should ask for)
+
+ Profit
+ Revenue:
+ (10k needles) ($300/needle) = $3M per year
+ Cost:
+ Investment: $10M
+ Variable Cost: (10K needles) ($30/needle + $20/AccuBiop) = $500K per year
+
+ Year 1 Profit = ($10M), Accumulated Y2 Profit = ($7.5M)
+ Gain $2.5M/year. Will breakeven year 5 and reach the goal of $1M profit by year 6
+
+Yale Graduate Student Consulting Club© !                                                    15
+Case 1: CS Med (Medical Device)
+ Partnership Assessment
+ During this analysis, Company 3 has approached CS Med for a partnership. As the 3rd
+ largest player in the market, Company 3 is looking for ways to improve market share by
+ diversifying its product. For producing the needle with AccuBiop, CS Med would receive a
+ royalty per needle, but will have to pay for and manufacture each AccuBiop
+
+ How much can CS Med charge per AccuBiop to reach its $1M goal in profit in Year 1?
+ Assumptions: All other costs (represented by cost/needle in the in house approach) will be
+ covered by Company 3
+
+ Calculation
+ Example Company 3 Partnership - assume all needles are converted to needles with AccuBiop
+ (Goal) < (C3 partnership revenue for AccuBiop) – (C3 partnership costs)
+ (Goal) < (C3 needles sold) (price per AccuBiop) – (C3 needles sold) (cost per AccuBiop)
+
+ $1M < (40k needles) ($x per AccuBiop) – (40k needles) ($20 per AccuBiop)
+ $1M< 40k ($x-$20)
+ ~$25/needle with AccuBiop < $x – $20
+ ~$45/needle with AccuBiop = $x
+
+ In this case, $45 per AccuBiop will lead to the profit goal within one year. Given the survey from
+ Exhibit 2, physicians are willing to pay as much as $120 more for better quality, $45 should be
+ easily acceptable.
+Yale Graduate Student Consulting Club© !                                                              16
+Case 1: CS Med (Medical Device)
+ Summary / End of Case
+ The CEO of CS Med would now like to hear a summation of your findings and a
+ recommendation of which way to commercialize the AccuBiop
+
+ Recommendation / Rationale
+ CS Med should form a partnership with Company 3 to bring the AccuBiop to market. Within the first
+ year, CS Med can reach the $1M profit goal by working with the 3rd player in the market and
+ charging $45 per AccuBiop. In house manufacturing would be the slower approach, also requires a
+ substantial financial burden on the company ($10M) that a start-up like CS Med may not want to
+ incur.
+
+ Risks
+ Regulatory Approval AccuBiop still needs to complete regulatory assessment before
+ commercialization and should be aware of this risk
+
+ Competitive response of other players If the other companies could produce a similar needle
+ improvement, this would lower the value of our product and could hurt the market share of our
+ partner.
+
+ Adoption Rate If AccuBiop needles are not adopted quickly enough, competitors would have more
+ time to develop a similar product and to enter the market.
+
+
+Yale Graduate Student Consulting Club© !                                                         17
+Case 1: CS Med (Medical Device)
+ Next Steps
+ Negotiate Deal Terms A good candidate would note that the terms of the partnership were dictated
+ by Company 3. The high value of the device to physicians should allow CS Med the leverage to
+ negotiate better terms or partner with other companies. Terms could include a higher price per
+ AccuBiop or an upfront payment.
+
+ Increase manufacturing of AccuBiop needles By fulfilling the physicians’ need for accuracy, CS
+ Med’s partner has the potential to increase market share. CS Med should prepare to increase
+ production of AccuBiops to meet the demand beyond a given partner’s market share.
+
+ Evaluate Other Partnerships An insightful candidate might suggest partnering with two or all three
+ companies because this would maximize the “#needles sold by partner”. However, the firm would
+ have to perform an analysis to see if working with multiple partners would be more profitable than
+ an exclusive partnership.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                              18
+Case 1: CS Med (Medical Device)
+
+   Exhibit 1: Biopsy Needle Market                              Exhibit 2: Physician Survey
+
+                                  Market                                                           1 to 3 ranking
+             Price /   Cost /                Units   Rank the following features:
+Company                          Share (by                                                         (1 highest)
+             needle    needle                Sold
+                                  units)             Higher Accuracy?                              1
+Company 1     $180       $30        35%      70k     Faster Speed?                                 3
+
+Company 2     $180       $30        35%      70k     Price?                                        2
+
+Company 3     $200       $35        20%      40k     How much are you willing to pay more for      Extra $ / needle
+
+                                                     Higher Accuracy?                              $100
+ Others       $190       $30        10%      20k
+                                                     Faster Speed                                  $20
+                                                     Willing to switch over to a new needle with   % yes response
+                                                     Higher Accuracy?                              80%
+                                                     Faster Speed?                                 10%
+                                                     Lower Price?                                  30%
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                                     19
+Case 2: EarX (Ear Infection Vaccine)
+Type of Case                                                                           Firm
+Commercialization                                                                      Health Advances
+
+Prompt
+Global Pharmaceutical (GP) researches, manufactures, and sells medical products throughout the
+world. GP is seeking new products to compliment its existing vaccine division. GP approached the
+small biotech, Ear-X, to license its ear infection vaccine (EX1), which is currently at the end of clinical
+trials. Ear-X is mainly a R/D company and thus has no manufacturing or distribution capabilities. The
+current negotiated deal structure is $200M upfront and $15 per vaccine in royalties to Ear-X. GP has
+hired our firm to analyze if this deal is acceptable.
+Additional Information (provided on request)
+Client Goals
+- GP wants to breakeven on the $200M payment within a year after launching in the US market
+Ear Infections (make sure the candidate understands this portion)
+- Common in children 4 years old and younger
+- Poor hygiene and high child-to-child contact are the main risk factors for spreading the infection
+- Normally a self-resolving (goes away without treatment) condition but the infection is painful to the
+   child
+EX1
+- EX1 will be an elective (non-mandatory) vaccine. Parents must ask for the vaccine or physicians
+   suggest vaccination. Must be administered by a medical professional
+
+Yale Graduate Student Consulting Club© !                                                                20
+Case 2: EarX (Ear Infection Vaccine)
+ What factors should be considered?
+ Sample Issue Tree
+
+
+
+                                                                                Licensing EX1
+
+
+                                  External: Market for                                                                      Internal:
+                                         EX1                                                                               Profitability
+
+
+
+              Size                  Competition                        Trend                                 Revenue                          Costs
+
+
+# Children have       Disease                             Customer                                                                   Fixed
+  ear infection                                          Preferences           Regulation       Units Sold       $ per Vaccine                   Variable Costs
+                     Prevalence                                                                                                      Costs
+
+
+                          Child to child        price         Level of pain
+             Hygiene        contact                                                                                                 Upfront   Royalties     EX1
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                                                                                      21
+Case 2: EarX (Ear Infection Vaccine)
+ Market Analysis
+ Since EX1 would be the first type of treatment for ear infections, there are no competitors or
+ detailed customer information. How would you begin to determine if there is a market for
+ this vaccine?
+
+ -   Survey of pediatricians or experts in the field
+ -   Survey of parent satisfaction with current care
+
+ Surveys
+ Four surveys of pediatricians have already been performed by our client (Exhibit 1).
+
+ Interpretations of Exhibit 1
+ • The four surveys do not come to a consensus on value of the vaccine
+ • There are positive correlations with a higher pediatrician willingness to prescribe the vaccine,
+    acceptable price for the vaccine, and prevalence of infection
+ • A polarization of the customer base may exist where a certain segment experiences a higher
+    prevalence of infection
+ • Division of city or suburban neighborhood does not seem to be relevant
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                              22
+Case 2: EarX (Ear Infection Vaccine)
+ Brainstorming
+ How could you segment the population to identify a patient group that is more affected by
+ ear infections?
+ Remind if needed major risk factors described in the prompt are hygiene and child-to-child contact
+ Risk Factors
+    - Hygiene
+         - Awareness
+         - Family income and habits
+    - Child-to-child contact frequency
+         - Difference in childcare options (daycare/school/homecare)
+         - Frequency for common activities (swimming/other classes)
+         - Family size
+
+ Market Composition
+ If childcare is not brought up, interviewer should prompt: What are different forms of childcare
+ and how could they affect the prevalence of ear infections? (Brainstorm)
+ - Parents, Relatives, Other full-time caregiver
+ - Daycare, School
+ In the first 3, the child would have less contact with other children, whereas the child would have
+ more contact with other children in daycare or school. Show Exibit 2 to confirm the effect on
+ infection rates.
+ Deeper analysis of the original surveys reveals that the patients in the 3rd and 4th survey all
+ went to daycare or school and ¾ of these parents would vaccinate
+Yale Graduate Student Consulting Club© !                                                           23
+Case 2: EarX (Ear Infection Vaccine)
+ Market Size
+ Estimate the number of children in daycare or school that would be vaccinated
+ Candidate would need to come up with a reasonable % of children that go to daycare or school
+ Example structure
+ (US pop.) (life expectancy ~80 years) (ear infection ages) (% daycare or school)
+ (% would vaccinate)
+ (320M people) (1/80 years) (first 5 years) (1/2) (3/4) = 7.5M children vaccinated
+ Candidate now has enough information for a profitability evaluation
+
+ Profitability Calculation
+ Candidate can use price set in survey of $50 and should ask for the cost of vaccine production ($15
+ per vaccine)
+ Revenue
+ (# children vaccinated) (vaccine price per child)
+ (7.5M children) ($50 per child) = 375M
+ Cost
+ (Upfront) + (# children vaccinated) (EX1 cost + Royalty cost)
+ (100M) + (7.5M)($30) = $325M
+
+ Profit
+ Year 1 = $50M, $150M per year afterwards
+
+
+Yale Graduate Student Consulting Club© !                                                         24
+Case 2: EarX (Ear Infection Vaccine)
+ Summary / End of Case
+ Our client wants to know if they should accept to the terms of the currently negotiated deal.
+
+ Recommendation
+ Yes, licensing EX1 would allow for a profit of $50M within the first year (more than the goal of
+ breaking even within the first year) and then $150M per year afterwards. By analyzing physician
+ surveys, we were able to identify a segment of the population with high infection rates and a higher
+ need for EX1.
+
+ Risks
+ Physician opinions While some physicians see the value of our vaccine (surveys 3 and 4), other
+ physicians clearly do not (survey 1 and 2). Physicians who would not prescribe our vaccine would
+ affect our sales. Our estimation for the market penetration in school/daycare could be affected.
+
+ Competitive response Since this is a large potential market, competing vaccines should be
+ expected to enter the market when our patent expires.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                           25
+Case 2: EarX (Ear Infection Vaccine)
+ Next Steps
+ Marketing:
+ Increase marketing and education of physicians about the vaccine The major driver for the sales
+ will be physician prescriptions. Informative material about the benefit of our product in school/
+ daycare situations as part of marketing will be necessary.
+
+ Direct to consumer marketing Parents who have children with high ear infection rates would value
+ this vaccine and this could help if their physicians do not want to prescribe the vaccine.
+
+ Explore other global markets Ear infections should be common outside of the US as well and
+ should prove to expand the market size by several magnitudes.
+
+ Examine other opportunities:
+ Consider acquiring Ear-X While licensing is the major option analyzed here, a similar analysis could
+ be performed on the value of acquiring Ear-X. Benefits include a lower payment in the long run and
+ consolidation of the R/D team into our client’s R/D department to better prepare for competitor
+ vaccine entry.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                             26
+Case 2: EarX (Ear Infection Vaccine)
+ Exhibit 1: Pediatrician Survey
+
+                                     Survey 1         Survey 2    Survey 3         Survey 4
+Would you prescribe EX1 to           No (90%)         No (85%)    No (5%)          No (10%)
+your patients?                       Yes (10%)        Yes (15%)   Yes (95%)        Yes (90%)
+What is an acceptable price for      $25 (90%)        $25 (85%)   $25 (5%)         $25 (5%)
+this vaccine? (from Yes group in     $50 (10%)        $50 (15%)   $50 (95%)        $50 (95%)
+previous question)
+Prevalence of ear infections         10%              10%         80%              80%
+Patient Neighborhoods                Suburb           City        City             Suburb
+
+
+Exhibit 2: Childcare Type and Ear Infection Prevalence
+
+ School
+
+Daycare                                                                  % of children with
+ Parent                                                                  at least one ear
+Relative                                                                 infection
+  Other
+
+
+           0          20             40          60          80   100
+Yale Graduate Student Consulting Club© !                                                       27
+ Case 3: NeoFactor (Growth Factor)
+Type of Case                                                                     Firm
+Market Entry                                                                     Trinity Partners
+
+Prompt
+Our client, NeoFactor, has produced a drug (NFD), which could be used as a preventative treatment for
+two neonatal congenital diseases. In early studies, let’s assume this drug has the same efficacy and
+potential in both diseases. However, NeoFactor only has enough capital and expertise to initiate a
+clinical trial for one disease. Which disease should NeoFactor prioritize?
+Additional Information (provided on request)
+Disease 1 (D1)
+- Improper development causes errors in vision
+- Standard of care (most common current treatment, can be thought of as a “competitor”) is surgery to
+   repair developmental damage within 72 hours of birth and follow up appointments
+Disease 2 (D2)
+- Slow development leads to weakness in lungs for the first year
+- Standard of care requires 1 year of hospitalization
+NeoFactor drug (NFD)
+- Early detection of D1 and D2 already occurs for all premature births (earlier than 39 weeks)
+- NFD would be given in response to early detection of symptoms to prevent disease progression
+Physician and Patient Opinions
+- Physicians would prescribe if the cost of NFD would provide a cost savings
+ Yale Graduate Student Consulting Club© !                                                           28
+Case 3: NeoFactor (Growth Factor)
+ What factors should be considered?
+ Sample Issue Tree
+
+
+
+                                                                                     Compare D1 and D2
+
+
+                                                             External                                                                     Internal
+
+
+
+                                                                                                                                                     Company’s
+                                 Market              Regulation               Clinical trial approval                     Profitability              Capability
+
+
+
+
+ Size          Penetration                   Competitors (Standard of Care)                                     Revenue                   Costs
+
+
+
+
+                                                       Cost for                                         Price              Volume
+                             Effectiveness            treatment          Convenience
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                                                                                  29
+Case 3: NeoFactor (Growth Factor)
+ Market Comparison
+ Candidate should want to analyze market size differences or identify patient populations
+ Provide exhibit 1 and prompt: What can be interpreted from this table?
+ Interpretation of Exhibit 1
+ 1) D1 and D2 occur at different prevalence depending on the time of birth
+ 2) Actual patient populations can be estimated using this table
+ Patients with D1: 10k+10k+16k = 36k
+ Patients with D2: 15k+5k+4k = 24k
+ D1 has a larger population by 12k
+
+ Market Penetration
+ What could potentially make a patient switch from the current standard of care / competitor?
+ (Brainstorm)
+ Patient Preferences
+  -Effectiveness:
+     -Efficacy of treatment
+     -Physician advice (expert advice)
+  -Attractiveness to use:
+     -Costs
+     -Convenience (treatment method, hospitalization vs. appointments; time for the treatments, and
+ so on)
+ Interviewer can provide the standard care information as long as the candidate want to
+ compare it with NFD in factors covered above.
+Yale Graduate Student Consulting Club© !                                                        30
+Case 3: NeoFactor (Growth Factor)
+ Market Comparison
+ Effectiveness:
+ Assume the standard of care and the drug treatments are equally effective.
+ Physician’s advice is neutral at this moment.
+
+ Cost:
+ The standard of care for:
+ D1 – surgery and 2 yearly follow up appointments
+ D2 – hospitalization for 6 months
+
+ Interviewee should ask to clarify costs. Cannot give our expected price yet, but:
+ D1 - Surgery costs $1900 and follow up appointments are about $500
+ D2 - Hospitalization is $1500 per day
+ Calculate the cost to the patient for the current standard of care
+ D1 = $1.9k + $.5k + $.5k = $2.9k
+ D2 ~ $1.5k/day * 360 days/2 = $270K
+ D2 has a much more expensive “competitor”.
+
+ Convenience:
+ Candidate should identify D2 requires serious hospitalization while D1 only requires appointments.
+ A good candidate will conclude NFD would be more popular for D2 treatment given the
+ standard of care for D2 is more expensive, and time consuming.
+
+Yale Graduate Student Consulting Club© !                                                          31
+Case 3: NeoFactor (Growth Factor)
+ Market Comparison
+ Based on the standard of care analysis, our team has predicted that 90% of D2 patients
+ would use NF1, whereas 50% of D1 patients would use NFD over the standard of care. What
+ is the potential profitability of each drug?
+ A good candidate should proactively ask the dose and price information to get revenue and cost.
+
+ Provide Exhibit 2
+ Same cost of production, longer dosage for D2
+
+ Profit per patient
+ [(price/week – cost/week)] (duration of treatment/week)
+ D1: [(2200-200)] (1) = $2k per patient
+ D2: [2200-200] (2) =$4k per patient
+
+ Profit
+ [(patient #)(% switching)] (profit per patient)
+ D1: [(36k)(50%)] (2k) = (18k) (2k) = $36M
+ D1: [(24k)(90%)] (4k) = (21.6k) (4k) = $86.4M
+
+ D2 is more profitable by ~50.4M
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                      32
+Case 3: NeoFactor (Growth Factor)
+ Summary / End of Case
+ The engagement is over and our client wants an answer. Which disease should be
+ prioritized?
+
+ Recommendation / Rationale
+ NeoFactor should invest in the clinical trial for D2. Although D1 has 12k more patients, the potential
+ costs savings to patients is predicted to cause a 90% adoption of NFD for D2 compared to 50% for
+ D1. Final calculations for profits predicts $2k more in profit per patient, which adds up to a
+ difference in $50.4M more in total profit per year.
+
+
+ Risks
+ Clinical Trial / FDA approval The results for NFD are still preclinical and as with the development of
+ most drugs, there is a high potential risk of failure. Client should gather more information regarding
+ the successful rate for D1 and D2.
+
+ Standard of Care Changes In the years needed for clinical trial approval to occur, the comparison to
+ existing treatments may be less favorable. This would especially be the case if a competitor enters
+ the market.
+
+ Physician / Patient Adoption The low prevalence of these two diseases necessitates informing
+ physicians about the potential of a new treatment. Otherwise, patient adoption will be low.
+
+
+Yale Graduate Student Consulting Club© !                                                             33
+Case 3: NeoFactor (Growth Factor)
+ Next Steps
+ Commercialization Thus far the focus of NeoFactor has been on the clinical trial process. Given the
+ current limited finances, the client should consider different options to bring NFD to market (e.g.
+ licensing the drug to a larger company with manufacturing, sales/marketing, and distribution.
+
+ Marketing / Information Informing physicians of this option would be the most effective way to
+ increase adoption of this drug over the current standard of care.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                          34
+Case 3: NeoFactor (Growth Factor)
+
+ Exhibit 1: Annual Prevalence of Diseases in Premature Births
+
+        Category                  <28 Wks       28-30 Wks    30-32 Wks       32-37 Wks
+       Population                  30,000         50,000       80,000          240,000
+     D1 Prevalence                   33%           20%          20%           Rare <1%
+
+     D2 Prevalence                   50%           10%           5%           Rare <1%
+
+
+
+
+ Exhibit 2: Doses of NFD Per Treatment Group (Based on Pre-Clinical Data)
+
+    Disease               Instruction           Duration    Price / Week   Cost / Week
+        D1             Continuous Intravenous   1 week         $2200          $200
+                              Infusion
+
+        D2             Continuous Intravenous   2 weeks        $2200          $200
+                              Infusion
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                 35
+Case 4: LT Neuro (Multiple Sclerosis)
+Type of Case                                                                         Firm
+Market Entry                                                                         Trinity Partners
+
+Prompt
+Our client, LT Neuro, developed a new oral treatment for Multiple Sclerosis (MS), which has passed
+phase 2 of clinical trials. Before completing the rest of the clinical trial process, our client wants a
+revenue projection for the drug in 2019, when the drug would hit peak sales. Specifically, the CEO
+would like to see how soon they could breakeven on phase 3 trial costs.
+
+Additional Information (provided on request)
+ Multiple Sclerosis
+ - An estimated 400k Americans have this disease, causing the brain and spinal cord slowly
+      damaged
+ - Symptoms include difficulty of movement, speaking, and senses.
+ - Diagnosis rate is at 80% of the estimated MS population. 90% of diagnosed receive treatment.
+ MS Treatment Market
+ - No full cure, but medication allows for management of symptoms
+ - Medication injections are the most common treatment. One oral treatment was introduced 4
+      years ago and gained popularity for convenience. Two oral drugs have just entered the market.
+ Client Information / Goals
+ - Our client has experience with launching drugs, but is concerned about the appearance of two
+      competitors and how this will impact sales
+ - Our client wants to break even on trial costs (in further detail later)
+Yale Graduate Student Consulting Club© !                                                           36!  35
+Case 4: LT Neuro (Multiple Sclerosis)
+ What factors should be considered?
+ Sample Issue Tree
+
+
+
+
+                                                Launch oral drug for treating MS?
+
+
+
+
+              Market                                                   Profitability                                 Implementation Risk
+
+
+
+
+Size          Trends         Share                   Revenue                               Costs                  Capital          Operational
+
+
+
+                                                                                                       Variable
+                           Competition      Volume             Price         Fixed Costs                Costs
+
+
+
+                                           Treatment                           Clinical                       # treatment
+                                           Frequency                            Trials       Costs / unit         sold
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                                                              37
+Case 4: LT Neuro (Multiple Sclerosis)
+ Market Analysis
+ What is the potential treated patient population? (Target Market Calculation)
+ Provide number of people with MS, 400K in 2014.
+ Example structure –
+ (Patient population) (% diagnosed) (% receive treatment) = 400K x 0.8 x 0.9 =288K
+
+ If asked, the candidate can assume the patient population will track with population growth, but
+ should still remain around 300k by 2019.
+
+ A intuitive candidate should recall that client’s product is an oral drug and for share of the market for
+ oral vs injectable. Otherwise, as long as the candidate asks for the revenue information on the
+ overall market, provide Exhibit 1.
+ Interpretations
+ - Oral drugs are gaining market share, but there is no information for 2019 (client goal year)
+
+ How many patients will be using oral medication in 2019?
+ One example to do the estimation is to assume the trend is expected to continue at a rate of
+ 15k patients per year. (2014 oral treatment patients) + (rate)(5 years) = 75k + 75k = 150k
+
+ Candidate should recall total target market is about 300k and realize that oral treatments will make
+ up 50% of the market in 2019.
+
+
+
+Yale Graduate Student Consulting Club© !                                                               38
+Case 4: LT Neuro (Multiple Sclerosis)
+ Market Analysis (continued)
+ A good candidate would not expect 100% market share capture and would ask what market share
+ we expect to capture given the other 3 existing competitors in the oral market.
+ What are factors that could affect our client’s market share?
+ -Product Comparison
+     -Efficacy
+     -Price
+ -Marketing
+     -Patient preference
+     -Doctor preference
+
+ Our client’s drug has been demonstrated to be significantly more efficacious than the older
+ competitor “Drug 1”, and is similar to Drug 2 and 3 in phase 2 comparisons. This
+ information was used to project customer adoption of our drug (Show Exhibit 2)
+
+ Candidate should be able to calculate projected market share
+
+ [(Drug 1) (Share taken) + (Drug 2) (Share taken) + (Drug 3) (Share Taken)] (2019 oral pop.)
+ [(40%) (50%) + (30%) (10%) + (30%) (10%)] (150k)
+ [20% + 3% + 3%] (150k)
+ 39k patients are projected to use our drug
+
+
+Yale Graduate Student Consulting Club© !                                                       39
+Case 4: LT Neuro (Multiple Sclerosis)
+ Profitability
+ With the expected patient population using our drug, how do you calculate profitability?
+
+ Revenue: Typical pricing for MS drugs are $4k/year/patient
+ (Price) (Volume) = ($4k) (39k) = 156M
+
+ Costs: What are the potential costs involved proceeding?
+ Fixed costs
+   -Phase 3 costs (mentioned in prompt)
+   -Drug launch costs
+   -Investments in expanding company capacity
+ Variable costs
+   -Manufacturing
+   -Sales/Distribution
+ After brainstorming, provide the following:
+ Phase 3 clinical trials and production changes will cost $80M, 30M, 20M, and 20M for
+ 2014-2018. Drug launch preparation will cost 50M in 2019. Production/sales/distribution will
+ cost 60M/year.
+
+ Total fixed costs= $80M+$30M+$20M+$20M+$50M=$200M.
+ From 2019, the annual profit would be 156M-60M=$96M/year.
+ Year 1 = (104M) , Year 2 = (8M)
+ Candidate should note that breakeven on development costs would occur in roughly over two years
+Yale Graduate Student Consulting Club© !                                                      40
+Case 4: LT Neuro (Multiple Sclerosis)
+ Summary / End of Case
+ Should our client proceed with phase 3 clinical trials?
+
+ Recommendation / Rationale
+
+ The client should proceed with phase 3. Launch of LT Neuro’s drug would coincide with an increase
+ of oral treatment usage to 50% of the MS treatment population. Additionally, market share analysis
+ has estimated that LT Neuro’s drug could capture 26% of the oral treatment market. The revenue
+ generated from this market share is $156M/year. Further projection of this revenue shows that the
+ drug would breakeven with clinical trial costs slightly over 2 years after launch and bring in 96M in
+ profits every year afterwards.
+
+ Risks
+ Clinical Trial Failure Phase 3 failure would undermine the current calculations
+
+ Competitive Response Existing injection treatment companies are experiencing a decline in market
+ share. They should be expected to also switch to oral treatments, potentially diluting our client’s
+ share.
+
+ Newly Emerging Drugs Similar to our client’s projected capture of market share, similarly effective
+ or greater efficacy drugs could sway customer preference away from our client’s drug.
+
+
+
+Yale Graduate Student Consulting Club© !                                                           41
+Case 4: LT Neuro (Multiple Sclerosis)
+ Next Steps
+ Maintain Market Awareness: The potential profits from this product are based on capturing
+ significant market share, 26% of the oral market or 13% of the total market in 2019. Any changes
+ based on pricing adjustments by competitors or the potential entry of new competitors should be
+ paid attention to.
+
+ Expand Adoption of LT drug: Since the efficacy of LT1 is greater than the older oral drug (Oral Drug
+ 1), the client should utilize effective marketing to draw even more market share from this competitor.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                            42
+ Case 4: LT Neuro (Multiple Sclerosis)
+
+
+ Exhibit 1: MS Patients by Treatment                      Exhibit 2: LT Neuro Adoption Projection
+
+
+300   273                                                                 Percentage of
+             261                                              Patients                     Projected LT
+                     249     237                                          oral treatment
+250                                  225                    treated by:                     Adoption
+                                                                           population
+200                                          Injectable     Oral Drug 1       40%             50%
+                                             Oral
+150                                                         Oral Drug 2       30%             10%
+100                                     75
+                                60                          Oral Drug 3       30%             10%
+                        45
+ 50             30
+        15
+  0
+      2010    2011    2012   2013    2014
+
+
+
+
+ Yale Graduate Student Consulting Club© !                                                             43
+Case 5: O’ Care (Orphan Drug)
+ Type of Case                                                                   Firm
+ Acquisition                                                                    Trinity Partners
+
+ Prompt
+ Our client wants to acquire O’Care (OC), a small biotech company. Most of OC’s products are in
+ development in the preclinical phase, but OC does have a single revenue stream. This revenue is
+ from sales of OC1, the only FDA approved orphan drug to treat Disease X. Disease X is an inherited
+ disease that affects 1/20000 among children at the age of 9 and younger. Negotiations with OC have
+ led to a price of $60M. The client hires you to access whether they should acquire OC or not.
+ Additional Information (provided on request)
+ Client Goal (Interviewer should emphasize this)
+ - The board will approve the deal only if the acquisition can breakeven in 5 years.
+ OC Business Model:
+ - OC develops orphan drugs in house, but OC1 is the sole revenue stream. Other preclinical drugs
+    can be considered mainly R&D cost within the 5 years.
+ - Contracts with a third party for OC1 manufacturing and distribution/sales/marketing.
+ Client Business Model:
+ - Develops several classes of pharmaceuticals in house, but wants to expand to orphan drugs.
+    Manufactures all drugs in house. Same external distribution/sales/marketing channels as OC.
+
+
+
+Yale Graduate Student Consulting Club© !                                                           44
+   Case 5: O’ Care (Orphan Drug)
+     What factors should be considered?
+     Sample Issue Tree
+
+     Interviewer should direct the interviewee towards synergy analysis first.
+
+
+
+
+                                                                       Acquire O’ Care?
+
+
+
+                      Current                                                            Acquisition
+                    Value of OC                                                         Considerations                                Risk
+
+
+          Market                                                                                                      Competitive                 Culture
+         for Drug                  Profitability                      Synergies                          Intangible    Response     Regulation
+                                                                                                                                                 Difference
+
+
+                                                              Cost           Revenue         Brand                    Expertise
+Competition     Customers    Revenue           Costs        Reduction        Increase        Name        Patents
+
+
+
+                                  Production           Distribution
+
+
+
+
+   Yale Graduate Student Consulting Club© !                                                                                                       45
+Case 5: O’ Care (Orphan Drug)
+ Profit Analysis for OC
+ Candidate can start with by comparing the financial structure for OC and our client.
+
+ Provide Exhibit 1: Cost structures once candidate asks about cost/revenue issue.
+ What can be interpreted from this?
+
+ The R&D costs are very comparable, but our client’s in house production is a large cost savings
+ over OC’s approach. Our client also seems to have lower costs for distribution even though they
+ operate through the same third party.
+
+
+ Synergies
+ What are potential synergies for this deal?
+ - In house production by our client of OC1.
+ - Marketing/distribution/sales via the same channel could be renegotiated to lower costs
+ - Streamline administration in management.
+
+ How would you analyze each potential synergy?
+ - Direct comparison of production/distribution/administrative costs
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                           46
+Case 5: O’ Care (Orphan Drug)
+ Synergies
+ After investigating further, your team estimates that distribution cost of OC1 could be cut by
+ 50% and production costs could be reduced 80%. What will be the cost savings and
+ resulting net profit on OC1 in dollar amounts?
+
+ Candidate should ask for total sales to calculate dollar amounts. 10M revenue per year
+
+
+ Profitability Comparison
+ Old Profitability                         Updated cost after Synergy
+ 15%=R/D = $1.5M
+ 25%=Production = $2.5M                    (1/5) $2.5M= $0.5M cost, $2M to profit
+ 30%=Distribution = $3M                    (1/2) 3M= $1.5M cost, $1.5M to profit
+ 30%=Net Profit= $3M
+
+ New Profitability
+ R/D = $1.5M
+ Production = $0.5M
+ Distribution = $1.5M
+ Net Profit = $6.5M
+ Candidate should remember that the goal is breakeven on $60M in 5 years.
+ Over 5 years, this equals $32.5M. Below the $60M
+
+Yale Graduate Student Consulting Club© !                                                     47
+Case 5: O’ Care (Orphan Drug)
+ Synergies
+ At this point, do you think we should go with the deal?
+ No. Even with cost reductions from synergy, the net profit over 5 years will add up to $32.5M,
+ $27.5M short of the goal set by the board.
+
+ The candidate may reject the deal at this moment, but explain that the CEO wants to brainstorm
+ ways that we can use to make the deal attractive.
+
+ A good suggestion would be to renegotiate the purchase price closer to the $32.5M, but a good
+ candidate should notice that the revenue side of the profitability equation has not yet been
+ explored.
+
+ If not asked, can prompt the following: You’ve explored the cost side of the profitability
+ question, how would you expand the revenue side?
+
+ Revenue
+ -Volume
+   -Market Size
+   -Share / Penetration
+   -Competition
+ -Price
+
+
+Yale Graduate Student Consulting Club© !                                                          48
+Case 5: O’ Care (Orphan Drug)
+ Market Penetrations
+ The 2013 revenue for OC is $10M. How many patients are using OC’s treatment?
+ Example structure –candidate needs patients’ annual expense for OC1: $40K/patient
+ # Patients under OC’s drug= Sales/average price= 10M/40K=0.25K patients.
+
+ What percent of the market has OC1 captured thus far?
+ If candidate did not ask, can remind Disease X affects 1/20k in children under 10
+ (US population / Life Expectancy) (0 to 9 years) (Incidence of X)
+ (320M/80) (10) (1/20k) = 2k
+
+ A market penetration of 0.25/2=12.5% for OC.
+ Why is market penetration so low?
+ - Marketing – the rarity of the disease could make physician and patient awareness low
+ - Financial – difficult to pay $40k per patient
+     - Insurance coverage – low coverage would make the cost of the drug difficult to pay
+     - Price – even with coverage, the copay may be too high
+ - Patient Preferences –
+     - Alternative treatments/management drugs
+     - Patients may not want treatment if the disease is not too severe
+
+ Team has performed a price sensitivity analysis Exhibit 2
+ Candidate should interpret the lowering of prices should allow for a larger capture of market share
+
+Yale Graduate Student Consulting Club© !                                                           49
+Case 5: O’ Care (Orphan Drug)
+ Market Penetrations
+ Our client’s CEO want to increase penetration to 40%. The CEO mentions that a total $1M/
+ year additional investment in production and distribution would cover the additional 550
+ patients. R&D cost will stay the same.
+
+ Could this change meet the financial goal?
+
+
+
+ Post Synergy Profitability
+ R/D = 1.5M
+ Production = .5M
+ Distribution = 1.5M
+ Net Profit = 6.5M
+
+ Post Price Change Profitability
+ Revenue
+ (Price/Drug) (# of treated patients) = (800) (30k) = 24M/year
+ Cost
+ (R/D) + (Production) + (Distribution) + 1M = 1.5M + .5M + 1.5M + 1M = 4.5M/year
+ Net Annual Profit = 19.5M/year
+ After 5 years, this is ~97.5M, more than the 60M acquisition cost
+
+
+Yale Graduate Student Consulting Club© !                                                    50
+Case 5: O’ Care (Orphan Drug)
+ Summary / End of Case
+ Should our client purchase O Care?
+
+ Recommendation/Rationale
+ Yes. O Care can be greatly improved by 1) synergies with our client’s existing operations 2)
+ modifying the pricing for this drug to increase penetration. This would allow for annual net profits of
+ 19.5M, much higher than needed for the board’s approval. This would additionally provide our client
+ with an expansion into the orphan drug market.
+
+ Risks
+ Acquisition logistics: The client needs to consider how to reorganize O Care to adopt this altered
+ operations pipeline from an implementation standpoint. Specific points of concern are corporate
+ culture fit, management adjustment, and financing the deal.
+
+ Competitive Response: Although OC1 is the only treatment currently approved, treatment of this
+ disease is lucrative so other companies may consider entering this market.
+
+ Regulatory: The length of the patent on OC1 should be considered because this drug has been on
+ the market. Expiration of the patent would allow new generic competitors to enter the market at a
+ much lower price point.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                              51
+Case 5: O’ Care (Orphan Drug)
+ Next Steps
+ Examine Disease X Patient Population: With only 40% market penetration even after cutting the
+ price in half, there must be other factors that could be examined that would encourage usage of
+ OC1 and thus increase units sold.
+
+ Expansion to International Markets: The analysis for this case mainly focused on a US population,
+ but other countries may have similar or even higher prevalence rates. These represent entirely
+ unexplored opportunities.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                           52
+   Case 5: O’ Care (Orphan Drug)
+
+                      Exhibit 1: Profitability Comparison                              Exhibit 2: Price Sensitivity
+                     100%
+                                                                                      45%
+                     90%
+                              30%                                                     40%
+                     80%
+
+
+
+
+                                                                 Market Penetration
+Percent of Revenue
+
+
+
+
+                                                  Net Profit                          35%
+                     70%                65%       Distribution                        30%
+                     60%                          Production                          25%
+                              30%
+                     50%                          R&D                                 20%
+
+                     40%                                                              15%
+
+                                                                                      10%
+                     30%      25%       15%
+                                                                                      5%
+                     20%                 5%                                           0%
+                     10%      15%       15%                                                 25   30   35   40    45   50
+
+                      0%                                                                         Price/patient/year
+                               OC      Client                                                     (in 000 dollars)
+                            Finance Finance
+                            Structure Structure
+
+    Yale Graduate Student Consulting Club© !                                                                               53
+Case 6: Ultimate Bandage
+ Type of Case                                                                   Firm
+ Market Entry                                                                   Trinity Partners
+
+ Prompt
+ Our client is the biggest bandage maker in US and wants to introduce a new product. The product
+ is a large bandage, named Ultimate Bandage (UB) that can be absorbed into the skin. This
+ increases healing time, but reduces scars. The CEO wants to analyze the market to decide
+ whether or not they should introduce the product.
+ Additional Information (provided on request)
+ Client Goals / Information
+ - Client invested in R/D to improve bandages and would like to assess the commercial value
+ - Client is hoping to capture more market share and ultimately improve profitability.
+ - Currently holds 60% of the large bandage market
+ Product Information
+ - Although there are many sizes of bandages, large bandages are relatively the same
+ - UB is the first bandage that can be absorbed into the skin
+ Current Market
+ - The overall large bandage market currently has a size of ~$1B and is stable.
+ - No other company has a similar product to UB
+ Regulations
+ - Assume the material is regarded as safe and regulatory approval is very likely.
+
+Yale Graduate Student Consulting Club© !                                                           54
+Case 6: Ultimate Bandage
+ What factors should be considered?
+ Sample Issue Tree
+
+
+
+                                                          Market Entry – New Product
+
+
+
+
+                                External                                                                          Internal
+
+
+
+
+             Market                                 Competitor                                          Revenue               Cost
+
+
+
+                                                                              Cannibalization
+                                           Market            Product                                                     Additional Sale
+Growth        Size        Penetration      Share            Comparison
+
+
+                                                                    # old bandage               Price
+                                                                       reduction                                                     New product
+                                                                                                              # new bandage
+                                                                                                                                        price
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                                                                   55
+Case 6: Ultimate Bandage
+ Market Analysis
+ Since the client is asking for a market analysis, candidate should ask about customers.
+ (If asked competitors, growth, and size covered in clarifying info)
+
+ Who do you think is the target customer? (Who do you think would use UB?)
+ Potential retailers would be a good suggestion, but redirect to end users
+
+ Candidate should come up with customer categories that make sense and then present Exhibit 1.
+ Athletes = 300M bandages
+ Construction Workers = 600M bandages
+
+ A good candidate would note that these different customer segments may have different needs that
+ could be fulfilled with the new product.
+
+ What features do you think athletes and construction workers would value?
+ How would you analyze this?
+ - Price, healing time, scaring, itchiness, etc.
+ - Perform a customer survey (Exhibit 2)
+ What can be interpreted from this Exhibit?
+ -Athletes rank features offered by the new product (faster healing time, low scarring) as the top 2.
+ CW rank price as the number 1 factor and do not seem too interested in faster healing / low
+ scarring.
+
+Yale Graduate Student Consulting Club© !                                                                56
+Case 6: Ultimate Bandage
+ Market Analysis
+ Based on this survey, the team has estimated that 50% of athletes and 10% of CW will switch
+ to a new product priced at $1.20. How do you think the market would respond to this product
+ introduction?
+
+ Internal
+    -Customers will switch from our bandage to UB (cannibalization of client’s products)
+ External
+    -Customers will switch from competitor bandage to UB (market share gain)
+
+ There will be some cannibalization of our product, but also a gain of market share by taking part of
+ the competitor’s share.
+
+ If candidate does not come up with this, try reiterating the following information. A percentage of
+ customers will switch to this new product. Our client’s market share is currently 60% and
+ competitors hold the other 40%. Market share for both should be changed in some way.
+
+ An insightful candidate would realize that depending on which number is larger (market share gain
+ or cannibalization) the launch of the product could be more profitable overall or less profitable
+ If there are two factors that could change, how do we compare this?
+ -Compare profitability between the two scenarios
+ -Compare revenue first and then costs
+
+Yale Graduate Student Consulting Club© !                                                               57
+Case 6: Ultimate Bandage
+ Revenue Analysis
+ Based on this survey and a price of $1.20 per bandage, the team has estimated that 80% of
+ the total athletes and 10% of the total CW will switch to a new product. Originally, the large
+ bandage is priced at $1 per bandage. How much revenue is gained?
+ Old Revenue
+ (Total bandages) (Client Market Share) ($1 per bandage) = (1B) (60%) = $600M
+
+ New Revenue
+ UB sold = [(Athlete bandages)(% switching) + (CW bandages)(%switching)]
+ [(300)(80%) + (600)(10%)] = 240M + 60M = 300M
+ 300M * $1.2 = $360M
+
+ Regular bandage = (Total bandages) – (Customers switching to UB)
+ 1B - 300M = 700M
+ Client Share of regular bandages = 700M (60%) = 420M
+ 420M * $1 = $420M
+
+ *We assume our client’s share 60% is homogenous in each segment of customer.
+ New Revenue = 360M + 420M = $780M
+ Client can gain $180M in revenue
+
+ After revenue analysis is complete, candidate should realize that although revenue has
+ increased, costs changes have not been factored in.
+Yale Graduate Student Consulting Club© !                                                      58
+Case 6: Ultimate Bandage
+ Cost Analysis
+ What do you think will change with cost if we introduce UB?
+ Example:
+ Variable Cost
+    - Material cost increase (new material)
+    - Production cost increase (may need new manufacturing adjustments)
+    - Labor cost increase (may require more labor to produce both types of bandages)
+ Fixed Cost
+    - Investment in material, production or labor changes
+ Variable costs for the regular bandage were $2 per box. Variable costs for UB will have to be
+ raised to $7 per box. Additionally an investment of $50M will have to be made to reorganize
+ the production facilities. No other fixed cost before or after introduction of UB. For each box,
+ there’re 10 bandages for both regular and UB.
+ Old Costs
+ 600M *0.2 = 120M
+ New Costs
+ (UB cost) + (regular bandage cost) + (investment)
+ (UB sold)(cost per UB)                                      = (300M)(.7) = $210M
+ (Client share of regular bandages)(cost per regular bandage) = (420M)(.2) = $84M
+ Investment                                                   =              $50M
+ New Variable Costs = $294
+ New Total cost = $344
+
+Yale Graduate Student Consulting Club© !                                                      59
+Case 6: Ultimate Bandage
+ Profitability Comparison
+ Old Profits
+ $600M-$120M = 480M
+
+ New Profits
+ $780M-$344M = 486M
+ Factor in investment
+ First year profit = 486M- 50M= 436M
+
+ Minimal increase in profits per year (6M) and factoring in the investment makes this a net
+ loss in the first 8 years.
+
+ Break-even time:
+ Investment/additional profit= 50M/6M=8.33 years.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                      60
+Case 6: Ultimate Bandage
+ Summary / End of Case
+ Our client wants to launch a new product, UB, to capture more revenue and ultimately
+ increase profits. Should our client launch the UB?
+
+ Recommendation / Rationale
+ I would recommend our client not to launch the product. The product does clearly have the potential
+ to draw in a good portion of the total large bandage market (300M or 30%). However, the costs
+ associated with this move end up cannibalizing our original profits. In sum, this move results in a
+ marginal increase of profit (6M) which is before factoring in the investment of 50M
+
+ (Candidate could argue the other way and say the gains of 10% in revenue would be significant and
+ the investment could be eventually paid back, but should be able to rationalize thoroughly)
+
+ Risks
+ Opportunity Cost Client would be the first large bandage maker to differentiate the market.
+
+ Competitive Response Other competitors could realize the potential for a differentiated product and
+ introduce their own product to take aim at our client’s market share
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                          61
+Case 6: Ultimate Bandage
+ Next Steps
+ Maintain Market Awareness If differentiation does occur in this market, the client should consider
+ introducing the UB as a way to counter a loss of market share.
+
+ Lower Costs of UB The new product is over 3 times more costly to make per bandage. Reducing
+ this cost would allow for a better profit margin and could make the launch of this product more
+ viable. Similar reduction in investment would also make this approach viable.
+
+ Perform Price Sensitivity Analysis For this case the price for UB was fixed at $1.2. If the price could
+ be increased enough and still capture enough market share, the profitability calculation of this new
+ product would change.
+
+ Explore the opportunity with other sizes Only one size of bandage was analyzed. Other sizes could
+ have different customer bases that are more receptive to a new product or have a higher profit
+ margin with less material needed.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                              62
+Case 6: Ultimate Bandage
+
+Exhibit 1: Total Large Bandage Use by
+        Customer Type (2013)
+
+    Office  Others, 3%                            Exhibit 2: Feature Preferences
+   Workers,
+     7%
+                                                    Customer
+                                                                 Construction
+                                                                                  Athletes
+                                                                  Workers
+                                             Categories
+                                                Low Price              1             5
+         Athletes,
+                              Construction     Fast Healing
+           30%                                                         3             1
+                               workers,           Time
+                                 60%            Less Scars             5             2
+                                              Low Post Care            4             4
+                                               Less Itching            2             3
+
+                                                              Ranked from:
+                                                          1 (most important) to
+Total = 1B large bandages                                  5 (least important)
+
+ Yale Graduate Student Consulting Club© !                                                63
+Case 7: C. Difficile Vaccine
+ Type of Case                                                                       Firm
+ Pricing                                                                            Clearview
+
+ Prompt
+ Our client, a large pharmaceutical company, has been selling products since the 1980s. They cover
+ every area of pharmaceuticals, but their specialty is vaccine development. They are currently
+ developing a vaccine for overgrowth of the bacteria C. difficile. A major side effect of infection is
+ CDAD or C. difficile associated diarrhea, leading to dehydration and hospitalization. Their vaccine
+ has a 75% efficacy rate in the prevention of C. difficile overgrowth. Our client is looking to define
+ their target market and come up with an appropriate pricing strategy for the vaccine.
+ Additional Information (provided on request)
+ Client Goal
+ - The client is optimistic about this vaccine and wants it to be a blockbuster (brings in $1B in
+    revenue per year)
+ - Our client is mainly concerned about the potential of this vaccine
+ C difficile Infections
+ - Affects children ages 0 to 4, pregnant women, and elderly
+ - Can spread more rapidly from person to person
+ - Current standard of care (current treatment) occurs in a chain of events. 1) Overgrowth of C. Diff,
+    2) hospitalization for diagnosis, and 3) antibiotic prescription.
+
+
+Yale Graduate Student Consulting Club© !                                                            64
+Case 7: C. Difficile Vaccine
+ What factors should be considered?
+ Sample Issue Tree
+
+
+
+                                                                     Pricing
+
+
+
+
+                                     External                                                   Internal
+
+
+           Competition              Customers/physician
+           Benchmarks                                                Regulations    Costs                     Target
+                                        preference
+
+
+ Standard of                      Effectiveness of the    Time for the                        # of
+    Care           Alternatives        treatment           treatment                                             Target Revenue
+                                                                                            vaccine
+
+
+                                                                                   Prevalence              Population
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                                                          65
+Case 7: C. Difficile Vaccine
+ Market Size
+ How do we define the target population?
+ Interviewee should consider the potential at risk populations: Children, pregnant women, elderly
+ and try to estimate which would be the largest.
+
+ Otherwise prompt Which is the largest?
+ Example calculation assuming equal distribution and stable population
+ Children 0 to 4 = (US pop) (Life Expectancy) (first 5 years) = (320M)(1/80)(5) = 20M
+ Pregnant Women = (US pop) (Births per year) = (320M)(1/80) = 4M
+ Elderly = (US pop)(Life Expectancy)(65 to 80) = (320M)(1/80)(15) = 60M
+
+ The elderly are the largest at risk group
+ Besides age another risk factor for getting CDAD is person-to-person contact. How would an
+ elderly person be in close contact with others that have C. diff infections? (Brainstorm)
+ The environments:
+ Large family vs small family
+ Living at home vs living in elderly care
+ Social community vs isolated community
+ Urban areas vs country areas
+
+ High hospitalization rate vs low hospitalization rate
+
+ A good candidate should come up with a few of the above
+Yale Graduate Student Consulting Club© !                                                            66
+Case 7: C. Difficile Vaccine
+ Market Size
+ Our team has identified that 10% of elderly live in long term care and are the most affected
+ segment. If we assume a peak penetration rate of 75%, how much in minimum should we
+ charge per vaccination?
+
+ 6M elderly live in long term care.
+ (Elderly Pop)(Long term care)(Peak penetration) = (60M)(1/10)(3/4) = 4.5M
+
+ Client goal is a blockbuster drug or 1B in revenue.
+ 1B / 4.5M = $222 per vaccine
+
+ How do we determine if this a reasonable price?
+ Payers
+ - Insurance companies
+ - Elderly (patients)
+ - Caretakers of elderly
+ Experts
+ - Physicians
+ - Nurses
+ - Industry experts
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                        67
+Case 7: C. Difficile Vaccine
+ Pricing
+ Instead of asking the patients directly, let’s determine the cost to a patient per year if left
+ unvaccinated as a “break even point” for the patient. What is the total cost to patients in
+ long term care if not vaccinated?
+ Can remind the candidate that the chain of events for CDAD treatment is 1) overgrowth of C. Diff,
+ 2) hospitalization for testing, and 3) antibiotic treatment. Candidate should ask for the chances of
+ each event : 50%, 50%, and 66%
+ 6M elderly live in long term care.
+ Long term care elderly with C. Diff overgrowth = (6M) (50%) = 3M
+ Patients who need hospitalization                   = (3M) (50%) = 1.5M
+ Patients who need antibiotics                       = (1.2M) (66%) = 0.8M
+
+ Candidate should ask for cost of hospitalization and antibiotics to calculate the cost per
+ patient
+
+ Hospitalization = $2k / day, requires 5 days = $10k per treatment
+ Antibiotic Treatment                        = $2K per treatment
+
+ Hospitalization total cost = (1.5M)($10k) = $15B
+ Antibiotic total cost =      (0.8M)($2k) = $1.6B
+ Total cost = $16.6B
+
+
+Yale Graduate Student Consulting Club© !                                                          68
+Case 7: C. Difficile Vaccine
+ Pricing
+ Calculate the cost of c. difficile treatment per long term care elderly patient
+
+ Total cost = $16.6B
+ 6M elderly patients in long term care
+
+ $16.6B in total cost / 6M elderly patients = $2.77K or almost $3K per person in potential cost
+
+
+
+ Ask the candidate to sum up the case
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                     69
+Case 7: C. Difficile Vaccine
+ Summary / End of Case
+ Our client wants an appropriate pricing scheme for a C. difficile vaccine in development.
+ Candidate can decide either way if this pricing is reasonable as long as they can defend their
+ answer.
+
+ Recommendation / Rationale
+ To reach the prompted goal of a blockbuster product, the client should price the vaccine at $222
+ given our estimation of an elderly market size of 6M individuals. The alternative costs of C. difficile
+ treatment are near $3000 per year, significantly more than the vaccine price. Thus, we expect that
+ our client would find vaccine sales to be positive if they were to target the elderly population.
+
+ Risks
+ Patient Finances A $222 vaccine may still be expensive for elderly patients who may not be able to
+ afford such a costly preventative measure and renewing vaccination rates were not considered.
+
+ Insurer Finances Medicare would likely cover the cost of C. difficile treatment because of the need
+ for hospitalization, but this may not extend to a preventative vaccine. Especially considering the
+ vaccine success is actually only 75%, this would mean that there would be additionally associated
+ costs to include on top of the basic vaccine price.
+
+ Regulatory As this product is still in development, the approval process of the drug should be
+ factored into the decision to continue with this drug.
+
+Yale Graduate Student Consulting Club© !                                                               70
+Case 7: C. Difficile Vaccine
+ Next Steps
+ Cost Analysis Although the revenue side of this examination looks favorable, none of the
+ production, sales/manufacturing, or distribution costs were not explored in this case. There may
+ also be additional development costs since the clinical trial stage was not discussed.
+
+ Incorporate other potential populations The focus of this case was on the long term elderly
+ population, but elderly in general and children are at risk for this disease. Investigating other
+ potential target segments within these two age groups could expand overall sales.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                             71
+Case 8: IBD Products
+ Type of Case                                                                       Firm
+ Market Size Estimation                                                             Clearview
+
+ Prompt
+ Your client is pharmaceutical company developing a product for mild to moderate (not severe)
+ inflammatory bowel disease (IBD). IBD is characterized by periods of bowel pain flare ups followed
+ by periods of normal bowel function. The two main products the client is considering is a drug and
+ an at home diagnostic test. The drug would help reduce symptoms of IBD and the home diagnostic
+ test would be used to help patients determine when to take drugs. The client wants your help to
+ estimate the size of both markets that they can capture.
+ Additional Information (provided on request)
+ Inflammatory Bowel Disease
+ - Complex disease that has genetic and environmental risk factors.
+ Client Information
+ - Client has full capabilities to manufacture, market, sell, and distribute both the drug and
+     diagnostic test
+ IBD Market
+ - 30 drugs are on the market or near approval
+ - No at home diagnostics thus far
+
+
+
+Yale Graduate Student Consulting Club© !                                                         72
+Case 8: IBD Products
+ What factors should be considered?
+ Sample Issue Tree
+
+
+                                                        Drug vs Diagnostic Test
+
+
+
+
+                                             External                                            Internal
+
+
+
+
+                     Market Size           Competition                                 Revenue              Cost
+                                                                          Regulatory
+                                                                           Approval
+
+
+
+
+Population           Prevalence            Penetration
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                                           73
+Case 8: IBD Products
+ Market Size Breakdown
+ Candidate should start with understanding the patient pool
+ How would estimate the Market size for your client in term of IBD population?
+ - Segment patients with IBD
+     - Severity (mentioned in the prompt)
+     - Different disease types (described as umbrella term in the prompt)
+     - Populations with higher prevalence
+     - Populations that seek treatment
+
+ The major forms of IBD are ulcerative colitis (UC) and Crohn’s disease (CD). UC is 1 in 1000
+ of the population and Crohn’s is 1 in 600. Severity can be broken up in both cases at a ratio
+ of 1:2:1 for mild: moderate: severe. 2/3rds of all patients seek treatment
+
+ Calculation
+ (US pop) (prevalence) (mild + moderate) (seek treatment)
+ UC = (300M) (1/1000) (3/4) (2/3) = 150k
+ CD = (300M) (1/600) (3/4) (2/3) = 250k
+
+ Total target population = 400k
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                     74
+Case 8: IBD Products
+ IBD Drug
+ Launch of our client’s drug would be 1 out of 30 drugs on the market. The current average
+ price is $2000 per month and patients take the drugs all year.
+ What would be the total revenue generated from this approach?
+
+ Interviewee should check if they can assume 1/30 is the factor to divide the target population.
+ Market studies of our drug have demonstrated that because our drug has around average
+ efficacy and is entering late, market penetration is expected to be more closer to 1/40.
+
+
+
+ Calculation
+ Price per year = 24k/year
+ (Target population) (Market penetration) (price per year)
+
+ (400k)(1/40) (24k) = 240M/year
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                           75
+Case 8: IBD Products
+ Diagnostic
+ Our client is also developing an at home diagnostic tool for IBD. This tool measure the level
+ of inflammation in a patients stool. Individuals would still need to be formally diagnosed by
+ a doctor by colonoscopy before use. Our client’s tool would help them to track their periods
+ of flare up at home. What would be the total revenue that could be generated from this
+ product?
+
+ Interviewee should be given the following information when requested:
+ Expected penetration is 80%. For the amount patients would need per month, our client
+ expects to charge $100.
+ Calculation
+ (Total Target Market) (Penetration) (Price per month) (months per year)
+
+ (400K) (4/5) ($100) (12) = $384M / year
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                    76
+Case 8: IBD Products
+ Cost Comparison
+ Given a more favorable comparison in revenue for the diagnostic test, what other factors
+ would you need to consider before deciding on one product?
+
+ Competition
+ - Competitive response (for a drug, will be difficult to compete in a crowded market. For the
+ diagnostic other competitors could enter)
+
+ Cost Comparison
+ - Production (different costs for producing a drug vs producing a diagnostic)
+ - Sales
+ - Marketing (physicians vs direct to patient marketing)
+ - Distribution (pharmacy for drug, possibly retail stores for diagnostic)
+
+ Regulatory Barriers
+  - FDA approval for the drug
+  - Different approval process for a diagnostic (drug would actually need to be consumed or
+ introduced into the body)
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                         77
+Case 8: IBD Products
+ Summary / End of Case
+ Our client is interested in IBD interventions and has asked our firm to size the market
+
+ Findings
+ The total market size of IBD patients is estimated at 400k
+
+ Recommendation / Rationale
+ The diagnostic tool would be the more favorable product to introduce judging by the revenue size.
+ Considering a total market size of IBD patients at 400K, introducing a new drug into a crowded
+ market would capture a very small fraction (1/40), especially when there are few distinguishing
+ features. The diagnostic tool instead provides an opportunity to explore the same large market from
+ the consumer side, which would make our client the first in an untapped market.
+
+ (The recommendation here could go either way, although more information supports the diagnostic
+ tool.)
+
+ Risks
+ Regulation Demonstration that the diagnostic tool would be efficacious is important.
+
+ Competition: Development of similar diagnostics by other players should be expected given the
+ large size of the market and the lack of competition compared to the drug market.
+
+
+Yale Graduate Student Consulting Club© !                                                          78
+Case 8: IBD Products
+ Next Steps
+ Expedite approval of diagnostic: Given the opportunity to expand into an unexplored market, the
+ client should try to be first to market.
+
+ Continuous improvement of the diagnostic The client should expect to see other companies look for
+ a way into this home diagnostic market. By improving the tool, our client could build a recognizable
+ brand name for the product.
+
+ Consider working with patient advocate groups One way patients share and distribute information is
+ through patient groups that share the same affliction. A strong marketing approach would be to
+ support and inform these groups of the availability of this tool.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                           79
+Case 9: Boreal (Hair Care)
+ Type of Case                                                                        Firm
+ Profitability                                                                       L.E.K.
+
+ Prompt
+ Our client is Boreal, a large European conglomerate. Boreal has many product divisions including
+ home cleaning supplies, pet care, and hair products. The hair product division is made up of five
+ separate companies and is the least profitable division. Boreal has brought in our firm to examine
+ the division and suggestions for improvement.
+ Additional Information (provided on request)
+ Client Goal
+ - Boreal wants to increase profits of the division
+ Hair Product Division
+ - Operates all over Europe and is made up of 5 subsidiaries
+ - These companies fall into the categories of hair care (multiple shampoo and conditioner
+    brands), hair styling (gels and styling creams), and hair transplants (surgical treatment for
+    baldness)
+ - The first two categories sell products and hair transplants are a clinical service
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                              80
+  Case 9: Boreal (Hair Care)
+    What factors should be considered?
+    Sample Issue Tree
+
+
+
+                                                                        Increase Profits
+
+
+
+
+                                    Profitability (segment for each company)                                       Market
+
+
+
+                                Revenue                                 Cost                  Market Size        Market Trend            Competition
+
+
+                          Service          # of
+                           Price         services        # of service          Cost/service             Growth              Regulation
+
+
+
+             Marketing                                                  Service
+
+
+                                             Hours for operation/                                   Service
+Brand Positioning        Channels                                              Locations            Quality
+                                               Appointments
+
+
+
+
+   Yale Graduate Student Consulting Club© !                                                                                                  81
+Case 9: Boreal (Hair Care)
+ Profitability Analysis
+ Since the client has recognized the issue of profitability underperformance, candidate should ask
+ for information about the profitability of this division.
+ Provide Exhibit 1
+ What can be interpreted from Exhibit 1?
+ - Hair Care and Hair Styling companies seem to be operating with healthy margins
+ - The Hair Solutions (HS) seems to be struggling although the other hair transplant subsidiary
+ Fountain of Hair (FoH) is profiting.
+
+ Underperformance of the division could be attributed to HS
+
+ Why is HS underperforming comparing with FoH?
+ External (less likely since two subsidiaries are both in hair transplants)
+ -Hair Transplant Market
+     -Market Share
+     -Competition
+     -Growth Trends
+ Internal (more possible)
+ -Low Revenue (Key issue here)
+      -Price
+      -# of services
+ -High Cost
+
+Yale Graduate Student Consulting Club© !                                                             82
+Case 9: Boreal (Hair Care)
+ FoH Underperformance
+ The CEO of Boreal has set up a meeting with the heads of FoH and HS
+
+ -The head of HS says that her company specializes in high end clients
+ -The head of FoH says that his company specializes in low end clients
+
+ -Both say the potential market for hair transplants is about 3500 per year. They also provide
+ company information as requested (show Exhibit 2)
+
+ Interpretations of Exhibit 2
+ - Candidate should note that while HS is the higher priced company, it has higher sales than FoH
+ - Additionally, costs are relatively the same between the two companies.
+ - Total sales (2500+800 = 3300) is covered by these two companies (~95% of the target market).
+ Why could HS have more customers? (Brainstorm)
+ Product Comparison
+ - Quality
+ - Price as surrogate for quality
+ - Brand reputation
+ Customers
+ - Preference
+ - Perception
+ How would you test these reasons? Customer survey or otherwise ask the customers (Exhibit 3)
+
+
+Yale Graduate Student Consulting Club© !                                                       83
+Case 9: Boreal (Hair Care)
+ Customer Survey
+ How would you interpret Exhibit 3?
+ - Total customer base skews from the 100k to 200k range and above. Very few customers are
+   below 100k
+ - Customers of HS and FoH are mostly the same; the majority of customers make over 100k and
+   are the same age.
+ - More customers using HS because it is perceived as higher quality and majority can afford that
+   premium.
+ - Majority of budget customers would still pay 10k or more for a transplant
+
+ A good candidate would question if two companies are actually necessary. A single company
+ charging 10k would still capture the same number of the customers except for the 5% of FoH
+ customers (40 customers).
+
+ Can move to the conclusion of the case.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                        84
+Case 9: Boreal (Hair Care)
+ Summary / End of Case
+ The CEO of Boreal has asked for our findings and recommendations
+
+ Recommendation / Rationale
+ I recommend that our client merge the two hair transplant companies. This would maintain the
+ majority of our customers, and lead to an overall increase in profits as customers switch from the
+ low margin ($3k) budget company to the higher margin ($5k) company.
+
+ FoH has been struggling due to a mismatch between company strategy and customer need.
+ Although HS and FoH were intended to meet the needs of two customer segments, there is only
+ one pool of high end customers who mostly value the perceived quality of HS. A merger would
+ better align the hair transplant portion of our client’s business.
+
+ Risks
+ Reorganization costs and implementation As with any merger, restructuring of the companies will
+ have significant costs associated with implementation.
+
+ Employee layoff issue As the merge happens, potentially, a sizable number of employees will be
+ laid off, generating some publicity risks for the conglomerate.
+
+ Loss of greater customer base then estimated A major assumption is that if FoH is closed, the
+ majority of customers will switch over to HS. A smaller than expected switch would allow for the
+ entry of a budget company.
+Yale Graduate Student Consulting Club© !                                                              85
+Case 9: Boreal (Hair Care)
+ Next Steps
+ Marketing to convert FoH customer base In the near term HS should try to convert as many of the
+ potential FoH customer base (estimated at 800) to using their procedure to increase overall profits
+
+ Explore a low cost budget procedure A significant problem with the operations of FoH was that the
+ costs associated with a budget procedure are very similar to the HS procedure. In the long run,
+ developing a lower cost procedure with similar or greater margins could be well received by the
+ potential FoH customer base and would bolster profitability.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                          86
+Case 9: Boreal (Hair Care)
+  Exhibit 1: Hair Product Division Subsidiaries
+
+                                                   Green
+   Subsidiary Name          Blue Wash                            Sharp Styles   Hair Solutions    Fountain of Hair
+                                                  Cleanse
+     Product Type            Hair Care           Hair Care        Hair Style    Hair Transplant   Hair Transplant
+        Revenue                 30M                45M               30M             25M               5.6M
+
+         Costs                  6M                  5M               5M            11.25M              5.2M
+
+
+
+
+  Exhibit 2: Transplant Company Comparison
+
+                                      Hair Solutions         Fountain of Hair
+            Revenue                        25M                    5.6M
+       Transplants / Year                  2500                    800
+      Price per Transplant                 $10k                    $7k
+      Cost per Transplant                  $5k                     $4k
+       Fixed costs / Year                  $2M                    $2M
+
+
+Yale Graduate Student Consulting Club© !                                                                      87
+Case 9: Boreal (Hair Care)
+
+  Exhibit 3: Transplant Customer Survey
+
+                                              Hair Solutions      Fountain of Hair
+                                           >200k        = 1000   >200k        = 0
+                                           100k to 200k = 1450   100k to 200k = 640
+               Income
+                                           50k to 100k =    50   50k to 100k = 160
+                                           < 50k        =    0   < 50k        =   0
+                 Age                              40-60                38-57
+   Would you still purchase
+                                                                     Yes = 95%
+   this procedure if it was                        NA
+                                                                     No = 5%
+            $10k?
+
+       Major reason for                        Quality 90%           Quality 5%
+    choosing this company                       Price 10%            Price 95%
+
+
+
+
+Yale Graduate Student Consulting Club© !                                              88
+ Glossary of Terms
+ Healthcare is a rapidly developing sector of the global economy. This glossary serves as a starting point with a
+ collection of terms to make the cases more approachable.
+
+ However, it must be noted that during an actual interview, be cautious with the terms you use unless you fully
+ understand them. The YGCC are not experts in this field so the terms contained within this glossary are simplified
+ definitions. We highly recommend further research on your part should you decide to engage in this industry.
+
+
+
+ Pharmaceuticals – the umbrella term for substances that have a biological effect to manage or treat a disease
+ Small molecules – chemically derived pharmaceuticals that are generally much smaller and less complex than
+ biologics
+ Biopharmaceutical / Biologic – biologically derived pharmaceuticals. Biologics are generally more complex than
+ small molecule pharmaceutics. Examples include recombinant insulin (diabetes), interferon (HCV), and antibodies
+ (commonly used for specifically targeting cancer).
+ Medical Devices – Devices used for a therapeutic use. The most easily recognizable are pacemakers (control
+ cardiac rhythms)
+
+ Clinical Trials Process – FDA based approval process that pharmaceuticals must pass through before being
+ sold to the general. There are many more caveats to explore so visit the FDA website for detailed information
+ 1) IND – Investigational New Drug. Before entering the clinical trial process, a company must file an application
+ that contains chemical analysis of the pharmaceutical and usually safety tests in animal subjects
+ 2) Phase I – Generally the first studies in humans to test safety
+ 3) Phase II – Larger scale trial for safety in a target population and efficacy
+ 4) Phase III – Larger scale trial to test safety and efficacy
+ 5) NDA – New Drug Application. Once the clinical trial process is complete, the company files an NDA to ask the
+ FDA for approval. If approved, the drug can enter the market
+
+Yale Graduate Student Consulting Club© !                                                                            89
+ Glossary of Terms
+
+ CS Med (Medical Device)
+ - biopsy – a medical procedure to take a sample of tissue from a patient for testing. In this case, this refers to
+    testing a breast mass for the diagnosis of cancer.
+ - commercialization – ways to bring a product to market. In this case, the client does not want to consider
+    selling the company or the intellectual property so that leaves in house production or some form of partnership
+
+
+ Ear X (Ear Infection Vaccine)
+ - self-resolving – a condition that the body can fix or “resolve” on its own.
+ - licensing – an agreement between two organizations where one group will give the other permission to use
+    their technology or invention in exchange for a fee (royalty or upfront payment). In this case GP wants to
+    license EX1 and carry through the invention to the market.
+ - royalties – a payment given to one company from another in payment of the right to use a technology. Usually
+    falls under a licensing agreement. In this case, the GP would pay Ear X for the right to use the technology of
+    producing an ear infection vaccine
+
+
+ NeoFactor (Growth Factor)
+ - neonatal – newborn babies
+ - congenital disease – a disease that develops before, at, or immediately (a few weeks) after birth. In this case,
+   D1 and D2
+ - premature birth – a birth that occurs earlier than the “normal” 39 weeks
+ - standard of care – the current, widely accepted method of treatment for patients with a certain disease
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                                         90
+ Glossary of Terms
+
+ LT Neuro (Multiple Sclerosis)
+ - multiple sclerosis – a disease that affects the protective covers of nerves in the spinal cord and the brain. This
+    damage is what causes the symptoms
+ - phase 2 clinical trials - see first page of glossary. In this case, it is mainly important to understand that there is
+    still one more phase of the clinical trial to complete which would take several years before LT Neuro could
+    enter the market with the new oral drug.
+ - drug launch cost – beyond payment of research, development, and clinical trials; companies need to pay
+
+
+
+ O’ Care (Orphan Care)
+ - preclinical phase – prior to beginning the clinical trial phases. See clinical trial description in the first part of the
+    glossary
+ - orphan drugs – drugs that affect less than 200,000 patients per year
+
+
+ Ultimate Bandage
+ - cannibalization – a company’s loss of sales of one product by the introduction of a new product. In this case,
+     the regular large bandage sales will decrease overall because of the introduction of the UB.
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                                                 91
+ Glossary of Terms
+
+ C Difficile Vaccine
+ - efficacy – the expected ability that a drug can be effective. In this case, the vaccine is expected to prevent
+    75% of C diff overgrowth and thus prevent CDAD
+ - blockbuster – a drug that brings in $1B in revenue per year
+
+
+
+
+ IBD Products
+ - Bowel – refers to the intestines and colon
+ - IBD – inflammatory bowel disease. An umbrella term for conditions that affect the gastrointestinal tract
+    (especially the intestines and colon)
+
+
+
+
+ Boreal (Hair Products)
+ - hair transplant – a surgical procedure where hair is transplanted from another part of a patient to the scalp as
+    a way to treat baldness
+
+
+
+
+Yale Graduate Student Consulting Club© !                                                                            92
+Additional Life Sciences Cases
+                McKinsey & Company
+                                   Title                     Source         Case #
+                              Magna Health               McKinsey Website    NA
+                        Suger Magnolia Hospital           Columbia 2006       5
+                                Heartcorp                 Columbia 2006      10
+                                 Meditest                 Columbia 2006      15
+                         Health Care in Canada            Columbia 2007       7
+                 Vitamin Manufacturer Entry into China     Kellogg 2001      36
+                               Old Pharma                  London 2013       NA
+                           Apollo Medical Labs            McCombs 2007        2
+                              APC Nutrition               McCombs 2008        7
+                              US Healthcare               Michigan 2005       5
+                           Pharma Acquisition             Michigan 2008      12
+                             Medical Device                 Ross 2005        43
+                            Diabetes Testing                Ross 2007        17
+                         Drug Store Profitability           Ross 2007        18
+                           Pharma Acquisition               Ross 2008        12
+                          Universal Healthcare              Sloan 2011       52
+                                Nutracorp                 Wharton 2005        5
+                               Mini Case 1                 YGCC 2012         23
+Yale Graduate Student Consulting Club© !                                             93
+Additional Life Sciences Cases
+                    Boston Consulting Group
+                                  Title               Source       Case #
+                                 GenCo             BCG Website      NA
+                              Eye Surgery          Columbia 2006    14
+                          Cure for Headaches       Kellogg 2001     45
+                              Orthopedics           Ross 2005       10
+                      Medical Glove Manufacturer    Ross 2005       25
+                               Hybrid Corn          Ross 2005       33
+                             Pharma Pricing         Ross 2007       16
+                              Eye Glasses           Ross 2009        9
+                           Bio-Product Growth       Ross 2010       13
+                             Antidepressant         Sloan 2011       1
+                              Always Fresh          Sloan 2011       9
+                       New Drug Sales Increase      Sloan 2011      27
+                          Pharma New Vaccine        Sloan 2011      29
+                       Global Healthcare Charity    Sloan 2011      30
+                              Global Health         Sloan 2011      50
+                        CPG Razors and Blades      Wharton 2005      7
+                              Rare Disease          YGCC 2012        1
+                             Medical Device         YGCC 2012       19
+                                 Club© ! Drug
+                             Apoplexy               YGCC 2013        8
+Yale Graduate Student Consulting                                            94
+Additional Life Sciences Cases
+
+                      Bain & Company
+                                   Title             Source       Case #
+                            Personal Care Co      Bain Website     NA
+                            Drugstore Chain       McCombs 2008      4
+                        Small Drug Manufacturer   Michigan 2008     6
+                        Small Drug Manufacturer    Ross 2008        6
+                               Vitamin Co          Ross 2010       15
+                       Pharmacy in Supermarket     Sloan 2011       5
+                               Toothpaste          Sloan 2011      19
+                             Contact Lenses        Sloan 2011      44
+                              Laparoscope          YGCC 2012        8
+
+
+
+
+Yale Graduate Student Consulting Club© !                                   95
+
