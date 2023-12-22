@@ -1,5 +1,4 @@
 import os
-import google.generativeai as genai
 import numpy as np
 
 from dotenv import load_dotenv
@@ -14,7 +13,8 @@ from langchain.document_loaders import DirectoryLoader
 from trulens_eval import Feedback, Select, Tru, TruCustomApp
 from trulens_eval.feedback import Groundedness
 from trulens_eval.feedback.provider.openai import OpenAI as fOpenAI
-from trulens_eval.tru_custom_app import instrument
+
+from rag_gemini import RAG_gemini
 
 
 def load_text(local_path: str) -> list:
@@ -30,48 +30,7 @@ def load_text(local_path: str) -> list:
     return texts
 
 
-class RAG_gemini:
-    @instrument
-    def retrieve(self, query: str) -> list:
-        """
-        Retrieve relevant text from vector store.
-        """
-        retriever = vectordb.as_retriever()
-        results = retriever.get_relevant_documents(query) 
-        return results[0]  
-
-    
-    @instrument
-    def generate_completion(self, query:str, context_str: list) -> str:
-        """
-        Generate answer from context.
-        """
-        message = [{
-            "role": "user",
-            "parts": [
-                f"We have provided context information below. \n"
-                f"---------------------\n"
-                f"{context_str}"
-                f"\n---------------------\n"
-                f"Given this information, please answer the question: {query}"
-            ]
-        }]
-        GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-        genai.configure(api_key=GOOGLE_API_KEY)
-        model = genai.GenerativeModel('gemini-pro')
-        response = model.generate_content(message)
-        response_txt = response.text
-        return response_txt
-        
-
-    @instrument
-    def query(self, query:str ) -> str:
-        context_str = self.retrieve(query)
-        completion = self.generate_completion(query, context_str)
-        return completion
-
-
-def get_feedbacks_for_openai() -> list:
+def get_feedbacks() -> list:
     # Initialize provider class
     fopenai = fOpenAI()
 
@@ -117,17 +76,18 @@ def evaluate(app_id: str, rag, feedbacks: list):
 
 if __name__ == "__main__":
     load_dotenv('../../.env')
-    providers = {
-        'openai' : {
-            'rag': RAG_gemini(),
-            'feedbacks': get_feedbacks_for_openai()
-        },
-    }
 
     texts = load_text('new-articles')
 
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
     vectordb = Chroma.from_documents(documents=texts, embedding=embeddings)
+
+    providers = {
+        'gemini' : {
+            'rag': RAG_gemini(vectordb),
+            'feedbacks': get_feedbacks()
+        },
+    }
 
     for app_id in providers:
         evaluate(
@@ -137,5 +97,5 @@ if __name__ == "__main__":
         )
 
     tru = Tru()
-    tru.get_leaderboard(app_ids=['openai'])
+    tru.get_leaderboard(app_ids=list(providers.keys()))
     tru.run_dashboard()
