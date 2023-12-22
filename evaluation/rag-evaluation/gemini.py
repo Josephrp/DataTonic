@@ -30,12 +30,6 @@ def load_text(local_path: str) -> list:
     
     return texts
 
-load_dotenv()
-
-texts = load_text('new-articles')
-
-embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-vectordb = Chroma.from_documents(documents=texts, embedding=embeddings)
 
 class RAG_openai:
     @instrument
@@ -123,6 +117,12 @@ def evaluate_openai():
 
 
 if __name__ == "__main__":
+    load_dotenv()
+    texts = load_text('new-articles')
+
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+    vectordb = Chroma.from_documents(documents=texts, embedding=embeddings)
+
     evaluate_openai()
 
     tru = Tru()
