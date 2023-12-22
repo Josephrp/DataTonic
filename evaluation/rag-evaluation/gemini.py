@@ -56,6 +56,7 @@ class RAG_openai:
                 f"Given this information, please answer the question: {query}"
             ]
         }]
+        GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
         genai.configure(api_key=GOOGLE_API_KEY)
         model = genai.GenerativeModel('gemini-pro')
         response = model.generate_content(message)
@@ -117,7 +118,6 @@ def evaluate_openai():
 
 if __name__ == "__main__":
     load_dotenv('../../.env')
-    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
     texts = load_text('new-articles')
 
