@@ -6,7 +6,7 @@ import soundfile as sf
 import json
 import os
 import asyncio
-from chainlit import chainlit as cl
+import streamlit as st
 from src.semantic_kernel.semantic_kernel_module import SemanticKernelDataModule
 from src.tonicweaver.taskweaver_module import TaskWeaverDataProcessor
 from src.autogen.autogen_module import AutoGenModule

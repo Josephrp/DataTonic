@@ -237,15 +237,28 @@ https://oai.azure.com/portal
 - visit this url and download and install the required packages :
 ```https://www.sqlite.org/download.html```
 **For Windows** : 
-- Download the sqlite-dll-win64-x64-*.zip and sqlite-tools-win32-x86-*.zip files.
-- Extract these files to a directory (e.g., C:\sqlite).
-- Set Environment Variables:
-    After installing SQLite, you need to add the directory where you extracted SQLite to your system's PATH so that the compiler can find the sqlite3.h file and the SQLite library.
-    - Right-click on 'This PC' or 'My Computer' and select 'Properties'.
-    - Click on 'Advanced system settings' and then 'Environment Variables'.
-    - Under 'System Variables', find and select the 'Path' variable, then click 'Edit'.
-    - Add the path to the directory where you extracted SQLite (e.g., C:\sqlite).
+You need the SQLite source files, including the sqlite3.h header file, for the pysqlite3 installation.
+
+- Go to the SQLite Download Page.
+- Download the sqlite-amalgamation-*.zip file under the "Source Code" section.
+- Extract the contents of this zip file to a known directory (e.g., C:\sqlite).
+
+Set Environment Variables:
+
+You need to ensure that the directory where you extracted the SQLite source files is included in your system's PATH environment variable.
+
+- Right-click on 'This PC' or 'My Computer' and select 'Properties'.
+- Click on 'Advanced system settings' and then 'Environment Variables'.
+- Under 'System Variables', find and select the 'Path' variable, then click 'Edit'.
+- Add the path to the directory where you extracted the SQLite source files (e.g., C:\sqlite).
 - Click 'OK' to close all dialog boxes.
+
+add your path :
+```bash
+setx SQLITE_INC "C:\sqlite"
+```
+proceed with the rest of the setup below.
+
 **Command Prompt**:
 download and install wsl:
 ```bash
