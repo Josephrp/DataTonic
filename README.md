@@ -1,9 +1,13 @@
 # DataTonic
 
+- turn your laptop computer into a webserver of nested data and code capable agents !
+
 A Data-Capable AGI-style Agent Builder of Agents , that creates swarms , runs commands and securely processes and creates datasets, databases, visualizations, and analyses.
 
 - DataTonic solves simple tasks that require complex data processing
 - it's perfect for data analytics and business intelligence
+
+you can use image or audio input in your native language : **DataTonic is AGI for all**
 
 #### What it does :
 
@@ -228,7 +232,37 @@ https://oai.azure.com/portal
 ![image](https://github.com/Tonic-AI/DataTonic/assets/18212928/192f55fb-c174-45d6-a15b-12f7bce5e0b2)
 - make a note of your `endpoint` , `API Key` , and `model name` to use it later.
 
-## Setup Instructions
+### Set Up Sqlite
+
+- visit this url and download and install the required packages :
+```https://www.sqlite.org/download.html```
+**For Windows** : 
+- Download the sqlite-dll-win64-x64-*.zip and sqlite-tools-win32-x86-*.zip files.
+- Extract these files to a directory (e.g., C:\sqlite).
+- Set Environment Variables:
+    After installing SQLite, you need to add the directory where you extracted SQLite to your system's PATH so that the compiler can find the sqlite3.h file and the SQLite library.
+    - Right-click on 'This PC' or 'My Computer' and select 'Properties'.
+    - Click on 'Advanced system settings' and then 'Environment Variables'.
+    - Under 'System Variables', find and select the 'Path' variable, then click 'Edit'.
+    - Add the path to the directory where you extracted SQLite (e.g., C:\sqlite).
+- Click 'OK' to close all dialog boxes.
+**Command Prompt**:
+download and install wsl:
+```bash
+pip install wsl
+```
+then run
+```bash
+wsl
+```
+then install sqlite
+```bash
+sudo apt-get update
+sudo apt-get install libsqlite3-dev #or : sqlite-devel
+sudo pip install pysqlite3
+```
+
+## DataTonic Setup Instructions
 
 This section provides instructions on setting up the project. Please turn off your firewall and use administrator priviledges on the command line.
 

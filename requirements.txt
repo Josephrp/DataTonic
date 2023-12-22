@@ -1,6 +1,8 @@
+torch
+torchaudio
+soundfile
 typing-extensions
 pydantic
-gradio
 azure-common
 azure-core
 azure-search-documents
@@ -16,4 +18,5 @@ chromadb==0.4.20
 llama_hub==0.0.59
 llama_index==0.9.15.post2
 pysqlite3
-chainlit
+streamlit
+streamlit-mic-recorder
