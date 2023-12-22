@@ -16,7 +16,6 @@ from trulens_eval.feedback import Groundedness
 from trulens_eval.feedback.provider.openai import OpenAI as fOpenAI
 from trulens_eval.tru_custom_app import instrument
 
-GOOGLE_API_KEY= os.getenv("GOOGLE_API_KEY")
 
 def load_text(local_path: str) -> list:
     if not os.path.exists(local_path):
@@ -117,7 +116,9 @@ def evaluate_openai():
 
 
 if __name__ == "__main__":
-    load_dotenv()
+    load_dotenv('../../.env')
+    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
     texts = load_text('new-articles')
 
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
