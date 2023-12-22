@@ -2,12 +2,10 @@ import textwrap
 import os
 import google.generativeai as genai
 import numpy as np
-# import streamlit as st
 
 from dotenv import load_dotenv
 from IPython.display import Markdown
 
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
 from langchain.document_loaders import TextLoader
