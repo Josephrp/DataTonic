@@ -1,24 +1,11 @@
-import pathlib
 import textwrap
 import os
 import google.generativeai as genai
-import pathlib
-import textwrap
-import os
-import google.generativeai as genai
-import pathlib
-import textwrap
 import numpy as np
-import streamlit as st
-import google.generativeai as genai
+# import streamlit as st
 
 from dotenv import load_dotenv
-from IPython.display import display
 from IPython.display import Markdown
-
-from IPython.display import display
-from IPython.display import Markdown
-from dotenv import load_dotenv
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
@@ -26,11 +13,7 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain.document_loaders import TextLoader
 from langchain.vectorstores import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.document_loaders import TextLoader
 from langchain.document_loaders import DirectoryLoader
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain.prompts import PromptTemplate
 
 from trulens_eval import Feedback, Select, Tru, TruCustomApp
 from trulens_eval.feedback import Groundedness
