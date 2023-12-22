@@ -1,10 +1,8 @@
-import textwrap
 import os
 import google.generativeai as genai
 import numpy as np
 
 from dotenv import load_dotenv
-from IPython.display import Markdown
 
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
@@ -18,32 +16,28 @@ from trulens_eval.feedback import Groundedness
 from trulens_eval.feedback.provider.openai import OpenAI as fOpenAI
 from trulens_eval.tru_custom_app import instrument
 
-
-def to_markdown(text):
-  text = text.replace('•', '  *')
-  return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
-
-load_dotenv()
 GOOGLE_API_KEY= os.getenv("GOOGLE_API_KEY")
 
-genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel('gemini-pro')
+def load_text(local_path: str) -> list:
+    if not os.path.exists(local_path):
+        os.mkdir(local_path)
 
-if not os.path.exists('new-articles'):
-    os.mkdir('new-articles')
+    loader = DirectoryLoader(local_path, loader_cls=TextLoader, show_progress=True)
+    documents = loader.load()
 
-loader = DirectoryLoader('./new-articles/', loader_cls=TextLoader, show_progress=True)
-documents = loader.load()
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+    texts = text_splitter.split_documents(documents)
+    
+    return texts
 
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
-texts = text_splitter.split_documents(documents)
+load_dotenv()
+
+texts = load_text('new-articles')
 
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 vectordb = Chroma.from_documents(documents=texts, embedding=embeddings)
 
-tru = Tru()
-
-class RAG_from_scratch:
+class RAG_openai:
     @instrument
     def retrieve(self, query: str) -> list:
         """
@@ -69,6 +63,7 @@ class RAG_from_scratch:
                 f"Given this information, please answer the question: {query}"
             ]
         }]
+        genai.configure(api_key=GOOGLE_API_KEY)
         model = genai.GenerativeModel('gemini-pro')
         response = model.generate_content(message)
         response_txt = response.text
@@ -80,46 +75,56 @@ class RAG_from_scratch:
         context_str = self.retrieve(query)
         completion = self.generate_completion(query, context_str)
         return completion
-    
-rag = RAG_from_scratch()
 
-# Initialize provider class
-fopenai = fOpenAI()
 
-grounded = Groundedness(groundedness_provider=fopenai)
+def get_feedbacks_for_openai() -> list:
+    # Initialize provider class
+    fopenai = fOpenAI()
 
-# Define a groundedness feedback function
-f_groundedness = (
-    Feedback(grounded.groundedness_measure_with_cot_reasons, name = "Groundedness")
-    .on(Select.RecordCalls.retrieve.rets.collect())
-    .on_output()
-    .aggregate(grounded.grounded_statements_aggregator)
-)
+    grounded = Groundedness(groundedness_provider=fopenai)
 
-# Question/answer relevance between overall question and answer.
-f_qa_relevance = (
-    Feedback(fopenai.relevance_with_cot_reasons, name = "Answer Relevance")
-    .on(Select.RecordCalls.retrieve.args.query)
-    .on_output()
-)
+    # Define a groundedness feedback function
+    f_groundedness = (
+        Feedback(grounded.groundedness_measure_with_cot_reasons, name = "Groundedness")
+        .on(Select.RecordCalls.retrieve.rets.collect())
+        .on_output()
+        .aggregate(grounded.grounded_statements_aggregator)
+    )
 
-# Question/statement relevance between question and each context chunk.
-f_context_relevance = (
-    Feedback(fopenai.qs_relevance_with_cot_reasons, name = "Context Relevance")
-    .on(Select.RecordCalls.retrieve.args.query)
-    .on(Select.RecordCalls.retrieve.rets.collect())
-    .aggregate(np.mean)
-)
+    # Question/answer relevance between overall question and answer.
+    f_qa_relevance = (
+        Feedback(fopenai.relevance_with_cot_reasons, name = "Answer Relevance")
+        .on(Select.RecordCalls.retrieve.args.query)
+        .on_output()
+    )
 
-tru_rag = TruCustomApp(
-    rag,
-    app_id = 'RAG v1',
-    feedbacks = [f_groundedness, f_qa_relevance, f_context_relevance]
-)
+    # Question/statement relevance between question and each context chunk.
+    f_context_relevance = (
+        Feedback(fopenai.qs_relevance_with_cot_reasons, name = "Context Relevance")
+        .on(Select.RecordCalls.retrieve.args.query)
+        .on(Select.RecordCalls.retrieve.rets.collect())
+        .aggregate(np.mean)
+    )
 
-with tru_rag as recording:
-    rag.query("What is the news about Pando")
+    return [f_groundedness, f_qa_relevance, f_context_relevance]
 
-tru.get_leaderboard(app_ids=["RAG v1"])
 
-tru.run_dashboard()
+def evaluate_openai():
+    rag_openai = RAG_openai()
+
+    tru_rag = TruCustomApp(
+        rag_openai,
+        app_id = 'openai',
+        feedbacks = get_feedbacks_for_openai()
+    )
+
+    with tru_rag as _:
+        rag_openai.query("What is the news about Pando")
+
+
+if __name__ == "__main__":
+    evaluate_openai()
+
+    tru = Tru()
+    tru.get_leaderboard(app_ids=['openai'])
+    tru.run_dashboard()
