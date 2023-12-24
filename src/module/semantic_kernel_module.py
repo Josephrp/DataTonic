@@ -1,9 +1,9 @@
-from semantic_kernel import SemanticKernel, KernelBuilder
-import taskweaver
+import semantic_kernel
+from semantic_kernel import Kernel
 from taskweaver.app.app import TaskWeaverApp
-from semantic_kernel.plugins.taskweaverplugin import TaskWeaverSQLIntegration
-from semantic_kernel.plugins.googleconnector import GoogleConnector
-from semantic_kernel.plugins.sk_web_pages_plugin import WebPagesPlugin
+from plugins.taskweaverplugin import TaskWeaverSQLIntegration
+from plugins.googleconnector import GoogleConnector
+from plugins.sk_web_pages_plugin import WebPagesPlugin
 import asyncio
 
 project_details = {
@@ -98,13 +98,13 @@ class SemanticKernelDataModule:
         self.kernel.Plugins.RegisterPlugin('google', self.google_connector)
         self.kernel.Plugins.RegisterPlugin('web_pages', self.web_pages_plugin)
 
-    async def process_data_with_taskweaver(self, task_description):
-        # Process data using TaskWeaver library
-        response_round = self.taskweaver_session.send_message(
-            task_description,
-            event_handler=lambda _type, _msg: print(f"{_type}:\n{_msg}")
-        )
-        return response_round.to_dict()
+    # async def process_data_with_taskweaver(self, task_description):
+    #     # Process data using TaskWeaver library
+    #     response_round = self.taskweaver_session.send_message(
+    #         task_description,
+    #         event_handler=lambda _type, _msg: print(f"{_type}:\n{_msg}")
+    #     )
+    #     return response_round.to_dict()
 
     async def process_data_with_taskweaver(self, task_description):
         taskweaver_processor = self.semantic_kernel.get_plugin('taskweaver')
@@ -129,7 +129,6 @@ class SemanticKernelDataModule:
             processed_content = self.taskweaver_processor.process_data_task({'content': content})
             page_contents.append(processed_content)
         return page_contents
-    
 
     async def create_and_fetch_sow(self, project_details):
         sow_planner = SoWPlanner(self.taskweaver_integration)

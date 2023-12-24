@@ -1,10 +1,10 @@
 import sqlite3
 import taskweaver
-from src.tonicweaver.taskweaver_module import TaskWeaverDataProcessor
+from src.module.taskweaver_module import TaskWeaverDataProcessor
 from taskweaver.app.app import TaskWeaverApp
 
 # Setup TaskWeaver
-app_dir = "./src/taskweaver/"  # Path to the directory with taskweaver_config.json
+app_dir = "./src/config/"  # Path to the directory with taskweaver_config.json
 app = TaskWeaverApp(app_dir=app_dir)
 session = app.get_session()
 

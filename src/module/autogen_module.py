@@ -1,9 +1,9 @@
 import os
 from typing import List, Dict, Any, Optional
 from pathlib import Path
-from semantic_kernel.semantic_kernel_module import SemanticKernelModule
-from tonicweaver.taskweaver_module import TaskWeaverDataProcessor
-from agent_builder import AgentBuilder
+from src.module.semantic_kernel_module import SemanticKernelModule
+from src.module.taskweaver_module import TaskWeaverDataProcessor
+from src.module.agent_builder import AgentBuilder
 from autogen.agentchat.contrib.retrieve_assistant_agent import RetrieveAssistantAgent
 from autogen.agentchat.contrib.retrieve_user_proxy_agent import RetrieveUserProxyAgent
 from autogen import AssistantAgent, UserProxyAgent, config_list_from_json
