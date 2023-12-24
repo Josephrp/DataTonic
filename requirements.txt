@@ -8,8 +8,11 @@ azure-core
 azure-search-documents
 pyautogen[gemini]~=0.2.0b4
 semantic-kernel
+langchain
+tabulate
 msrest
 msrestazure
+pymemgpt
 bs4
 python-dotenv
 aiohttp>=3.9.0,<3.9.1
@@ -17,6 +20,5 @@ beautifulsoup4==4.12.2
 chromadb==0.4.20
 llama_hub==0.0.59
 llama_index==0.9.15.post2
-pysqlite3
 streamlit
 streamlit-mic-recorder

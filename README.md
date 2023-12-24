@@ -259,6 +259,22 @@ setx SQLITE_INC "C:\sqlite"
 ```
 proceed with the rest of the setup below.
 
+### Install Taskweaver
+
+TaskWeaver requires Python >= 3.10. It can be installed by running the following command:
+
+```
+# [optional to create conda environment]
+# conda create -n taskweaver python=3.10
+# conda activate taskweaver
+
+# clone the repository
+git clone https://github.com/microsoft/TaskWeaver.git
+cd TaskWeaver
+# install the requirements
+pip install -r requirements.txt
+```
+
 **Command Prompt**:
 download and install wsl:
 ```bash

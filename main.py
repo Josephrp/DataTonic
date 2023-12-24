@@ -7,9 +7,9 @@ import json
 import os
 import asyncio
 import streamlit as st
-from src.semantic_kernel.semantic_kernel_module import SemanticKernelDataModule
-from src.tonicweaver.taskweaver_module import TaskWeaverDataProcessor
-from src.autogen.autogen_module import AutoGenModule
+from src.module.semantic_kernel_module import SemanticKernelDataModule
+from src.module.taskweaver_module import TaskWeaverDataProcessor
+from src.module.autogen_module import AutoGenModule
 
 def process_image(image, project_id, region, access_token):
     buffered = io.BytesIO()
