@@ -2,7 +2,7 @@ import taskweaver
 from taskweaver import TaskWeaverApp
 from src.planner.planner import Planner
 from taskweaver.code_generator.code_generator import CodeGenerator
-from taskweaver.code_interpretor.code_interpreter import CodeInterpreter
+from taskweaver.code_interpreter.code_interpreter import CodeInterpreter, CodeExecutor
 from taskweaver.logging import TelemetryLogger
 from taskweaver.memory import Memory
 
