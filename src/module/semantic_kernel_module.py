@@ -4,6 +4,7 @@ from taskweaver.app.app import TaskWeaverApp
 from src.plugins.taskweaverplugin import TaskWeaverSQLIntegration
 from src.plugins.googleconnector import GoogleConnector
 from src.plugins.sk_web_pages_plugin import WebPagesPlugin
+
 import asyncio
 
 project_details = {
