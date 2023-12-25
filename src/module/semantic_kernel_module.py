@@ -1,9 +1,9 @@
 import semantic_kernel
 from semantic_kernel import Kernel
 from taskweaver.app.app import TaskWeaverApp
-from plugins.taskweaverplugin import TaskWeaverSQLIntegration
-from plugins.googleconnector import GoogleConnector
-from plugins.sk_web_pages_plugin import WebPagesPlugin
+from src.plugins.taskweaverplugin import TaskWeaverSQLIntegration
+from src.plugins.googleconnector import GoogleConnector
+from src.plugins.sk_web_pages_plugin import WebPagesPlugin
 import asyncio
 
 project_details = {
