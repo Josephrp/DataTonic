@@ -6,7 +6,7 @@ pydantic
 azure-common
 azure-core
 azure-search-documents
-pyautogen[gemini]~=0.2.0b4
+ag2[gemini]~=0.2.0b4
 semantic-kernel
 langchain
 tabulate
